@@ -16,11 +16,18 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->unsignedBigInteger('role_id');
             $table->string('email')->unique();
+            $table->string('address')->nullable();
+            $table->string('phone')->unique();
+            $table->unsignedBigInteger('salary');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+
+             $table->foreign('role_id')->references('id')->on('roles');
         });
     }
 
