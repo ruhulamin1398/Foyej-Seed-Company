@@ -64,6 +64,56 @@
         </style>
     </head>
     <body>
+
+
+
+
+
+<div style="padding :100px;"><?php
+
+use \Milon\Barcode\DNS1D;
+
+$d = new DNS1D();
+$d->setStorPath(__DIR__."/cache/");
+echo $d->getBarcodeHTML("123456", "C39");
+echo "</br> </br> </br>";echo "</br> </br> </br>";echo "</br> </br> </br>";echo "</br> </br> </br>";
+
+echo DNS1D::getBarcodeHTML("441", "C39"); echo "</br>";echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("442", "C39+"); echo "</br>";echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("443", "C39E"); echo "</br>";echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("444", "C39E+"); echo "</br>";echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("445", "C93");echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("446", "S25");echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("447", "S25+");echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("468", "I25");echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("46", "I25+"); echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("4446", "C128"); echo "</br> c_128 </br> </br>";
+echo DNS1D::getBarcodeHTML("4656", "C128A"); echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("4445", "C128B"); echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("4445645656", "C128C"); echo "</br> </br> </br>";
+echo DNS1D::getBarcodeHTML("44455656", "EAN2");
+echo DNS1D::getBarcodeHTML("4445656", "EAN5");
+echo DNS1D::getBarcodeHTML("4445", "EAN8");
+echo DNS1D::getBarcodeHTML("4445", "EAN13");
+echo DNS1D::getBarcodeHTML("4445645656", "UPCA");
+echo DNS1D::getBarcodeHTML("4445645656", "UPCE");
+echo DNS1D::getBarcodeHTML("4445645656", "MSI");
+echo DNS1D::getBarcodeHTML("4445645656", "MSI+");
+echo DNS1D::getBarcodeHTML("4445645656", "POSTNET");
+echo DNS1D::getBarcodeHTML("4445645656", "PLANET");
+echo DNS1D::getBarcodeHTML("4445645656", "RMS4CC");
+echo DNS1D::getBarcodeHTML("4445645656", "KIX");
+echo DNS1D::getBarcodeHTML("4445645656", "IMB");
+echo DNS1D::getBarcodeHTML("4445645656", "CODABAR");
+echo DNS1D::getBarcodeHTML("4445645656", "CODE11");
+echo DNS1D::getBarcodeHTML("4445645656", "PHARMA");
+echo DNS1D::getBarcodeHTML("4445645656", "PHARMA2T");
+
+
+?>
+</div>
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
