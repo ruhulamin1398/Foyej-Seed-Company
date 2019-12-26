@@ -20,10 +20,12 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('catagory_id');
             $table->string('cost');
             $table->string('price');
+            $table->date('expire_data');
             
             $table->unsignedBigInteger('stock');
             $table->unsignedBigInteger('sell');
             $table->unsignedBigInteger('low-limit');
+   
             
 
 

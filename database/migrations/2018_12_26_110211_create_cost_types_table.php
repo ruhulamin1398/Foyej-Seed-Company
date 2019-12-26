@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSuppliersTable extends Migration
+class CreateCostTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreateSuppliersTable extends Migration
      */
     public function up()
     {
-        Schema::create('suppliers', function (Blueprint $table) {
+        Schema::create('cost_types', function (Blueprint $table) {
             
             
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('phone')->unique();
-            $table->string('address')->nullable();
-            $table->string('company')->nullable();
-            $table->unsignedBigInteger('due');
-            $table->timestamps();
+            $table->string('type')->unique();
+
+            /// sellery  bil  
 
         });
     }
@@ -34,6 +31,6 @@ class CreateSuppliersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('suppliers');
+        Schema::dropIfExists('cost_types');
     }
 }
