@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReturnProductDetailsTable extends Migration
+class CreateProductTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateReturnProductDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('return_product_details', function (Blueprint $table) {
+        Schema::create('product_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('type')->unique();
+            /// like as packet, normal
         });
     }
 
@@ -26,6 +27,6 @@ class CreateReturnProductDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('return_product_details');
+        Schema::dropIfExists('product_types');
     }
 }

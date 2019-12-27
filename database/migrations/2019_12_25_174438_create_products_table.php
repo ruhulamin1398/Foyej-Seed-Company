@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('barcode');
             $table->string('name');
             $table->unsignedBigInteger('catagory_id');
+            $table->unsignedBigInteger('product_type_id');
             $table->string('cost');
             $table->string('price');
             $table->date('expire_data');
@@ -30,6 +31,7 @@ class CreateProductsTable extends Migration
 
 
             $table->foreign('catagory_id')->references('id')->on('categories');
+            $table->foreign('product_type_id')->references('id')->on('product_types');
         });
     }
 

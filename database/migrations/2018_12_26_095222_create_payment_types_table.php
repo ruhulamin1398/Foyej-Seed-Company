@@ -18,7 +18,7 @@ class CreatePaymentTypesTable extends Migration
             $table->bigIncrements('id');
             $table->string('type')->unique();
 
-            /// like  purces ,due-payment 
+            /// like  invoice ,due-payment 
   
         });
     }
