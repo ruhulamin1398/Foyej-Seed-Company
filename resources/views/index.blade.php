@@ -1,4 +1,4 @@
-@extends('layout.app');
+@extends('layout.app')
 
 @section('content')
 
@@ -11,19 +11,19 @@
                         Growth</p>
                 </a><a href="#" class="btn-box big span4"><i class="icon-user"></i><b>15</b>
                     <p class="text-muted">
-                        New Users</p>
+                        Order</p>
                 </a><a href="#" class="btn-box big span4"><i class="icon-sell"></i><b>15,152</b>
                     <p class="text-muted">
-                        Profit</p>
+                        sell</p>
                 </a>
             </div>
             <div class="btn-box-row row-fluid">
                 <div class="span8">
                     <div class="row-fluid">
                         <div class="span12">
-                            <a href="#" class="btn-box small span4"><i class="fas fa-shopping-cart"></i><b>Sell</b>
-                            </a><a href="#" class="btn-box small span4"><i class="icon-group"></i><b>Clients</b>
-                            </a><a href="#" class="btn-box small span4"><i class="icon-exchange"></i><b>Invoice</b>
+                            <a href="#" class="btn-box small span4"><i class="icon-shopping-cart"></i><b>Sell
+                            </a><a href="#" class="btn-box small span4"><i class="icon-group"></i><b>Clients>
+                            </a><a href="#" class="btn-box small span4"><i class="icon-file"></i><b>Invoice</b>
                             </a>
                         </div>
                     </div>

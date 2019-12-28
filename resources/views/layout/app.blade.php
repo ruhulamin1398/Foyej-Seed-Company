@@ -16,16 +16,16 @@
     </head>
 
 <body>
-    @include('layout.nav');
+    @include('layout.nav')
 
 
     <div class="wrapper">
         <div class="container">
             <div class="row">
 
-                @include('layout.sidevar');
+                @include('layout.sidevar')
                 
-                @yield('content');
+                @yield('content')
 
             </div>
         </div>
