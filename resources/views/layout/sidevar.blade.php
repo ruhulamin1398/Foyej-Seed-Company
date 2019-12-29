@@ -13,7 +13,8 @@
                 <ul id="toggleProduct" class="collapse unstyled">
                     <li><a href="other-login.html"><i class="icon-inbox"></i>Add New </a></li>
                     <li><a href="other-user-listing.html"><i class="icon-inbox"></i>View Product <b class="label green pull-right">11</b> </a></li>
-                </ul>
+                    <li><a href="other-login.html"><i class="icon-inbox"></i>Drop  </a></li>
+                    </ul>
             </li>
 
             <!-- product end  -->
@@ -25,7 +26,7 @@
                     </i>Catagories </a>
                 <ul id="toggleProductCatagory" class="collapse unstyled">
                     <li><a href="other-login.html"><i class="icon-inbox"></i>Add New </a></li>
-                    <li><a href="other-user-listing.html"><i class="icon-inbox"></i>View Product <b class="label orange pull-right">11</b> </a></li>
+                    <li><a href="other-user-listing.html"><i class="icon-inbox"></i>View Catagory <b class="label orange pull-right">11</b> </a></li>
                 </ul>
             </li>
 
