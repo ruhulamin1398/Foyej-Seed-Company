@@ -15,9 +15,25 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'IndexController@index')->name('index');
+Route::get('/index', 'IndexController@index')->name('index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::view('/a','bar');
+Route::view('/','table');
+Route::view('/bar','bar');
+
+
+
+
+use App\Role;
+
+Route::get('admin/contacts', 'ContactController@getIndex');
+Route::get('table/data',  function () {
+       $contact= Role::all();
+        return ($contact);
+    });
+
+Route::post('admin/contacts/store', 'ContactController@postStore');
+Route::post('admin/contacts/update', 'ContactController@postUpdate');
+Route::post('admin/contacts/delete', 'ContactController@postDelete');
