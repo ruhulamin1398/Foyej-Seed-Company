@@ -105,154 +105,159 @@
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Sell</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Cash</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Cost</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Clients</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Due</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Invoice</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Products</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Low</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
-
               <!-- Growth Card Example -->
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                    <i class="fas fa-calendar fa-2x  text-info "></i>
+                  <a href="http://"> <i class="fas fa-calendar fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="http://">Today's Report</a> </div>
                       </div>
+                       
 
                     </div>
                   </div>
                 </div>
               </div>
+
+       
+
+
 
 
 
