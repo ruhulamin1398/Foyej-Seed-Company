@@ -30,7 +30,8 @@ class RoleTableSeeder extends Seeder
             'address' => 'Habigong',
             'phone' => '01840000408',
             'salary' => '50000',
-            'password' => '12345'
+            'password' => '12345',
+            'status'    =>1
         ],
         
         [
@@ -40,7 +41,8 @@ class RoleTableSeeder extends Seeder
         'address' => 'Tangail',
         'phone' => '01799076632',
         'salary' => '20000',
-        'password' => '01123'
+        'password' => '01123',
+        'status'    =>1
     ],
 
         ]);
