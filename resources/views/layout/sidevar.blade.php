@@ -1,203 +1,161 @@
 <!-- Sidebar -->
-<ul class="navbar-nav   sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav    sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Divider -->
 
 
 
 
-  <div class="card shadow bg-dark mb-2">
+  <div class="card  bg-dark mb-2">
 
-    <div class="card-body">
+    
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index">
+      <li class="nav-item active ">
+        <a class="nav-link p-3 " href="index">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
-
-
-
-
-      <hr class="sidebar-divider">  
-
-      <!-- Nav Item - Pages Collapse Menu -->
+      <hr class="sidebar-divider m-1 p-0 ">  
+      <!-- Product Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true" aria-controls="collapseProducts">
           <i class="fas fa-fw fa-cog "></i>
-          <span>Components</span>
+          <span>Products</span>
         </a>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+        <div id="collapseProducts" class="collapse" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
+            
+          <a class="collapse-item" href="buttons.html">Add New</a>
+            <a class="collapse-item" href="buttons.html">View All</a>
+            </div>
         </div>
       </li>
       <!-- Divider -->
-      <hr class="sidebar-divider">
+      <hr class="sidebar-divider m-1 p-0 ">
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!--Catagory  Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseCatagory" aria-expanded="true" aria-controls="collapseCatagory">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Catagories</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseCatagory" class="collapse" aria-labelledby="headingCatagory" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            
+          <a class="collapse-item" href="buttons.html">Add New</a>
+            <a class="collapse-item" href="buttons.html">View All</a>
+
           </div>
         </div>
       </li>
 
 
-
-
-
-
-    </div>
   </div>
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="card  bg-dark mb-2">
 
+    
+<!-- Nav Item - Dashboard -->
 
-  <div class="card shadow bg-dark mb-2">
-
-    <div class="card-body">
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-      <!-- Divider -->
-
-
-
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
-        </div>
-      </li>
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
-        </div>
-      </li>
-
-
-
-
-
-    </div>
-  </div>
-
-
-
-
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    Interface
-  </div>
-
-
-  <!-- Nav Item - Utilities Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-      <i class="fas fa-fw fa-wrench"></i>
-      <span>Utilities</span>
-    </a>
-    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Custom Utilities:</h6>
-        <a class="collapse-item" href="utilities-color.html">Colors</a>
-        <a class="collapse-item" href="utilities-border.html">Borders</a>
-        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-        <a class="collapse-item" href="utilities-other.html">Other</a>
+<!-- Product Collapse Menu -->
+<li class="nav-item">
+  <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseCustomers" aria-expanded="true" aria-controls="collapseCustomers">
+    <i class="fas fa-fw fa-cog "></i>
+    <span>Customers</span>
+  </a>
+  <div id="collapseCustomers" class="collapse" aria-labelledby="headingCustomers" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      
+    <a class="collapse-item" href="buttons.html">Add New</a>
+      <a class="collapse-item" href="buttons.html">View All</a>
       </div>
-    </div>
-  </li>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider">
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    Addons
   </div>
+</li>
+<!-- Divider -->
+<hr class="sidebar-divider m-1 p-0 ">
 
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-      <i class="fas fa-fw fa-folder"></i>
-      <span>Pages</span>
-    </a>
-    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Login Screens:</h6>
-        <a class="collapse-item" href="login.html">Login</a>
-        <a class="collapse-item" href="register.html">Register</a>
-        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-        <div class="collapse-divider"></div>
-        <h6 class="collapse-header">Other Pages:</h6>
-        <a class="collapse-item" href="404.html">404 Page</a>
-        <a class="collapse-item" href="blank.html">Blank Page</a>
-      </div>
+<!--Catagory  Collapse Menu -->
+<li class="nav-item">
+  <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseSuppliers" aria-expanded="true" aria-controls="collapseSuppliers">
+    <i class="fas fa-fw fa-cog"></i>
+    <span>Supliers</span>
+  </a>
+  <div id="collapseSuppliers" class="collapse" aria-labelledby="headingSuppliers" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      
+    <a class="collapse-item" href="buttons.html">Add New</a>
+      <a class="collapse-item" href="buttons.html">View All</a>
+
     </div>
-  </li>
+  </div>
+</li>
 
-  <!-- Nav Item - Charts -->
-  <li class="nav-item">
-    <a class="nav-link" href="charts.html">
-      <i class="fas fa-fw fa-chart-area"></i>
-      <span>Charts</span></a>
-  </li>
 
-  <!-- Nav Item - Tables -->
-  <li class="nav-item">
-    <a class="nav-link" href="tables.html">
-      <i class="fas fa-fw fa-table"></i>
-      <span>Tables</span></a>
-  </li>
 
-  <!-- Divider -->
-  <hr class="sidebar-divider d-none d-md-block">
+<!-- Divider -->
+<hr class="sidebar-divider m-1 p-0 ">
 
+<!--Catagory  Collapse Menu -->
+<li class="nav-item">
+  <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseStaff" aria-expanded="true" aria-controls="collapseStaff">
+    <i class="fas fa-fw fa-cog"></i>
+    <span>Staff</span>
+  </a>
+  <div id="collapseStaff" class="collapse" aria-labelledby="headingStaff" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      
+    <a class="collapse-item" href="buttons.html">Add New</a>
+      <a class="collapse-item" href="buttons.html">View All</a>
+
+    </div>
+  </div>
+</li>
+
+
+<!-- Divider -->
+<hr class="sidebar-divider m-1 p-0 ">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item  ">
+        <a class="nav-link p-3 " href="index">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Reports</span></a>
+      </li>
+
+</div>
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="card  bg-dark mb-2">
+
+    
+<hr class="sidebar-divider m-1 p-0 ">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item  ">
+        <a class="nav-link p-3 " href="index">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Profile</span></a>
+      </li>
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item  ">
+        <a class="nav-link p-3 " href="index">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Sallery</span></a>
+      </li>
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item  ">
+        <a class="nav-link p-3 " href="index">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Logout</span></a>
+      </li>
   <!-- Sidebar Toggler (Sidebar) -->
-  <div class="text-center d-none d-md-inline">
+  <div class="text-center  d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
   </div>
+</div>
 
+  
 </ul>
 <!-- End of Sidebar -->
+
