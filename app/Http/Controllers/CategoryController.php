@@ -15,10 +15,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $catagories= Category::all();
+        $categories= Category::all();
         
        
-       return view('product.catagory',compact('catagories'));
+       return view('product.category',compact('categories'));
     }
 
     /**
@@ -39,11 +39,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-       $catagory= new Category;
+       $category= new Category;
 
-       $catagory-> name = $request->name;
-       $catagory-> description = $request->description;
-       $catagory->save();
+       $category-> name = $request->name;
+       $category-> description = $request->description;
+       $category->save();
        return back();
 
     }
@@ -67,7 +67,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return ("gggg");
+      /////////////
     }
 
     /**
@@ -80,7 +80,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
 
-      
+      ///////////////
         
     }
 
@@ -94,17 +94,17 @@ class CategoryController extends Controller
     {
 
         Category::find($id)->delete();
-         return redirect(route('catagories.index'))->with('successMsg','Catagory Successfully Deleted');
+         return redirect(route('categories.index'))->with('successMsg','Category Successfully Deleted');
     }
     public function catagoriesupdate(Request $request){
 
        
-        $catagory = Category::find($request->id);
-        $catagory->name= $request->name;
-        $catagory->description= $request->description;
-        $catagory->save();
+        $category = Category::find($request->id);
+        $category->name= $request->name;
+        $category->description= $request->description;
+        $category->save();
         
-        return redirect(route('catagories.index'))->with('successMsg','Catagory Successfully updated');
+        return redirect(route('categories.index'))->with('successMsg','Category Successfully updated');
 
     }
 }

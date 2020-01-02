@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class RoleTableSeeder extends Seeder
 {
@@ -30,7 +31,7 @@ class RoleTableSeeder extends Seeder
             'address' => 'Habigong',
             'phone' => '01840000408',
             'salary' => '50000',
-            'password' => '12345',
+            'password' => Hash::make(1116430725),
             'status'    =>1
         ],
         
@@ -41,7 +42,7 @@ class RoleTableSeeder extends Seeder
         'address' => 'Tangail',
         'phone' => '01799076632',
         'salary' => '20000',
-        'password' => '01123',
+        'password' => Hash::make(1116430725),
         'status'    =>1
     ],
 
@@ -71,8 +72,8 @@ class RoleTableSeeder extends Seeder
                  ]);
 
             DB::table('product_types')->insert([
-                ['type' => 'Packet'],
-                ['type' => 'Normal'],
+                ['name' => 'normal','description' => 'just a sign'],
+                ['name' => 'packet','description' => 'now ready for sele'],
     
             ]);
 
@@ -85,7 +86,7 @@ class RoleTableSeeder extends Seeder
                     'price' => 12,
                     'stock' => 100,
                     'sell' => 50,
-                    'low-limit' => 10
+                    'low_limit' => 10
                 ],
 
                 [
@@ -96,7 +97,7 @@ class RoleTableSeeder extends Seeder
                 'price' => 24,
                 'stock' => 100,
                 'sell' => 50,
-                'low-limit' => 10
+                'low_limit' => 10
                 ],
     
             ]);

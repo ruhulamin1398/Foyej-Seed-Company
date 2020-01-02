@@ -19,11 +19,17 @@ Route::get('/index', 'IndexController@index')->name('index');
 
 Auth::routes();
 
-
-Route::resource('catagories', 'CategoryController');
+// Product Area 
+Route::resource('categories', 'CategoryController');
 Route::post('catagoriesupdate', 'CategoryController@catagoriesupdate')->name("catagoriesupdate");
 
+Route::resource('product_type', 'ProductTypeController');
+Route::post('product_typeupdate', 'ProductTypeController@Product_typeupdate')->name("product_typeupdate");
 
+Route::resource('products', 'ProductController');
+Route::post('productsupdate', 'ProductController@Productsupdate')->name("productsupdate");
+
+// end Product area 
 
 
 

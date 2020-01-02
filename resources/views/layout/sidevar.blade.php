@@ -25,18 +25,19 @@
       <div id="collapseProducts" class="collapse" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
 
-          <a class="collapse-item" href="buttons.html">Add New</a>
-          <a class="collapse-item" href="buttons.html">View All</a>
+          <a class="collapse-item" href="{{ route('products.index') }}">Products</a>
+          <a class="collapse-item" href="{{ route('products.create') }}">Add New</a>
           <a class="collapse-item" href="buttons.html">drop</a>
+          <a class="collapse-item" href="{{ route('product_type.index') }}">Type</a>
         </div>
       </div>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
-    <!--Catagory  Collapse Menu -->
+    <!--Category  Collapse Menu -->
     <li class="nav-item  ">
-      <a class="nav-link p-3 " href="{{ route('catagories.store') }}">
+      <a class="nav-link p-3 " href="{{ route('categories.store') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Categories</span></a>
     </li>
@@ -66,7 +67,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
-    <!--Catagory  Collapse Menu -->
+    <!--Category  Collapse Menu -->
     <li class="nav-item">
       <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseSuppliers" aria-expanded="true" aria-controls="collapseSuppliers">
         <i class="fas fa-fw fa-cog"></i>
@@ -87,7 +88,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
-    <!--Catagory  Collapse Menu -->
+    <!--Category  Collapse Menu -->
     <li class="nav-item">
       <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseStaff" aria-expanded="true" aria-controls="collapseStaff">
         <i class="fas fa-fw fa-cog"></i>

@@ -18,13 +18,13 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('catagory_id');
             $table->unsignedBigInteger('product_type_id');
-            $table->unsignedBigInteger('cost');
+            $table->unsignedBigInteger('cost')->nullable();
             $table->unsignedBigInteger('price');
             $table->date('expire_date')->nullable();
             
-            $table->unsignedBigInteger('stock');
-            $table->unsignedBigInteger('sell');
-            $table->unsignedBigInteger('low-limit');
+            $table->unsignedBigInteger('stock')->default(0);
+            $table->unsignedBigInteger('sell')->default(0);
+            $table->unsignedBigInteger('low_limit')->default(0);
    
             
 

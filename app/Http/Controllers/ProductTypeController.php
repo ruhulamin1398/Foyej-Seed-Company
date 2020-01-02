@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Product_type;
 use Illuminate\Http\Request;
-use App\Product;
 
-class ProductController extends Controller
+class ProductTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products= Product::all();
-        
-       
-       return view('product.view',compact('products'));
+        $productTypes= Product_type::all();
+        return view('product.type', compact( 'productTypes' ) );
+
     }
 
     /**
@@ -27,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view ('product.create');
+        //
     }
 
     /**
@@ -38,18 +37,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        
-       $product= new Product;
+        $productType= new Product_type;
 
-       $product-> name = $request->name;
-       $product-> catagory_id = $request->catagory_id;
-       $product-> product_type_id = $request->product_type_id;
-       $product-> price = $request->price;
-       $product->low_limit = $request->low_limit;
-
-       $product->save();
-       return back();
-
+        $productType-> name = $request->name;
+        $productType-> description = $request->description;
+        $productType->save();
+        return back();
     }
 
     /**
@@ -94,6 +87,21 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        Product_type::find($id)->delete();
+         return redirect(route('product_type.index'))->with('successMsg','Product Type Successfully Deleted');
+  
+    }
+
+    public function Product_typeupdate(Request $request){
+
+       
+        $productType = Product_type::find($request->id);
+        $productType->name= $request->name;
+        $productType->description= $request->description;
+        $productType->save();
+        
+        return redirect(route('product_type.index'))->with('successMsg','Product Type Successfully updated');
+
     }
 }
