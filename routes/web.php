@@ -20,6 +20,9 @@ Route::get('/index', 'IndexController@index')->name('index');
 Auth::routes();
 
 
+Route::resource('catagories', 'CategoryController');
+Route::post('catagoriesupdate', 'CategoryController@catagoriesupdate')->name("catagoriesupdate");
+
 
 
 
