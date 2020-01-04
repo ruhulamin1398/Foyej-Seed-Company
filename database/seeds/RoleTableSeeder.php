@@ -72,15 +72,15 @@ class RoleTableSeeder extends Seeder
                  ]);
 
             DB::table('product_types')->insert([
-                ['name' => 'normal','description' => 'just a sign'],
-                ['name' => 'packet','description' => 'now ready for sele'],
+                ['name' => 'normal','description' => 'just a sign','sell_type_id' => 1   ],
+                ['name' => 'packet','description' => 'now ready for sele' ,'sell_type_id' =>2],
     
             ]);
 
             DB::table('products')->insert([
                 [
                     'name' => 'lalsak',
-                    'catagory_id' => 1,
+                    'category_id' => 1,
                     'product_type_id'=>2,
                     'cost' => 10,
                     'price' => 12,
@@ -91,7 +91,7 @@ class RoleTableSeeder extends Seeder
 
                 [
                 'name' => 'palonsak',
-                'catagory_id' => 2,
+                'category_id' => 2,
                 'product_type_id'=>1,
                 'cost' => 20,
                 'price' => 24,

@@ -28,6 +28,7 @@ Route::post('product_typeupdate', 'ProductTypeController@Product_typeupdate')->n
 
 Route::resource('products', 'ProductController');
 Route::post('productsupdate', 'ProductController@Productsupdate')->name("productsupdate");
+Route::get('productsdrop', 'ProductController@productsdrop')->name("productsdrop");
 
 // end Product area 
 

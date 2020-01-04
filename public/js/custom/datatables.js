@@ -206,31 +206,13 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
     /**
      * for showing edit item popup
      */
-  
+   
     $(document).on('click', "#edit-item", function() {
+
+
       $(this).addClass('edit-item-trigger-clicked'); //useful for identifying which trigger was clicked and consequently grab data from the correct row and not the wrong one.
   
       var options = {
@@ -264,8 +246,19 @@ $(document).ready(function () {
   });
   
   
+  $(document).ready(function(){
   
+    function create() {
+        $("#create-button").click(function () {
+           
+            $('#create-modal').modal('show');  
+        });
+    }
+    create();
+
+
+  });
   
-  
+
 
 

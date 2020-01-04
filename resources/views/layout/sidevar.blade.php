@@ -11,7 +11,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active ">
-      <a class="nav-link p-3 " href="index">
+      <a class="nav-link p-3 " href="{{ route('index') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
     </li>
@@ -27,7 +27,8 @@
 
           <a class="collapse-item" href="{{ route('products.index') }}">Products</a>
           <a class="collapse-item" href="{{ route('products.create') }}">Add New</a>
-          <a class="collapse-item" href="buttons.html">drop</a>
+          <a class="collapse-item" href="{{ route('productsdrop') }}">Drop</a>
+          
           <a class="collapse-item" href="{{ route('product_type.index') }}">Type</a>
         </div>
       </div>

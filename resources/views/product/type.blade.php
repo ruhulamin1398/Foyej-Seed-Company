@@ -20,6 +20,21 @@
                         <span class="text-dark pl-2"> Product Type</span>
                         <input type="text" name="name" class="form-control mb-2" id="inlineFormInput">
                     </div>
+
+                    <div class="col-auto">
+                        <span class="text-dark pl-2"> Sell Type</span>
+                        <select type="text" name="sell_type" class="form-control mb-2" id="inlineFormInput">
+
+                        <option value="0" selected="selected">Select Sell Type</option>
+                            @foreach ($productTypes as $productType)
+                            <option value="{{$productType->id}}"> {{$productType->name}}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
+
+  
+
                     <div class="col-auto">
 
                         <span class="text-dark pl-2"> Description</span>

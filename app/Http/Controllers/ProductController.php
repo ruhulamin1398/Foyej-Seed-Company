@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Product_type;
+use App\Category;
 
 class ProductController extends Controller
 {
@@ -14,10 +16,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products= Product::all();
-        
-       
-       return view('product.view',compact('products'));
+        $products = Product::all();
+
+
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+        return view('product.view', compact('categories', 'productTypes', 'products'));
     }
 
     /**
@@ -27,7 +32,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view ('product.create');
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+        return view('product.create', compact('categories', 'productTypes'));
     }
 
     /**
@@ -38,17 +46,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        
-       $product= new Product;
 
-       $product-> name = $request->name;
-       $product-> catagory_id = $request->catagory_id;
-       $product-> product_type_id = $request->product_type_id;
-       $product-> price = $request->price;
-       $product->low_limit = $request->low_limit;
 
-       $product->save();
-       return back();
+        $product = new Product;
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->product_type_id = $request->product_type_id;
+        $product->price = $request->price;
+        $product->low_limit = $request->low_limit;
+        $product->save();
+
+
+
+              
+        return redirect(route('products.index'))->with('successMsg','Product Successfully inserted');
 
     }
 
@@ -95,5 +106,16 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function productsdrop()
+    {
+
+        $products = Product::all();
+
+
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+        return view('product.drop', compact('categories', 'productTypes', 'products'));
     }
 }

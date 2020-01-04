@@ -41,6 +41,10 @@ class ProductTypeController extends Controller
 
         $productType-> name = $request->name;
         $productType-> description = $request->description;
+        $productType-> sell_type_id = $request->sell_type_id;
+
+
+        
         $productType->save();
         return back();
     }
