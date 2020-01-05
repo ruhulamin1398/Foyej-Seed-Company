@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Supplier;
 use Illuminate\Http\Request;
 
+
 class SupplierController extends Controller
 {
     /**
@@ -14,8 +15,20 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        //
+        $suppliers= Supplier::all();
+        
+       
+       return view('product.suppliers',compact('suppliers'));
     }
+
+    public function apiIndex()
+    {
+        $suppliers= Supplier::all();
+        
+       
+       return ($suppliers);
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -35,9 +48,17 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+       $supplier= new Supplier();
 
+       $supplier-> name = $request->name;
+       $supplier-> phone = $request->phone;
+       $supplier-> company = $request->company;
+       $supplier-> address = $request->address;
+       $supplier-> due = 0;
+       $supplier->save();
+       return back();
+
+    }
     /**
      * Display the specified resource.
      *
@@ -78,8 +99,26 @@ class SupplierController extends Controller
      * @param  \App\Supplier  $supplier
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Supplier $supplier)
+    public function destroy($id)
     {
-        //
+
+        Supplier::find($id)->delete();
+         return redirect(route('suppliers.index'))->with('successMsg','Category Successfully Deleted');
     }
+    public function suppliersupdate(Request $request){
+
+       
+        $supplier = Supplier::find($request->id);
+        
+       $supplier-> name = $request->name;
+       $supplier-> phone = $request->phone;
+       $supplier-> company = $request->company;
+       $supplier-> address = $request->address;
+     
+       $supplier->save();
+
+        return redirect(route('suppliers.index'))->with('successMsg','supplier Successfully updated');
+
+    }
+
 }

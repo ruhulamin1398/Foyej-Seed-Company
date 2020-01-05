@@ -37,7 +37,7 @@ $(document).ready(function(){
     
         // fill the data in the input fields
         
-  
+        
         $("#editProductId").val(id);
         $("#editProductId2").val(id);
         $("#editProductName").val(viewName);

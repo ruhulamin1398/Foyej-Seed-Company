@@ -17,11 +17,11 @@ class CreateSuppliersTable extends Migration
             
             
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->default('Unknown');
             $table->string('phone')->unique();
             $table->string('address')->nullable();
             $table->string('company')->nullable();
-            $table->unsignedBigInteger('due');
+            $table->unsignedBigInteger('due')->default(0);
             $table->timestamps();
 
         });

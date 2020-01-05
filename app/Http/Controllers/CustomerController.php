@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Customer;
 use Illuminate\Http\Request;
 
+use App\Supplier;
+use App\Category;
+use App\Product;
+
 class CustomerController extends Controller
 {
     /**
@@ -14,7 +18,20 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+
+        $suppliers = Supplier::all();
+        $customers = Customer::all();
+
+
+        return view('customer.view', compact('customers', 'suppliers'));
+    }
+
+    public function apiIndex()
+    {
+        $customers = Customer::all();
+
+
+        return ($customers);
     }
 
     /**
@@ -35,7 +52,14 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $customer = new Customer();
+
+        $customer->id = $request->id;
+        $customer->name = $request->name;
+        $customer->address = $request->address;
+        $customer->due = 0;
+        $customer->save();
+        return back();
     }
 
     /**
@@ -78,8 +102,26 @@ class CustomerController extends Controller
      * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+
+    public function destroy($id)
     {
-        //
+
+        Customer::find($id)->delete();
+        return redirect(route('customers.index'))->with('successMsg', 'Customer Successfully Deleted');
+    }
+    public function customersupdate(Request $request)
+    {
+        // return $request;
+
+        
+
+        $customer = Customer::find((int)$request->id);
+        //  return $customer;
+        $customer->name = $request->name;
+        $customer->address = $request->address;
+
+        $customer->save();
+
+        return redirect(route('customers.index'))->with('successMsg', 'Customer Successfully updated');
     }
 }

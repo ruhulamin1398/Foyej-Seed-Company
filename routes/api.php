@@ -18,3 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('/categories', 'CategoryController@apiIndex')->name('category_api');
 Route::get('/product_types', 'ProductTypeController@apiIndex')->name('product_type_api');
+
+Route::get('/suppliers', 'SupplierController@apiIndex')->name('suppliers');
+Route::get('/customers', 'CustomerController@apiIndex')->name('customers');
