@@ -6,8 +6,6 @@ use App\Customer;
 use Illuminate\Http\Request;
 
 use App\Supplier;
-use App\Category;
-use App\Product;
 
 class CustomerController extends Controller
 {
@@ -54,7 +52,7 @@ class CustomerController extends Controller
     {
         $customer = new Customer();
 
-        $customer->id = $request->id;
+        $customer->phone = $request->phone;
         $customer->name = $request->name;
         $customer->address = $request->address;
         $customer->due = 0;
@@ -115,8 +113,9 @@ class CustomerController extends Controller
 
         
 
-        $customer = Customer::find((int)$request->id);
+        $customer = Customer::find($request->id);
         //  return $customer;
+        $customer->phone = $request->phone;
         $customer->name = $request->name;
         $customer->address = $request->address;
 

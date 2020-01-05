@@ -17,7 +17,7 @@ class CreatePaymentsTable extends Migration
             $table->bigIncrements('id');
             
             $table->unsignedBigInteger('user_id');
-            $table->string('customer_id')->nullable();
+            $table->unsignedBigInteger('customer_id')->nullable();
             $table->string('payment_type');
             $table->unsignedBigInteger('payment');
             $table->timestamps();

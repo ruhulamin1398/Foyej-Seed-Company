@@ -114,16 +114,15 @@ class RoleTableSeeder extends Seeder
             ]);
 
         DB::table('customer_types')->insert([
-            ['name' => 'ruhul'],
-            ['name' => 'masum'],
-            ['name' => 'sagor'],
+            ['name' => 'regular'],
+            ['name' => 'normal']
            
     
         ]);
 
         DB::table('customers')->insert([
         [
-            'id' => '01840000408',
+            'phone' => '01840000408',
             'name' => 'ruhul',
             'address' => 'Habigong',
             'customer_type_id' => 1,
@@ -131,7 +130,7 @@ class RoleTableSeeder extends Seeder
         ],
 
          [
-            'id' => '01846000408',
+            'phone' => '01846000402',
             'name' => 'masum',
             'address' => 'Tangail',
             'customer_type_id' => 2,

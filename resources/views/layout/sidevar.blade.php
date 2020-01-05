@@ -50,7 +50,7 @@
 <!--purchase -->
 
  <li class="nav-item  ">
-  <a class="nav-link p-3 " href="{{ route('customers.index') }}">
+  <a class="nav-link p-3 " href="{{ route('purchases.index') }}">
     <i class="fas fa-fw fa-tachometer-alt"></i>
     <span>Purchase</span></a>
 </li>

@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('customer_id')->nullable();
+            $table->unsignedBigInteger('customer_id')->nullable();
             $table->unsignedBigInteger('total_discount');
             $table->unsignedBigInteger('total_price');
             $table->unsignedBigInteger('total_profit');

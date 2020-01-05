@@ -23,7 +23,7 @@
                     <div class="col-auto">
 
                         <span class="text-dark pl-2"> Phone</span>
-                        <input type="text" name="id"  class="form-control mb-2" >
+                        <input type="text" name="phone"  class="form-control mb-2" >
                     </div>
                     <div class="col-auto">
 
@@ -83,7 +83,7 @@
                         <tr class="data-row">
                             <td class="iteration">{{$i++}}</td>
                             <td id="supplierName">{{$customer->name}}</td>
-                            <td id="supplierPhone">{{"0".$customer->id}}</td>
+                            <td id="supplierPhone">{{$customer->phone}}</td>
                             <td id="supplierAddress">{{$customer->address}}</td>
                             <td id="supplierDue">{{$customer->due}}</td>
 
@@ -155,6 +155,13 @@
                     <div class="form-group">
                         <label class="col-form-label" for="editModalSupplierName">Name</label>
                         <input type="text" name="name" class="form-control" id="editModalSupplierName" required >
+                    </div>
+                    <!-- /name -->
+                    
+                    <!-- name -->
+                    <div class="form-group">
+                        <label class="col-form-label" for="editModalSupplierPhone">phone</label>
+                        <input type="text" name="phone" class="form-control" id="editModalSupplierPhone" required >
                     </div>
                     <!-- /name -->
 
