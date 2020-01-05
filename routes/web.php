@@ -30,16 +30,19 @@ Route::resource('products', 'ProductController');
 Route::post('productsupdate', 'ProductController@Productsupdate')->name("productsupdate");
 Route::get('productsdrop', 'ProductController@productsdrop')->name("productsdrop");
 
+Route::resource('purchases', 'PurchaseController');
+
+
 Route::resource('suppliers', 'SupplierController');
 Route::post('suppliersupdate', 'SupplierController@suppliersupdate')->name("suppliersupdate");
 
 // end Product area 
 
-// supplier area start
+// customer area start
 Route::resource('customers', 'CustomerController');
 Route::post('customersupdate', 'CustomerController@customersupdate')->name("customersupdate");
 
-// supplier area end
+// customer area end
 
 // testing  routes
 
