@@ -246,18 +246,7 @@ $(document).ready(function () {
   });
   
   
-  $(document).ready(function(){
-  
-    function create() {
-        $("#create-button").click(function () {
-           
-            $('#create-modal').modal('show');  
-        });
-    }
-    create();
 
-
-  });
   
 
 

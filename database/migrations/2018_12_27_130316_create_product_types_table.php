@@ -22,7 +22,7 @@ class CreateProductTypesTable extends Migration
             /// like as packet, normal
 
             
-            $table->foreign('sell_type')->references('id')->on('sell_types');
+            $table->foreign('sell_type_id')->references('id')->on('sell_types');
         });
     }
 

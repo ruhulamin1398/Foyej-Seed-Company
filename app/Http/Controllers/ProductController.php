@@ -92,9 +92,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+            /////
     }
 
     /**
@@ -105,8 +105,31 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::find($id)->delete();
+        return redirect(route('products.index'))->with('successMsg','Product Successfully Deleted');
+ 
     }
+
+
+    public function Productsupdate(Request $request)
+    {
+      $product =  Product::find($request->id);
+    //  return $request;
+
+    $product->name= $request->name;
+    $product->category_id= $request->category_id;
+    $product->product_type_id= $request->product_type_id;
+    $product->price= $request->price;
+    $product->low_limit= $request->low_limit;
+      $product->save();
+
+        return redirect(route('products.index'))->with('successMsg','Product Successfully updated');
+ 
+    }
+
+
+
+
     public function productsdrop()
     {
 

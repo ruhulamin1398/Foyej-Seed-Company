@@ -21,6 +21,14 @@ class CategoryController extends Controller
        return view('product.category',compact('categories'));
     }
 
+    public function apiIndex()
+    {
+        $categories= Category::all();
+        
+       
+       return ($categories);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

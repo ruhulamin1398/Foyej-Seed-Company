@@ -53,6 +53,17 @@ class RoleTableSeeder extends Seeder
             ['name' => 'sagor','phone' => '01799076632','address' => 'Tangail','company' => 'Arong','due' => '7000'],
             ]);
 
+
+            DB::table('sell_types')->insert([
+                [
+                    'name' => 'packet'
+                ],
+                [
+                    'name' => 'normal'
+                ],
+    
+            ]);
+
             DB::table('categories')->insert([
                 ['name' => 'stricer','description' => 'just a sign'],
                 ['name' => 'complete','description' => 'now ready for sele'],

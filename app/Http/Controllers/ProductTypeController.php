@@ -18,6 +18,12 @@ class ProductTypeController extends Controller
         return view('product.type', compact( 'productTypes' ) );
 
     }
+    public function apiIndex()
+    {
+        $productTypes= Product_type::all();
+        return ($productTypes);
+
+    }
 
     /**
      * Show the form for creating a new resource.

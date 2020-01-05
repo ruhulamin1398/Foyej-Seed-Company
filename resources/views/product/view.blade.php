@@ -61,21 +61,21 @@
                         @foreach ($products as $product)
                         <?php $id = $product->id; ?>
                         <tr class="data-row">
-                            <td class="iteration">{{$i++}}</td>
-                            <td class="  word-break name">{{$product->name}}</td>
-                            <td class="  word-break category_id">{{$product->category->name}}</td>
-                            <td class="  word-break product_type_id">{{$product->product_type->name}}</td>
-                            <td class="  word-break cost">{{$product->cost}}</td>
-                            <td class="  word-break price">{{$product->price}}</td>
-                            <td class="  word-break expire_date">{{$product->stock}}</td>
-                            <td class="  word-break sell">{{$product->sell}}</td>
-                            <td class="  word-break low_limit">{{$product->low_limit}}</td>
-                            <td class="  word-break expire_date">{{$product->expire_date}}</td>
-     
-                         
+                            <td class="iteration">{{$i}}</td>
+                            <td id= "viewName">{{$product->name}}</td>
+                            <td id= "viewCategoryId">{{$product->category->name}}</td>
+                            <td id= "viewProductTypeId">{{$product->product_type->name}}</td>
+                            <td id= "viewCost">{{$product->cost}}</td>
+                            <td id= "viewPrice">{{$product->price}}</td>
+                            <td id= "viewStock">{{$product->stock}}</td>
+                            <td id= "viewSell">{{$product->sell}}</td>
+                            <td id= "viewLowLimit">{{$product->low_limit}}</td>
+                            <td id= "viewexpiredate">{{$product->expire_date}}</td>
+
+
 
                             <td class="align-middle">
-                                <button type="button" class="btn btn-success" id="edit-item" data-item-id={{$id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
+                                <button type="button" class="btn btn-success" id="edit-product-button" product-item-id={{$id}} value={{$id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
 
 
                                 <form method="POST" action="{{ route('products.destroy',  $product->id )}} " id="delete-form-{{ $product->id }}" style="display:none; ">
@@ -123,7 +123,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-dark" id="edit-modal-label ">Edit Data</h5>
+                <h5 class="modal-title text-dark" id="edit-modal-label ">Add Product</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -187,6 +187,91 @@
 </div>
 </div>
 <!-- /Create new product-->
+
+
+
+
+
+<!-- edit  product -->
+<div class="modal fade" id="edit-product-modal" tabindex="-1" role="dialog" aria-labelledby="edit-product-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="edit-product-modal-label ">Edit Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="attachment-body-content">
+
+                <form method="POST" id="create-form" action="{{ route('productsupdate' ) }}">
+               
+                    @csrf
+
+
+                    <div class="form-group">
+                        <label for="editProductId2">Id</label>
+                        <input type="text" class="form-control" id="editProductId2"  disabled>
+                    </div>
+
+                    <div class="form-group">
+                      
+                        <input type="text" name="id" class="form-control" id="editProductId" placeholder="Enter product name"  hidden  >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editProductName">Product Name</label>
+                        <input type="text" name="name" class="form-control" id="editProductName" placeholder="Enter product name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editProductCatagoryId">Procuct Category</label>
+                        <select class="form-control form-control" name="category_id" id="editProductCatagoryId">
+                            <option value="0" selected="selected">Select Category </option>
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}"> {{$category->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editProductTypeId">Procuct Type</label>
+                        <select class="form-control form-control" name="product_type_id" id="editProductTypeId">
+
+                            <option value="0" selected="selected">Select Product Type</option>
+                            @foreach ($productTypes as $productType)
+                            <option value="{{$productType->id}}"> {{$productType->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="editProductPrice">Sell Price</label>
+                        <input type="number" name="price" class="form-control" id="editProductPrice" placeholder="120">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editLowLimit">Low Limit</label>
+                        <input type="number" name="low_limit" class="form-control" id="editLowLimit" placeholder="Enter Lowest Limit">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+                </form>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- /edit  product-->
 
 
 

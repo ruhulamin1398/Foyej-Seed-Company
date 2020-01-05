@@ -76,6 +76,7 @@
   <!-- Page level custom scripts -->
   <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
   <script src="{{asset('js/custom/datatables.js')}}"></script>
+  <script src="{{asset('js/custom/product.js')}}"></script>
 
 
  
