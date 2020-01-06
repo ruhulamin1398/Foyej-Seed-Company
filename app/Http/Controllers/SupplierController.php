@@ -69,6 +69,11 @@ class SupplierController extends Controller
     {
         //
     }
+    public function ApiShow($phone)
+    {
+        $supplier= Supplier::where('phone',$phone)->first();
+        return $supplier;
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -119,6 +124,22 @@ class SupplierController extends Controller
 
         return redirect(route('suppliers.index'))->with('successMsg','supplier Successfully updated');
 
+    }
+    public function supplierscheck(Request $request){
+       
+        $phone=$request->phone;
+        /// return $phone;
+       
+       
+        $supplier= Supplier::where('phone',$phone)->first();
+        // return $supplier;
+     
+        if (is_null($supplier)) {
+            return 0;
+        }
+        else
+        return 1;   
+      
     }
 
 }

@@ -35,6 +35,7 @@ Route::resource('purchases', 'PurchaseController');
 
 Route::resource('suppliers', 'SupplierController');
 Route::post('suppliersupdate', 'SupplierController@suppliersupdate')->name("suppliersupdate");
+Route::get('supplierscheck', 'SupplierController@supplierscheck')->name("supplierscheck");
 
 // end Product area 
 
