@@ -69,9 +69,10 @@ class SupplierController extends Controller
     {
         //
     }
-    public function ApiShow($phone)
+    public function ApiShow(Request $request)
     {
-        $supplier= Supplier::where('phone',$phone)->first();
+     ///   return $request->phone;
+        $supplier= Supplier::where('phone',$request->phone)->first();
         return $supplier;
     }
 

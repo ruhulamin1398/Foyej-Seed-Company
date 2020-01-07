@@ -16,11 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/categories', 'CategoryController@apiIndex')->name('category_api');
+Route::get('/categories', 'CategoryController@apiIndex')->name('categories_api');
 Route::get('/product_types', 'ProductTypeController@apiIndex')->name('product_type_api');
-Route::get('/product/{id}', 'ProductController@ApiShow')->name('product');
+Route::get('/product', 'ProductController@ApiShow')->name('product_view_api');
+Route::get('product_check', 'ProductController@apiProducutCheck')->name("product_check_api");
 
-Route::get('/suppliers', 'SupplierController@apiIndex')->name('suppliers');
-Route::get('/supplier/{phone}', 'SupplierController@ApiShow')->name('supplier');
+Route::get('/suppliers', 'SupplierController@apiIndex')->name('suppliers_api');
+Route::get('/supplier', 'SupplierController@ApiShow')->name('supplier_view_api');
+Route::get('supplierscheck', 'SupplierController@supplierscheck')->name("supplierscheck_api");
 
-Route::get('/customers', 'CustomerController@apiIndex')->name('customers');
+Route::get('/customers', 'CustomerController@apiIndex')->name('customers_api');
