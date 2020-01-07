@@ -9,7 +9,6 @@ $(document).ready(function () {
     $("#purchasePageSupplierView").hide();
 
     $("#purchasePageSupplierPhoneField").change(function () {
-        var phoneNumber = $("#purchasePageSupplierPhoneField").val();
 
 
         var link = $("#supplierCheckLink").val().trim() + "?phone=" + $("#purchasePageSupplierPhoneField").val();
@@ -83,6 +82,31 @@ $(document).ready(function () {
     //;/ product area start 
 
 
+   // $("body").on("click", "#purchaseProductTableEdit", function () {
+    //    console.log("clicked");
+        // var frm = $('#create-form');
+        // $.ajax({
+        //     type: frm.attr('method'),
+        //     url: frm.attr('action'),
+        //     data: frm.serialize(),
+        //     success: function (data) {
+
+        //         console.log('Submission was successful.');
+        //         console.log(data);
+        //     },
+        //     error: function (data) {
+        //         console.log('An error occurred.');
+        //         console.log(data);
+        //     },
+        // });
+
+
+  //  });
+
+
+
+
+    $("#purchaseProductError").hide();
 
     $("#purchaseProductInputId").change(function () {
 
@@ -91,6 +115,8 @@ $(document).ready(function () {
 
         $.get(checkLink, function (data) {
             if (data == 1) {
+                $(".purchaseProductCreateProduct").show();
+                $("#purchaseProductError").hide();
 
                 $.get(viewLink, function (data) {
                     console.log(data);
@@ -106,6 +132,8 @@ $(document).ready(function () {
                 $("#purchaseProductInputTotal").prop("disabled", false);
 
             } else {
+                $(".purchaseProductCreateProduct").show();
+                $("#purchaseProductError").show();
 
                 $("#purchaseProductInputName").val('');
                 $("#purchaseProductInputPrice").val(0);
@@ -192,8 +220,10 @@ $(document).ready(function () {
 
     var PurchaseTableData = {};
 
-
+ var totalPaurchase=0;
     function showTable() {
+        
+        totalPaurchase=0;
 
         var html = '';
         var i = 0;
@@ -212,7 +242,7 @@ $(document).ready(function () {
 
 
             html += '</td> </tr>';
-            $("#purchaseProductTable tbody").html(html);
+            $("#purchaseProductTableTbody").html(html);
         });
     }
 
@@ -266,7 +296,7 @@ $(document).ready(function () {
     });
 
     $("body").on("click", "#purchaseProductTableEdit", function () {
-
+        $("#purchaseProductTableTbody").html("");
         var prooductId = $(this).attr('productId');
         //   alert(prooductId);
 
@@ -280,11 +310,14 @@ $(document).ready(function () {
 
         delete PurchaseTableData[prooductId];
         showTable();
+        purchaseProductInputSubmitButton();
 
     });
 
     $("body").on("click", "#purchaseProductTableDelete", function () {
         console.log("clicked");
+        
+        $("#purchaseProductTableTbody").html("");
 
         // $(this).addClass('edit-item-trigger-clicked');
         // console.log("class added ");
@@ -298,8 +331,9 @@ $(document).ready(function () {
 
         delete PurchaseTableData[prooductId];
         showTable();
+        showTable();
 
-
+        purchaseProductInputSubmitButton();
 
     });
 

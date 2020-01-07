@@ -17,8 +17,14 @@ class PurchaseController extends Controller
     public function index()
     {
         
+        $products = Product::all();
 
-        return view('product.purchase' );
+
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+
+        return view('product.purchase',compact('categories', 'productTypes', 'products') );
     }
 
     /**

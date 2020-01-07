@@ -26,7 +26,7 @@
 
 
                         <tr>
-                            <th>#</th>
+                            <th>Product Id</th>
                             <th>Name</th>
                             <th>Category</th>
                             <th>Type</th>
@@ -41,7 +41,7 @@
                     </thead>
                     <tfoot class="thead-dark">
                         <tr>
-                            <th>#</th>
+                            <th>Product Id</th>
                             <th>Name</th>
                             <th>Category</th>
                             <th>Type</th>
@@ -56,12 +56,11 @@
 
                     </tfoot>
                     <tbody>
-
-                        <?php $i = 1; ?>
+ <?php $id=1 ?>
                         @foreach ($products as $product)
                         <?php $id = $product->id; ?>
                         <tr class="data-row">
-                            <td class="iteration">{{$i}}</td>
+                            <td class="iteration">{{$id}}</td>
                             <td id= "viewName">{{$product->name}}</td>
                             <td id= "viewCategoryId">{{$product->category->name}}</td>
                             <td id= "viewProductTypeId">{{$product->product_type->name}}</td>

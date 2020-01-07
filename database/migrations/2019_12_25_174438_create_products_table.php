@@ -22,9 +22,9 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('price');
             $table->date('expire_date')->nullable();
             
-            $table->unsignedBigInteger('stock')->default(0);
-            $table->unsignedBigInteger('sell')->default(0);
-            $table->unsignedBigInteger('low_limit')->default(0);
+            $table->unsignedBigInteger('stock')->default(0)->nullable();
+            $table->unsignedBigInteger('sell')->default(0)->nullable();
+            $table->unsignedBigInteger('low_limit')->default(0)->nullable();
    
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('product_type_id')->references('id')->on('product_types');
