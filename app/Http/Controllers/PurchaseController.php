@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Purchase;
 use Illuminate\Http\Request;
-
+use App\Product;
+use App\Product_type;
+use App\Category;
 class PurchaseController extends Controller
 {
     /**
@@ -15,7 +17,8 @@ class PurchaseController extends Controller
     public function index()
     {
         
-        return view('product.purchase');
+
+        return view('product.purchase' );
     }
 
     /**

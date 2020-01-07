@@ -56,8 +56,6 @@ class ProductController extends Controller
         $product->low_limit = $request->low_limit;
         $product->save();
 
-
-
               
         return redirect(route('products.index'))->with('successMsg','Product Successfully inserted');
 
@@ -72,6 +70,11 @@ class ProductController extends Controller
     public function show($id)
     {
         //
+    }
+    public function apiShow($id)
+    {
+        $product= Product::find($id);
+        return $product;
     }
 
     /**

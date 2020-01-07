@@ -170,7 +170,7 @@ $(document).ready(function () {
 
     }
 
-    fetchRecords();
+    // fetchRecords();
 
 
     // var adminUrl='';

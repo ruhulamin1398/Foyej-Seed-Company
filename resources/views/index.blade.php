@@ -378,7 +378,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Developed By</h6>
               </div>
               <div class="card-body">
-                <div class="text-success h3 font-weight-bold"> Abasas It Firm</div>
+                <div class="text-success h3 font-weight-bold"> Abasas IT Farm</div>
                 <div class="text-dark">01840000408</div>
               </div>
             </div>
