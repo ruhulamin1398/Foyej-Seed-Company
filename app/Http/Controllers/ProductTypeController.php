@@ -105,7 +105,11 @@ class ProductTypeController extends Controller
 
     public function Product_typeupdate(Request $request){
 
+        $request->validate([
+            'name' => 'required:product_types',
+        ]);
        
+
         $productType = Product_type::find($request->id);
         $productType->name= $request->name;
         $productType->description= $request->description;

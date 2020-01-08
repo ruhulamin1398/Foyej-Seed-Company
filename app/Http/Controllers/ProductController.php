@@ -48,6 +48,14 @@ class ProductController extends Controller
     {
 
 
+        $request->validate([
+            'name' => 'required:products',
+            'category_id' => 'required:products',
+            'product_type_id' => 'required:products',
+            'cost' => 'required:products',
+            'price' => 'required:products',
+        ]);
+
         $product = new Product;
         $product->name = $request->name;
         $product->category_id = $request->category_id;
@@ -135,6 +143,18 @@ class ProductController extends Controller
 
     public function Productsupdate(Request $request)
     {
+
+        
+        $request->validate([
+            'name' => 'required:products',
+            'category_id' => 'required:products',
+            'product_type_id' => 'required:products',
+            'cost' => 'required:products',
+            'price' => 'required:products',
+        ]);
+
+
+
         $product =  Product::find($request->id);
         //  return $request;
 

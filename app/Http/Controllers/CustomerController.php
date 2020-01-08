@@ -50,6 +50,10 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'phone' => 'required|unique:customers|max:11|min:11',
+        ]);
+
         $customer = new Customer();
 
         $customer->phone = $request->phone;
@@ -110,6 +114,9 @@ class CustomerController extends Controller
     public function customersupdate(Request $request)
     {
         // return $request;
+        $request->validate([
+            'phone' => 'required|unique:customers|max:11|min:11',
+        ]);
 
         
 
