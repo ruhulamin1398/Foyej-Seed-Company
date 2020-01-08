@@ -31,7 +31,7 @@ Route::post('productsupdate', 'ProductController@Productsupdate')->name("product
 Route::get('productsdrop', 'ProductController@productsdrop')->name("productsdrop");
 
 Route::resource('purchases', 'PurchaseController');
-
+Route::resource('purchases_details', 'PurchaseDetailsController');
 
 Route::resource('suppliers', 'SupplierController');
 Route::post('suppliersupdate', 'SupplierController@suppliersupdate')->name("suppliersupdate");

@@ -24,7 +24,7 @@ class PurchaseDetailsController extends Controller
      */
     public function create()
     {
-        //
+   /////;
     }
 
     /**
@@ -35,7 +35,16 @@ class PurchaseDetailsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $purchase_details= new Purchase_details();
+        $purchase_details->purchase_id= $request->purchase_id;
+        $purchase_details->product_id= $request->product_id;
+        $purchase_details->price= $request->price;
+        $purchase_details->quantity= $request->quantity;
+        $purchase_details->total= $request->total;
+
+        $purchase_details->save();
+        return ($purchase_details->id);
+
     }
 
     /**

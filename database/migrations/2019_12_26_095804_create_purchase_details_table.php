@@ -21,6 +21,8 @@ class CreatePurchaseDetailsTable extends Migration
             $table->unsignedBigInteger('quantity');
             $table->unsignedBigInteger('total');
             
+            $table->timestamps();
+            
             $table->foreign('purchase_id')->references('id')->on('purchases');
             $table->foreign('product_id')->references('id')->on('products');
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Product_type;
 use App\Category;
+
 class PurchaseController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        
+
         $products = Product::all();
 
 
@@ -24,7 +25,7 @@ class PurchaseController extends Controller
         $productTypes = Product_type::all();
 
 
-        return view('product.purchase',compact('categories', 'productTypes', 'products') );
+        return view('product.purchase', compact('categories', 'productTypes', 'products'));
     }
 
     /**
@@ -45,18 +46,18 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $purchase= new Purchase();
 
-       //  $purchase->user_id= $request->user_id ;
-         $purchase->user_id= 1 ;   
-        $purchase->supplier_id= $request->supplier_id ;   
-        $purchase->due= $request->due ;   
-        $purchase->discount= $request->discount ; 
-        $purchase->total= $request->total; 
+        $purchase = new Purchase();
 
-     //   $purchase->user_id=1 ;   
-      //  $purchase->supplier_id=1 ;   
+        //  $purchase->user_id= $request->user_id ;
+        $purchase->user_id = 1;
+        $purchase->supplier_id = $request->supplier_id;
+        $purchase->due = $request->due;
+        $purchase->discount = $request->discount;
+        $purchase->total = $request->total;
+
+        //   $purchase->user_id=1 ;   
+        //  $purchase->supplier_id=1 ;   
         // $purchase->due= 101 ;   
         // $purchase->discount= 121 ; 
         // $purchase->total= 120; 

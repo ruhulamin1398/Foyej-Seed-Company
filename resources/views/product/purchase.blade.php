@@ -229,34 +229,22 @@
             <input type=" text" name="discount" id="purchaseSubmitFormDiscount" hidden ">
             <input type=" text" name="total" id="purchaseSubmitFormTotal" hidden ">
             </form>
+            <!-- product add database link  -->
+            
+            <!-- submit form start  -->
+            <form action="{{route('purchases_details.store')}} " id="orderProductAddForm" method="POST">
+              @csrf
+
+            <input type=" text" name="purchase_id" id="orderProductAddPurchaseId"  hidden ">
+            <input type=" text" name="product_id" id="orderProductAddProductId" hidden ">
+            <input type=" text" name="price" id="orderProductAddPrice" hidden ">
+            <input type=" text" name="quantity" id="orderProductAddQuantity" hidden ">
+            <input type=" text" name="total" id="orderProductAddTotal" hidden ">
+            </form>
+
+          
 
 
-<!-- 
-            <form method="POST" action="{{ route('purchases.store') }} " id="purchaseSubmitForm">
-                    @csrf
-                    <div class="form-row a">
-                      <div class="col-auto">
-                        <input type="text" id="purchasePageAddSupplierFormName" name="name" placeholder="name" class="form-control mb-2">
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" id="purchasePageAddSupplierFormPhone" name="phone" class="form-control mb-2" hidden>
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" id="purchasePageAddSupplierFormAddress" name="address" placeholder="address" class="form-control mb-2">
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" id="purchasePageAddSupplierFormCompany" name="company" placeholder="company" class="form-control mb-2">
-                      </div>
-
-                      <div class="col-auto">
-                        <button type="button" id="purchasePageAddSupplierButton" class="btn btn-primary mt-3">done</button>
-                      </div>
-
-
-
-                  </form>  -->
-
-            <!-- submit form END  -->
 
 
 
