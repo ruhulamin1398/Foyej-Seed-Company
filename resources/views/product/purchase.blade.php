@@ -150,9 +150,9 @@
                     <form method="post">
 
 
-                      <input type="text" id="supplierViewLink" size="10" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
-                      <input type="text" id="supplierCheckLink" size="10" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
-                      <input type="text" name="phone" id="purchasePageSupplierPhoneField" ">
+                      <input type="text" id="supplierViewLink" size="5" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
+                      <input type="text" id="supplierCheckLink" size="5" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
+                      <input type="text" name="phone"  size="5" id="purchasePageSupplierPhoneField" ">
                     <input type=" number" name="efsd" hidden ">
                   </form>
                   </div>
@@ -214,13 +214,19 @@
             <div class="card-body">
               <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
               <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
-              <input type="text" id="purchasePaymentField">
+              <input type="text"size="5" id="purchasePaymentField">
               <div class="text-light font-weight-bold">Due : <span id="totalDue"></span> </div>
               <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
             </div>
 
             <!-- submit form start  -->
-            <form action="" method="post"></form>
+            <form action="{{ route('purchase.store') }}" id="purchaseSubmitForm" method="post">
+
+            <input type=" number" name="user_id" id="purchaseSubmitFormUserId" value="100" hidden ">
+            <input type=" number" name="supplier_id" id="purchaseSubmitFormUserId" hidden ">
+            <input type=" number" name="due" id="purchaseSubmitFormUserId" hidden ">
+            <input type=" number" name="discount" id="purchaseSubmitFormUserId" hidden ">
+            </form>
 
             <!-- submit form END  -->
 
