@@ -349,6 +349,7 @@ $(document).ready(function () {
 // submit Area Start 
 
 
+
 $("#purchasePaymentField").change(function(){
     console.log("paymnet input field");
     var due= parseInt(      $("#totalPrice").text() )- parseInt(      $("#purchasePaymentField").val() ) ;

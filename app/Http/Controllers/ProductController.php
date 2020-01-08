@@ -64,10 +64,9 @@ class ProductController extends Controller
 
         $product->save();
 
+        // return $product->id;
 
-              
-        return redirect(route('products.index'))->with('successMsg','Product Successfully inserted');
-
+        return redirect(route('products.index'))->with('successMsg', 'Product Successfully inserted');
     }
 
     /**
@@ -82,22 +81,21 @@ class ProductController extends Controller
     }
     public function apiShow(Request $request)
     {
-        $product= Product::find($request->id);
+        $product = Product::find($request->id);
         return $product;
     }
 
-    public function apiProducutCheck(Request $request){
-       
-       
-        $product= Product::find($request->id);
+    public function apiProducutCheck(Request $request)
+    {
+
+
+        $product = Product::find($request->id);
         // return $supplier;
-     
+
         if (is_null($product)) {
             return 0;
-        }
-        else
-        return 1;   
-      
+        } else
+            return 1;
     }
     /**
      * Show the form for editing the specified resource.
@@ -119,7 +117,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-            /////
+        /////
     }
 
     /**
@@ -131,32 +129,30 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::find($id)->delete();
-        return redirect(route('products.index'))->with('successMsg','Product Successfully Deleted');
- 
+        return redirect(route('products.index'))->with('successMsg', 'Product Successfully Deleted');
     }
 
 
     public function Productsupdate(Request $request)
     {
-      $product =  Product::find($request->id);
-    //  return $request;
+        $product =  Product::find($request->id);
+        //  return $request;
 
-    $product->name= $request->name;
-    $product->category_id= $request->category_id;
-    $product->product_type_id= $request->product_type_id;
-    $product->price= $request->price;
-    $product->low_limit= $request->low_limit;
-    
-    $product->cost = $request->cost;
-    
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->product_type_id = $request->product_type_id;
+        $product->price = $request->price;
+        $product->low_limit = $request->low_limit;
 
-    $product->weight = $request->weight;
-    $product->price_per_unit = (int) $request->price /  (int) $request->weight;
+        $product->cost = $request->cost;
 
-      $product->save();
 
-        return redirect(route('products.index'))->with('successMsg','Product Successfully updated');
- 
+        $product->weight = $request->weight;
+        $product->price_per_unit = (int) $request->price /  (int) $request->weight;
+
+        $product->save();
+
+        return redirect(route('products.index'))->with('successMsg', 'Product Successfully updated');
     }
 
 

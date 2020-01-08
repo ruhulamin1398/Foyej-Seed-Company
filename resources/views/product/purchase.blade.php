@@ -17,19 +17,19 @@
       <div class="card mb-4 shadow">
 
         <div class="card-header py-3 bg-dark  text-light ">
-        <nav class="navbar ">
-                <a class="navbar-brand">Purchase New</a>
-               <!-- <button class="btn btn-success purchaseProductCreateProduct" id="create-button">new Product</button> -->
-            </nav>
-                
+          <nav class="navbar ">
+            <a class="navbar-brand">Purchase New</a>
+            <!-- <button class="btn btn-success purchaseProductCreateProduct" id="create-button">new Product</button> -->
+          </nav>
+
         </div>
         <div class="card-body">
           <form id="purchaseProductInputForm">
 
             <div class="form-row align-items-center">
               <div class="col-auto">
-              <input type="text" id="productCheckLink" size="10" value="{{route('product_check_api')}} " class="form-control  mb-2" hidden>
-              <input type="text" id="productViewLink" size="10" value="{{route('product_view_api')}} " class="form-control  mb-2" hidden>
+                <input type="text" id="productCheckLink" size="10" value="{{route('product_check_api')}} " class="form-control  mb-2" hidden>
+                <input type="text" id="productViewLink" size="10" value="{{route('product_view_api')}} " class="form-control  mb-2" hidden>
               </div>
               <div class="col-auto">
                 <span class="text-dark  pl-2"> Product Id</span>
@@ -38,7 +38,7 @@
 
               <div class="col-auto">
                 <span class="text-dark  pl-2"> Product Name</span>
-                <input type="text" name="name" id="purchaseProductInputName" size="20" value="" class="form-control  mb-2"  disabled="true" >
+                <input type="text" name="name" id="purchaseProductInputName" size="20" value="" class="form-control  mb-2" disabled="true">
               </div>
               <div class="col-auto">
 
@@ -56,7 +56,7 @@
               <div class="col-auto">
 
                 <span class="text-dark pl-1"> Total</span>
-                <input type="text" name="total" id="purchaseProductInputTotal" size="10" value=0 class="form-control  mb-2 " disabled="true" >
+                <input type="text" name="total" id="purchaseProductInputTotal" size="10" value=0 class="form-control  mb-2 " disabled="true">
               </div>
 
 
@@ -69,9 +69,9 @@
 
           </form>
           <div id="purchaseProductError" class="text-danger "> Product Not Fount , Try again !!! </div>
-          
 
-          
+
+
         </div>
       </div>
 
@@ -116,7 +116,7 @@
                 </tr>
 
               </tfoot>
-              <tbody id="purchaseProductTableTbody" >
+              <tbody id="purchaseProductTableTbody">
               </tbody>
             </table>
 
@@ -150,9 +150,9 @@
                     <form method="post">
 
 
-                    <input type="text" id="supplierViewLink" size="10" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
-                    <input type="text" id="supplierCheckLink" size="10" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
-                      <input type="number" name="phone" id="purchasePageSupplierPhoneField" ">
+                      <input type="text" id="supplierViewLink" size="10" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
+                      <input type="text" id="supplierCheckLink" size="10" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
+                      <input type="text" name="phone" id="purchasePageSupplierPhoneField" ">
                     <input type=" number" name="efsd" hidden ">
                   </form>
                   </div>
@@ -200,48 +200,41 @@
           </div>
           <!-- Growth Card Example -->
         </div>
-      
-      
+
+
 
 
         <!-- sumit Area Start -->
 
 
-<div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-3 ">
-        <div class="card border-none   bg-dark  h-100 p-4">
-        
+        <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-3 ">
+          <div class="card border-none   bg-dark  h-100 p-4">
 
-          <div class="card-body">
-              <div class="font-weight-blod h3 text-light">Total:   <span id="totalPrice" >0</span>  </div>
-              <div class="font-weight-blod  text-light">Discount:   <span id="totalPriceDiscount" >0</span>  </div>
-            
-                
-              <input type="number"  id="purchasePaymentField" >       
-                   
-            
-<div class="text-light font-weight-bold" >Due : <span id="totalDue"></span> </div>
-              <button id="purchaseCompleteButton" class="btn btn-success" > Finish </button></div>
+
+            <div class="card-body">
+              <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
+              <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
+              <input type="text" id="purchasePaymentField">
+              <div class="text-light font-weight-bold">Due : <span id="totalDue"></span> </div>
+              <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
+            </div>
+
+            <!-- submit form start  -->
+            <form action="" method="post"></form>
+
+            <!-- submit form END  -->
+
+
+
+          </div>
         </div>
+
+        <!-- sumit Area End -->
+
+
+
       </div>
-
-<!-- sumit Area End -->
-
-+
-      
-      </div>
-<!-- supplier area End  -->
-
-
-
-
-
-
-
-
-
-
-
-
+      <!-- supplier area End  -->
 
 
     </div>
@@ -251,6 +244,6 @@
 
 
 
-  
+
 
   @endsection
