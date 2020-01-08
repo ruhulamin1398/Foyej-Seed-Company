@@ -6,8 +6,8 @@
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars text-light "></i>
           </button>
-
-          <span class="h2 title text-light" >Foyej Seed Company </span>
+          <a href="{{ route('index') }}">
+          <span class="h2 title text-light"  > Foyej Seed Company  </span></a>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

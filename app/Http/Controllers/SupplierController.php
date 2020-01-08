@@ -48,6 +48,11 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'phone' => 'required|unique:suppliers|max:11|min:11',
+            'name' => 'required:suppliers',
+        ]);
+    
        $supplier= new Supplier();
 
        $supplier-> name = $request->name;
@@ -112,8 +117,12 @@ class SupplierController extends Controller
          return redirect(route('suppliers.index'))->with('successMsg','Category Successfully Deleted');
     }
     public function suppliersupdate(Request $request){
-
        
+        $request->validate([
+            'phone' => 'required|unique:suppliers|max:11|min:11',
+            'name' => 'required:suppliers',
+        ]);
+
         $supplier = Supplier::find($request->id);
         
        $supplier-> name = $request->name;

@@ -70,7 +70,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
-    <!--customer  Collapse Menu -->
+    <!--supplier  Collapse Menu -->
     <li class="nav-item  ">
       <a class="nav-link p-3 " href="{{ route('suppliers.index') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>

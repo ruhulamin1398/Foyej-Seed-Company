@@ -47,6 +47,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required:categories',
+        ]);
        $category= new Category;
 
        $category-> name = $request->name;
@@ -105,7 +108,9 @@ class CategoryController extends Controller
          return redirect(route('categories.index'))->with('successMsg','Category Successfully Deleted');
     }
     public function catagoriesupdate(Request $request){
-
+        $request->validate([
+            'name' => 'required:categories',
+        ]);
        
         $category = Category::find($request->id);
         $category->name= $request->name;
