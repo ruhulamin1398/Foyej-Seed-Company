@@ -20,6 +20,7 @@ class CreatePurchasesTable extends Migration
             $table->unsignedBigInteger('supplier_id')->nullable();
             $table->unsignedBigInteger('due');
             $table->unsignedBigInteger('discount');
+            $table->unsignedBigInteger('total');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
