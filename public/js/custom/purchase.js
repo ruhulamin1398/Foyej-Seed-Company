@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
 
-
+    var user_id = 1;
+    var supplier_id;
+    
 
     // supplier Area Start 
 
@@ -21,6 +23,7 @@ $(document).ready(function () {
                 var link = $("#supplierViewLink").val().trim() + "?phone=" + $("#purchasePageSupplierPhoneField").val();
                 //     console.log(link);
                 $.get(link, function (data, status) {
+                    supplier_id = data.id;
 
                     $("#purchasePageSupplierName").text(data.name);
                     $("#purchasePageSupplierPhone").text(data.phone);
@@ -49,7 +52,7 @@ $(document).ready(function () {
             data: frm.serialize(),
             success: function (data) {
 
-                $.get("/api/supplier/" + phoneNumber, function (data, status) {
+                $.get("/api/supplier?phone="+phoneNumber, function (data, status) {
 
                     $("#purchasePageSupplierName").text(data.name);
                     $("#purchasePageSupplierPhone").text(data.phone);
@@ -82,26 +85,26 @@ $(document).ready(function () {
     //;/ product area start 
 
 
-   // $("body").on("click", "#purchaseProductTableEdit", function () {
+    // $("body").on("click", "#purchaseProductTableEdit", function () {
     //    console.log("clicked");
-        // var frm = $('#create-form');
-        // $.ajax({
-        //     type: frm.attr('method'),
-        //     url: frm.attr('action'),
-        //     data: frm.serialize(),
-        //     success: function (data) {
+    // var frm = $('#create-form');
+    // $.ajax({
+    //     type: frm.attr('method'),
+    //     url: frm.attr('action'),
+    //     data: frm.serialize(),
+    //     success: function (data) {
 
-        //         console.log('Submission was successful.');
-        //         console.log(data);
-        //     },
-        //     error: function (data) {
-        //         console.log('An error occurred.');
-        //         console.log(data);
-        //     },
-        // });
+    //         console.log('Submission was successful.');
+    //         console.log(data);
+    //     },
+    //     error: function (data) {
+    //         console.log('An error occurred.');
+    //         console.log(data);
+    //     },
+    // });
 
 
-  //  });
+    //  });
 
 
 
@@ -148,9 +151,9 @@ $(document).ready(function () {
 
             }
 
-            
 
-        purchaseProductInputSubmitButton();
+
+            purchaseProductInputSubmitButton();
 
         });
 
@@ -186,7 +189,7 @@ $(document).ready(function () {
         var quantity = $("#purchaseProductInputQuantity").val();
         $("#purchaseProductInputTotal").val(price * quantity);
 
-        
+
 
         purchaseProductInputSubmitButton();
     });
@@ -197,7 +200,7 @@ $(document).ready(function () {
         var quantity = $("#purchaseProductInputQuantity").val();
         $("#purchaseProductInputTotal").val(price * quantity);
 
-        
+
 
         purchaseProductInputSubmitButton();
 
@@ -222,19 +225,19 @@ $(document).ready(function () {
 
 
     function showTable() {
-        
-    var totalPaurchase=0;
-    var totalPaurchaseRow=0;
-    
-    totalPaurchase =   parseInt(totalPaurchase);
-    totalPaurchaseRow =   parseInt(totalPaurchaseRow);
+
+        var totalPaurchase = 0;
+        var totalPaurchaseRow = 0;
+
+        totalPaurchase = parseInt(totalPaurchase);
+        totalPaurchaseRow = parseInt(totalPaurchaseRow);
 
         var html = '';
         var i = 0;
         jQuery.each(PurchaseTableData, function (row) {
-         
+
             totalPaurchase += parseInt(PurchaseTableData[row].total.trim());
-            totalPaurchaseRow+=  parseInt(PurchaseTableData[row].quantity.trim()) *  parseInt(PurchaseTableData[row].price.trim())
+            totalPaurchaseRow += parseInt(PurchaseTableData[row].quantity.trim()) * parseInt(PurchaseTableData[row].price.trim())
             html += '<tr>'
             html += '<td>' + ++i + '</td>'
             html += '<td>' + PurchaseTableData[row].id + '</td>'
@@ -273,7 +276,7 @@ $(document).ready(function () {
         console.log(purchaseProductInputQuantity);
         console.log(purchaseProductInputTotal);
 
-        if (purchaseProductInputId > 0 && purchaseProductInputPrice > 0 && purchaseProductInputQuantity >0 && purchaseProductInputTotal>0 ) {
+        if (purchaseProductInputId > 0 && purchaseProductInputPrice > 0 && purchaseProductInputQuantity > 0 && purchaseProductInputTotal > 0) {
 
             $("#purchaseProductInputSubmit").attr("disabled", false);
 
@@ -323,7 +326,7 @@ $(document).ready(function () {
 
     $("body").on("click", "#purchaseProductTableDelete", function () {
         console.log("clicked");
-        
+
         $("#purchaseProductTableTbody").html("");
 
         // $(this).addClass('edit-item-trigger-clicked');
@@ -346,22 +349,55 @@ $(document).ready(function () {
 
 
     // Cart Area End Here 
-// submit Area Start 
+    // submit Area Start 
 
 
 
-$("#purchasePaymentField").change(function(){
-    console.log("paymnet input field");
-    var due= parseInt(      $("#totalPrice").text() )- parseInt(      $("#purchasePaymentField").val() ) ;
-    console.log("due "+due);
-    $("#totalDue").text(due);
-});
+    $("#purchasePaymentField").change(function () {
+        console.log("paymnet input field");
+        var due = parseInt($("#totalPrice").text()) - parseInt($("#purchasePaymentField").val());
+        console.log("due " + due);
+        $("#totalDue").text(due);
+    });
 
-$("#purchaseCompleteButton").click(function(){
+    $("#purchaseCompleteButton").click(function () {
+       var  due=$("#totalDue").text();
+       var discount=$("#totalPriceDiscount").text();
+       var total   =$("#totalPrice").text();
+
+        $("#purchaseSubmitFormUserId").val(user_id);
+        $("#purchaseSubmitFormSupplierId").val(supplier_id);
+        $("#purchaseSubmitFormDue").val(due);
+        $("#purchaseSubmitFormDiscount").val(discount);
+        $("#purchaseSubmitFormTotal").val(total);
+        console.log("user_id"+user_id);
+        console.log("supplier_id"+supplier_id);
+        console.log("due"+due);
+        console.log("discount"+discount);
 
 
-});
-// sybmit Area End 
+
+        var frm = $('#purchaseSubmitForm');
+        var act= frm.attr('action');
+        console.log("action "+act);
+        $.ajax({
+            type: frm.attr('method'),
+            url:act,
+            data: frm.serialize(),
+            success: function (data) {
+                console.log(' purchaseSubmitForm Submission was successful. and id is '+data);
+               
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('An error occurred.');
+                console.log(data);
+            },
+        });
+        
+
+    });
+    // sybmit Area End 
 
 
 
