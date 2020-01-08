@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/index', 'IndexController@index')->name('index');
+Route::get('/', 'IndexController@index')->name('index');
 
 Auth::routes();
 
@@ -48,7 +48,7 @@ Route::post('customersupdate', 'CustomerController@customersupdate')->name("cust
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/testrelation', 'UserController@index')->name('home');
-Route::view('/','table');
+Route::view('/table','table');
 Route::view('/bar','bar');
 
 
