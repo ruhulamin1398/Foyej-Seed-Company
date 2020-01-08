@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('product_type_id');
             $table->unsignedBigInteger('cost')->nullable();
+            $table->unsignedBigInteger('weight')->nullable();
+            $table->unsignedBigInteger('price_per_unit')->nullable();
             $table->unsignedBigInteger('price');
             $table->date('expire_date')->nullable();
             

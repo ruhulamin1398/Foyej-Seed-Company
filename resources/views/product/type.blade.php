@@ -7,7 +7,7 @@
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-    <div class="card mb-4 shadow">
+    <!-- <div class="card mb-4 shadow">
 
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Add New Product Type</h6>
@@ -49,7 +49,7 @@
 
             </form>
         </div>
-    </div>
+    </div> -->
 
 
 

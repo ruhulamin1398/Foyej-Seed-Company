@@ -209,13 +209,18 @@
 
 <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-3 ">
         <div class="card border-none   bg-dark  h-100 p-4">
+        
 
           <div class="card-body">
-            <div class="row no-gutters ">
-              <div class="font-weight-blod">Total:</div>
-            </div>
-          </div>
-          <!-- Growth Card Example -->
+              <div class="font-weight-blod h3 text-light">Total:   <span id="totalPrice" >0</span>  </div>
+              <div class="font-weight-blod  text-light">Discount:   <span id="totalPriceDiscount" >0</span>  </div>
+            
+                
+              <input type="number"  id="purchasePaymentField" >       
+                   
+            
+<div class="text-light font-weight-bold" >Due : <span id="totalDue"></span> </div>
+              <button id="purchaseCompleteButton" class="btn btn-success" > Finish </button></div>
         </div>
       </div>
 
@@ -247,74 +252,5 @@
 
 
   
-<!-- Create new product -->
-<div class="modal fade" id="create-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-dark" id="edit-modal-label ">Add Product</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="attachment-body-content">
-
-                <form method="POST" id="create-form" action="{{ route('products.store') }}">
-                    @csrf
-
-
-                    <div class="form-group">
-                        <label for="productName">Product Name</label>
-                        <input type="text" name="name" class="form-control" id="productName" placeholder="Enter product name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="catagory_id">Procuct Category</label>
-                        <select class="form-control form-control" name="category_id" id="catagory_id">
-                            <option value="0" selected="selected">Select Category </option>
-                            @foreach ($categories as $category)
-                            <option value="{{$category->id}}"> {{$category->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="product_type_id">Procuct Type</label>
-                        <select class="form-control form-control" name="product_type_id" id="product_type_id">
-
-                            <option value="0" selected="selected">Select Product Type</option>
-                            @foreach ($productTypes as $productType)
-                            <option value="{{$productType->id}}"> {{$productType->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <label for="price">Sell Price</label>
-                        <input type="number" name="price" class="form-control" id="price" placeholder="120">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lowLimit">Low Limit</label>
-                        <input type="number" name="low_limit" class="form-control" id="lowLimit" placeholder="Enter Lowest Limit">
-                    </div>
-
-
-                    <button type="button" class="btn btn-primary">Submit</button>
-
-
-
-                </form>
-
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-</div>
-<!-- /Create new product-->
 
   @endsection

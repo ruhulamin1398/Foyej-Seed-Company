@@ -31,6 +31,7 @@
                             <th>Category</th>
                             <th>Type</th>
                             <th>Cost</th>
+                            <th>Weight</th>
                             <th>Price</th>
                             <th>Stock</th>
                             <th>Sell</th>
@@ -46,6 +47,7 @@
                             <th>Category</th>
                             <th>Type</th>
                             <th>Cost</th>
+                            <th>Weight</th>
                             <th>Price</th>
                             <th>Stock</th>
                             <th>Sell</th>
@@ -65,6 +67,7 @@
                             <td id= "viewCategoryId">{{$product->category->name}}</td>
                             <td id= "viewProductTypeId">{{$product->product_type->name}}</td>
                             <td id= "viewCost">{{$product->cost}}</td>
+                            <td id= "viewWeight">{{$product->weight}}</td>
                             <td id= "viewPrice">{{$product->price}}</td>
                             <td id= "viewStock">{{$product->stock}}</td>
                             <td id= "viewSell">{{$product->sell}}</td>
@@ -159,11 +162,20 @@
                         </select>
                     </div>
 
+                    <div class="form-group">
+                    <label for="price">Weight</label>
+                    <input type="number" name="weight" class="form-control" id="weight" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="cost">Cost</label>
+                    <input type="number" name="cost" class="form-control" id="cost" placeholder="">
+                </div>
 
 
                     <div class="form-group">
                         <label for="price">Sell Price</label>
-                        <input type="number" name="price" class="form-control" id="price" placeholder="120">
+                        <input type="number" name="price" class="form-control" id="price" placeholder="">
                     </div>
 
                     <div class="form-group">
@@ -245,7 +257,16 @@
                     </div>
 
 
+                    <div class="form-group">
+                    <label for="editProductWeight">Weight</label>
+                    <input type="number" name="weight" class="form-control"  id="editProductWeight" placeholder="120">
+                </div>
 
+                <div class="form-group">
+                    <label for="editProductCost">Cost</label>
+                    <input type="number" name="cost" class="form-control" id="editProductCost" placeholder="">
+                </div>
+                
                     <div class="form-group">
                         <label for="editProductPrice">Sell Price</label>
                         <input type="number" name="price" class="form-control" id="editProductPrice" placeholder="120">

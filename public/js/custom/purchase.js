@@ -220,14 +220,21 @@ $(document).ready(function () {
 
     var PurchaseTableData = {};
 
- var totalPaurchase=0;
+
     function showTable() {
         
-        totalPaurchase=0;
+    var totalPaurchase=0;
+    var totalPaurchaseRow=0;
+    
+    totalPaurchase =   parseInt(totalPaurchase);
+    totalPaurchaseRow =   parseInt(totalPaurchaseRow);
 
         var html = '';
         var i = 0;
         jQuery.each(PurchaseTableData, function (row) {
+         
+            totalPaurchase += parseInt(PurchaseTableData[row].total.trim());
+            totalPaurchaseRow+=  parseInt(PurchaseTableData[row].quantity.trim()) *  parseInt(PurchaseTableData[row].price.trim())
             html += '<tr>'
             html += '<td>' + ++i + '</td>'
             html += '<td>' + PurchaseTableData[row].id + '</td>'
@@ -237,12 +244,12 @@ $(document).ready(function () {
             html += '<td>' + PurchaseTableData[row].total + '</td>'
             html += '<td>'
             html += '<button type="button" productId=' + PurchaseTableData[row].id + ' id="purchaseProductTableEdit" class="btn btn-success"> <i class="fa fa-edit" aria-hidden="false"> </i></button>'
-
             html += ' <button type="button" id="purchaseProductTableDelete" productId=' + PurchaseTableData[row].id + '  class="btn btn-danger" > <i class="fa fa-trash" aria-hidden="false"> </i></button>'
-
 
             html += '</td> </tr>';
             $("#purchaseProductTableTbody").html(html);
+            $("#totalPrice").text(totalPaurchase);
+            $("#totalPriceDiscount").text(totalPaurchaseRow - totalPaurchase);
         });
     }
 
@@ -338,11 +345,22 @@ $(document).ready(function () {
     });
 
 
-
-
-
     // Cart Area End Here 
+// submit Area Start 
 
+
+$("#purchasePaymentField").change(function(){
+    console.log("paymnet input field");
+    var due= parseInt(      $("#totalPrice").text() )- parseInt(      $("#purchasePaymentField").val() ) ;
+    console.log("due "+due);
+    $("#totalDue").text(due);
+});
+
+$("#purchaseCompleteButton").click(function(){
+
+
+});
+// sybmit Area End 
 
 
 

@@ -32,7 +32,9 @@ $(document).ready(function(){
         var viewName = row.children("#viewName").text();
         var viewCategoryId  = row.children("#viewCategoryId").text();
         var viewProductTypeId = row.children("#viewProductTypeId").text();
+        var viewWeight = row.children("#viewWeight").text();
         var viewPrice = row.children("#viewPrice").text();
+        var viewCost = row.children("#viewCost").text();
         var viewLowLimit = row.children("#viewLowLimit").text();
     
         // fill the data in the input fields
@@ -105,7 +107,9 @@ $(document).ready(function(){
 
 
   
-        $("#editProductPrice").val(viewPrice);
+          $("#editProductWeight").val(viewWeight);
+          $("#editProductPrice").val(viewPrice);
+          $("#editProductCost").val(viewCost);
         $("#editLowLimit").val(viewLowLimit);
     
       });

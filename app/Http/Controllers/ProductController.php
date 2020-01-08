@@ -52,9 +52,18 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->category_id = $request->category_id;
         $product->product_type_id = $request->product_type_id;
+        $product->cost = $request->cost;
         $product->price = $request->price;
         $product->low_limit = $request->low_limit;
+
+
+
+        $product->weight = $request->weight;
+        $product->price_per_unit = (int) $request->price /  (int) $request->weight;
+
+
         $product->save();
+
 
               
         return redirect(route('products.index'))->with('successMsg','Product Successfully inserted');
@@ -137,6 +146,13 @@ class ProductController extends Controller
     $product->product_type_id= $request->product_type_id;
     $product->price= $request->price;
     $product->low_limit= $request->low_limit;
+    
+    $product->cost = $request->cost;
+    
+
+    $product->weight = $request->weight;
+    $product->price_per_unit = (int) $request->price /  (int) $request->weight;
+
       $product->save();
 
         return redirect(route('products.index'))->with('successMsg','Product Successfully updated');
