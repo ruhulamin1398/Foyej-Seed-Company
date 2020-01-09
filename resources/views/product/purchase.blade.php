@@ -8,7 +8,7 @@
   <div class="row ">
 
     <!-- main body start -->
-    <div class="col-xl-9 col-lg-9 col-md-9   ">
+    <div class="col-xl-8 col-lg-8 col-md-8   ">
 
 
 
@@ -130,13 +130,13 @@
     </div>
 
     <!-- Left Sidebar Start -->
-    <div class="col-xl-3 col-lg-3 col-md-3   ">
+    <div class="col-xl-4 col-lg-4 col-md-4   ">
 
 
 
       <!-- Supplier Area Start -->
-      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-3 ">
-        <div class="card border-none   bg-dark  h-100 p-4">
+      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
+        <div class="card border-none   bg-dark  h-100 p-2">
           <h3 class="text-white">Supplier</h3>
           <div class="card-body">
             <div class="row no-gutters ">
@@ -146,14 +146,17 @@
                 @csrf
                 <div class="form-row ">
                   <div class="col-auto">
-                    <span class="text-light pl-2"> Supplier Phone</span>
                     <form method="post">
 
 
                       <input type="text" id="supplierViewLink" size="5" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
                       <input type="text" id="supplierCheckLink" size="5" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
-                      <input type="text" name="phone"  size="11" id="purchasePageSupplierPhoneField" ">
-                    <input type=" number" name="efsd" hidden ">
+
+                      <div class=" col-auto">
+                        <label class="text-light" for="purchasePageSupplierPhoneField">Supplier Phone</label>
+                        <input type="text" name="phone" id="purchasePageSupplierPhoneField" class="form-control mb-2">
+                      </div>
+                      <input type=" number" name="efsd" hidden ">
                   </form>
                   </div>
                 </div>
@@ -206,24 +209,39 @@
         <!-- sumit Area Start -->
 
 
-        <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-3 ">
-          <div class="card border-none   bg-dark  h-100 p-4">
+        <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
+          <div class="card border-none   bg-dark  h-100 p-1">
 
+    <div class="card-body">
+                                <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
+                                <div class="col-auto">
+                                    <label class="text-light" for="purchasePaymentField">Payment</label>
+                                    <input type="text" id="purchasePaymentField" class="form-control mb-2">
+                                </div>
 
-            <div class="card-body">
-              <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
-              <input type="text"size="6" id="purchasePaymentField">
-              <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
+                                <hr class="sidebar-divider bg-light m-1 p-0 ">
 
-              <div class="text-light font-weight-bold">Due : <span id="totalDue"></span> </div>
-              <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
-            </div>
+                                <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
+
+                                <div class="col-auto">
+                                    <label class="text-light" for="purchaseMoreDiscountField">More Discount</label>
+                                    <input type="text" id="purchaseMoreDiscountField" class="form-control mb-2">
+                                </div>
+
+                                <!-- Divider -->
+                                <hr class="sidebar-divider bg-light m-1 p-0 ">
+                                <div class="text-light font-weight-bold">Due : <span id="totalDue"></span> </div>
+
+                                <!-- Divider -->
+                                <hr class="sidebar-divider bg-light m-1 p-0 ">
+                                <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
+                            </div>
 
             <!-- submit form start  -->
             <form action="{{ route('purchases.store') }}" id="purchaseSubmitForm" method="POST">
               @csrf
 
-            <input type=" text" name="user_id" id="purchaseSubmitFormUserId"  hidden ">
+              <input type=" text" name="user_id" id="purchaseSubmitFormUserId" hidden ">
             <input type=" text" name="supplier_id" id="purchaseSubmitFormSupplierId" hidden ">
             <input type=" text" name="pay" id="purchaseSubmitFormPayment" hidden ">
             <input type=" text" name="due" id="purchaseSubmitFormDue" hidden ">
