@@ -39,7 +39,7 @@
     <!--sell -->
    
      <li class="nav-item  ">
-      <a class="nav-link p-3 " href="{{ route('customers.index') }}">
+      <a class="nav-link p-3 " href="{{ route('orders.index') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Sell</span></a>
     </li>

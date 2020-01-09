@@ -25,9 +25,10 @@ Route::get('/suppliers', 'SupplierController@apiIndex')->name('suppliers_api');
 Route::get('/supplier', 'SupplierController@ApiShow')->name('supplier_view_api');
 Route::get('supplierscheck', 'SupplierController@supplierscheck')->name("supplierscheck_api");
 
-
-
-
-
-
 Route::get('/customers', 'CustomerController@apiIndex')->name('customers_api');
+Route::get('/customer', 'CustomerController@ApiShow')->name('customer_view_api');
+Route::get('/customer_check', 'CustomerController@apiCustomerCheck')->name("customer_check_api");
+
+
+
+

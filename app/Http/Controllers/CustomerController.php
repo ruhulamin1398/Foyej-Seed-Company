@@ -27,8 +27,6 @@ class CustomerController extends Controller
     public function apiIndex()
     {
         $customers = Customer::all();
-
-
         return ($customers);
     }
 
@@ -73,6 +71,12 @@ class CustomerController extends Controller
     public function show(Customer $customer)
     {
         //
+    }
+    public function ApiShow(Request $request)
+    {
+     ///   return $request->phone;
+        $customer= Customer::where('phone',$request->phone)->first();
+        return $customer;
     }
 
     /**
@@ -130,4 +134,24 @@ class CustomerController extends Controller
 
         return redirect(route('customers.index'))->with('successMsg', 'Customer Successfully updated');
     }
+
+
+
+    public function apiCustomerCheck(Request $request){
+       
+        $phone=$request->phone;
+        /// return $phone;
+       
+       
+        $customer= Customer::where('phone',$phone)->first();
+        // return $supplier;
+     
+        if (is_null($customer)) {
+            return 0;
+        }
+        else
+        return 1;   
+      
+    }
+
 }

@@ -18,8 +18,9 @@ class CreatePurchasesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('supplier_id')->nullable();
-            $table->unsignedBigInteger('due');
-            $table->unsignedBigInteger('discount');
+            $table->unsignedBigInteger('pay')->nullable();
+            $table->unsignedBigInteger('due')->nullable();;
+            $table->unsignedBigInteger('discount')->nullable();;
             $table->unsignedBigInteger('total');
             $table->timestamps();
 
