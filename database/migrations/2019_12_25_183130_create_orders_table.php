@@ -20,9 +20,12 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('customer_id')->nullable();
             $table->unsignedBigInteger('total_discount')->nullable();;
-            $table->unsignedBigInteger('total_price');
+            $table->unsignedBigInteger('total');
             $table->unsignedBigInteger('total_profit')->nullable();;
             
+            $table->unsignedBigInteger('pay')->nullable();
+            
+            $table->unsignedBigInteger('discount')->nullable();;
             $table->unsignedBigInteger('payment')->nullable();;
             $table->unsignedBigInteger('due')->nullable();;
             $table->timestamps();
@@ -30,6 +33,9 @@ class CreateOrdersTable extends Migration
             
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('customer_id')->references('id')->on('customers');
+
+
+
 
           
         });

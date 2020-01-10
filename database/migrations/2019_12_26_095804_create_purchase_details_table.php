@@ -14,6 +14,7 @@ class CreatePurchaseDetailsTable extends Migration
     public function up()
     {
         Schema::create('purchase_details', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
             $table->unsignedBigInteger('purchase_id');
             $table->unsignedBigInteger('product_id');

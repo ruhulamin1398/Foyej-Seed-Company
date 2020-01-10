@@ -12,6 +12,7 @@ class CreatePurchasesTable extends Migration
      * @return void
      */
     public function up()
+    
     {
         Schema::create('purchases', function (Blueprint $table) {
 

@@ -21,10 +21,14 @@ class CreateOrderDetailsTable extends Migration
             $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('quantity');
             $table->unsignedBigInteger('total');
-            $table->unsignedBigInteger('profit');
+            $table->unsignedBigInteger('profit')->nullable();
             
             $table->foreign('order_id')->references('id')->on('orders');
             $table->foreign('product_id')->references('id')->on('products');
+
+            $table->timestamps();
+
+
 
         });
     }

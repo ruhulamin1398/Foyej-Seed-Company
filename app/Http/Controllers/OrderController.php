@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Product;
+use App\Product_type;
+use App\Category;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -14,7 +17,14 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view("product.order");
+        $products = Product::all();
+
+
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+
+        return view('product.order', compact('categories', 'productTypes', 'products'));
     }
 
     /**
@@ -35,7 +45,18 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $order = new Order();
+        $order->user_id = 1;
+        $order->customer_id = $request->customer_id;
+        $order->pay = $request->pay;
+        $order->due = $request->due;
+        $order->discount = $request->discount;
+        $order->total = $request->total;
+
+
+        $order->save();
+
+        return $order->id;
     }
 
     /**
@@ -82,4 +103,7 @@ class OrderController extends Controller
     {
         //
     }
+
+
+
 }

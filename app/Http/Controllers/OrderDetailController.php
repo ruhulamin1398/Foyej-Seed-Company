@@ -14,6 +14,7 @@ class OrderDetailController extends Controller
      */
     public function index()
     {
+
         //
     }
 
@@ -35,7 +36,16 @@ class OrderDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $order_detail= new Order_detail();
+        $order_detail->order_id= $request->order_id;
+        $order_detail->product_id= $request->product_id;
+        $order_detail->price= $request->price;
+        $order_detail->quantity= $request->quantity;
+        $order_detail->total= $request->total;
+
+        $order_detail->save();
+        return ($order_detail->id);
     }
 
     /**

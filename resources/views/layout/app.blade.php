@@ -78,7 +78,8 @@
     <script src="{{asset('js/custom/datatables.js')}}"></script>
     <script src="{{asset('js/custom/product.js')}}"></script>
     <script src="{{asset('js/custom/supplier.js')}}"></script>
-    <script src="{{asset('js/custom/purchase.js')}}"></script>
+    <!-- <script src="{{asset('js/custom/purchase.js')}}"></!--> -->
+    <script src="{{asset('js/custom/order.js')}}"></script>
 
 
 
