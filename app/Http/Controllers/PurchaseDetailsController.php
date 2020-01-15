@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Purchase_details;
 use Illuminate\Http\Request;
 
@@ -33,6 +34,16 @@ class PurchaseDetailsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+    public function addQuantity($id,$quantity){
+        $product= Product::find($id);
+        $product->stock +=$quantity;
+        $product->save();
+
+    }
+
     public function store(Request $request)
     {
         $purchase_details= new Purchase_details();
@@ -41,11 +52,15 @@ class PurchaseDetailsController extends Controller
         $purchase_details->price= $request->price;
         $purchase_details->quantity= $request->quantity;
         $purchase_details->total= $request->total;
-
         $purchase_details->save();
+
+
+        $this->addQuantity($request->product_id,$request->quantity);
+
         return ($purchase_details->id);
 
     }
+
 
     /**
      * Display the specified resource.

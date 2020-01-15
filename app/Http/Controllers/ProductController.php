@@ -91,6 +91,7 @@ class ProductController extends Controller
     {
         $product = Product::find($request->id);
         return $product;
+        
     }
 
     public function apiProducutCheck(Request $request)

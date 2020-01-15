@@ -29,7 +29,7 @@
           <a class="collapse-item" href="{{ route('products.create') }}">Add New</a>
           <a class="collapse-item" href="{{ route('categories.store') }}">Categories</a>
           <a class="collapse-item" href="{{ route('product_type.index') }}">Type</a>
-          <a class="collapse-item" href="{{ route('productsdrop') }}">Drop</a>
+          <a class="collapse-item" href=" {{ route('productsdrop') }}">Drop</a>
         </div>
       </div>
     </li>

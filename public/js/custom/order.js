@@ -109,7 +109,7 @@ $(document).ready(function () {
     
     
     
-    $("#orderProductError").hide();
+    $("#orderProductErrorId").hide();
     
     $("#orderProductInputId").change(function () {
     
@@ -119,15 +119,17 @@ $(document).ready(function () {
         $.get(checkLink, function (data) {
             if (data == 1) {
                 $(".orderProductCreateProduct").show();
-                $("#orderProductError").hide();
+                $("#orderProductErrorId").hide();
     
                 $.get(viewLink, function (data) {
                     console.log(data);
                     $("#orderProductInputName").val(data.name);
+                    
+                $("#orderProductInputPrice").val(data.price);
+                $("#orderProductInputQuantity").val(data.stock);
                 });
+
     
-                $("#orderProductInputPrice").val(0);
-                $("#orderProductInputQuantity").val(0);
                 $("#orderProductInputTotal").val(0);
     
                 $("#orderProductInputPrice").prop("disabled", false);
@@ -136,7 +138,7 @@ $(document).ready(function () {
     
             } else {
                 $(".orderProductCreateProduct").show();
-                $("#orderProductError").show();
+                $("#orderProductErrorId").show();
     
                 $("#orderProductInputName").val('');
                 $("#orderProductInputPrice").val(0);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order_detail;
+use App\Product;
 use Illuminate\Http\Request;
 
 class OrderDetailController extends Controller
@@ -36,18 +37,32 @@ class OrderDetailController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $order_detail= new Order_detail();
-        $order_detail->order_id= $request->order_id;
-        $order_detail->product_id= $request->product_id;
-        $order_detail->price= $request->price;
-        $order_detail->quantity= $request->quantity;
-        $order_detail->total= $request->total;
+
+        $order_detail = new Order_detail();
+        $order_detail->order_id = $request->order_id;
+        $order_detail->product_id = $request->product_id;
+        $order_detail->price = $request->price;
+        $order_detail->quantity = $request->quantity;
+        $order_detail->total = $request->total;
 
         $order_detail->save();
+
+        $this->removeQuantity($request->product_id, $request->quantity);
+
         return ($order_detail->id);
     }
 
+
+
+
+
+
+    public function removeQuantity($id, $quantity)
+    {
+        $product = Product::find($id);
+        $product->stock -= $quantity;
+        $product->save();
+    }
     /**
      * Display the specified resource.
      *

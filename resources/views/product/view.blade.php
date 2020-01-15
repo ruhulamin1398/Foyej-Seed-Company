@@ -58,21 +58,21 @@
 
                     </tfoot>
                     <tbody>
- <?php $id=1 ?>
+                        <?php $id = 1 ?>
                         @foreach ($products as $product)
                         <?php $id = $product->id; ?>
                         <tr class="data-row">
                             <td class="iteration">{{$id}}</td>
-                            <td id= "viewName">{{$product->name}}</td>
-                            <td id= "viewCategoryId">{{$product->category->name}}</td>
-                            <td id= "viewProductTypeId">{{$product->product_type->name}}</td>
-                            <td id= "viewCost">{{$product->cost}}</td>
-                            <td id= "viewWeight">{{$product->weight}}</td>
-                            <td id= "viewPrice">{{$product->price}}</td>
-                            <td id= "viewStock">{{$product->stock}}</td>
-                            <td id= "viewSell">{{$product->sell}}</td>
-                            <td id= "viewLowLimit">{{$product->low_limit}}</td>
-                            <td id= "viewexpiredate">{{$product->expire_date}}</td>
+                            <td id="viewName">{{$product->name}}</td>
+                            <td id="viewCategoryId">{{$product->category->name}}</td>
+                            <td id="viewProductTypeId">{{$product->product_type->name}}</td>
+                            <td id="viewCost">{{$product->cost}}</td>
+                            <td id="viewWeight">{{$product->weight}}</td>
+                            <td id="viewPrice">{{$product->price}}</td>
+                            <td id="viewStock">{{$product->stock}}</td>
+                            <td id="viewSell">{{$product->sell}}</td>
+                            <td id="viewLowLimit">{{$product->low_limit}}</td>
+                            <td id="viewexpiredate">{{$product->expire_date}}</td>
 
 
 
@@ -85,7 +85,7 @@
                                     {{ method_field("delete") }}
                                 </form>
 
-                            
+
 
 
 
@@ -163,14 +163,14 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="price">Weight</label>
-                    <input type="number" name="weight" class="form-control" id="weight" placeholder="">
-                </div>
+                        <label for="price">Weight</label>
+                        <input type="number" name="weight" class="form-control" id="weight" placeholder="">
+                    </div>
 
-                <div class="form-group">
-                    <label for="cost">Cost</label>
-                    <input type="number" name="cost" class="form-control" id="cost" placeholder="">
-                </div>
+                    <div class="form-group">
+                        <label for="cost">Cost</label>
+                        <input type="number" name="cost" class="form-control" id="cost" placeholder="">
+                    </div>
 
 
                     <div class="form-group">
@@ -216,18 +216,18 @@
             <div class="modal-body" id="attachment-body-content">
 
                 <form method="POST" id="create-form" action="{{ route('productsupdate' ) }}">
-               
+
                     @csrf
 
 
                     <div class="form-group">
                         <label for="editProductId2">Id</label>
-                        <input type="text" class="form-control" id="editProductId2"  disabled>
+                        <input type="text" class="form-control" id="editProductId2" disabled>
                     </div>
 
                     <div class="form-group">
-                      
-                        <input type="text" name="id" class="form-control" id="editProductId" placeholder="Enter product name"  hidden  >
+
+                        <input type="text" name="id" class="form-control" id="editProductId" placeholder="Enter product name" hidden>
                     </div>
 
                     <div class="form-group">
@@ -258,15 +258,15 @@
 
 
                     <div class="form-group">
-                    <label for="editProductWeight">Weight</label>
-                    <input type="number" name="weight" class="form-control"  id="editProductWeight" placeholder="120">
-                </div>
+                        <label for="editProductWeight">Weight</label>
+                        <input type="number" name="weight" class="form-control" id="editProductWeight" placeholder="120">
+                    </div>
 
-                <div class="form-group">
-                    <label for="editProductCost">Cost</label>
-                    <input type="number" name="cost" class="form-control" id="editProductCost" placeholder="">
-                </div>
-                
+                    <div class="form-group">
+                        <label for="editProductCost">Cost</label>
+                        <input type="number" name="cost" class="form-control" id="editProductCost" placeholder="">
+                    </div>
+
                     <div class="form-group">
                         <label for="editProductPrice">Sell Price</label>
                         <input type="number" name="price" class="form-control" id="editProductPrice" placeholder="120">

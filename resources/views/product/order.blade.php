@@ -38,6 +38,8 @@
               <div class="col-auto">
                 <span class="text-dark  pl-2"> Product Id</span>
                 <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2">
+                <div id="orderProductErrorId" class="text-danger "> Product Not Fount !!! </div>
+               
               </div>
 
               <div class="col-auto">
@@ -72,7 +74,7 @@
             </div>
 
           </form>
-          <div id="orderProductError" class="text-danger "> Product Not Fount , Try again !!! </div>
+       
 
 
 
