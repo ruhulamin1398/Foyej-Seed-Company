@@ -25,7 +25,7 @@ class PurchaseDetailsController extends Controller
      */
     public function create()
     {
-   /////;
+        /////;
     }
 
     /**
@@ -37,40 +37,39 @@ class PurchaseDetailsController extends Controller
 
 
 
-    public function addQuantity($id,$quantity){
-        $product= Product::find($id);
-        $product->stock +=$quantity;
+    public function addQuantity($id, $quantity)
+    {
+        $product = Product::find($id);
+        $product->stock += $quantity;
         $product->save();
-
     }
 
 
-    public function updateCost($id,$quantity , $cost){
-        
-        $newCost= $cost/$quantity;
-        $product= Product::find($id);
-        $product->cost = $newCost;
-        $product->price_per_unit = $newCost/$product->weight;
-        $product->save();
+    public function updateCost($id, $quantity, $cost)
+    {
 
+        $newCost = $cost / $quantity;
+        $product = Product::find($id);
+         $product->cost = $newCost;
+
+        
+        $product->save();
     }
 
     public function store(Request $request)
     {
-        $purchase_details= new Purchase_details();
-        $purchase_details->purchase_id= $request->purchase_id;
-        $purchase_details->product_id= $request->product_id;
-        $purchase_details->price= $request->price;
-        $purchase_details->quantity= $request->quantity;
-        $purchase_details->total= $request->total;
+        $purchase_details = new Purchase_details();
+        $purchase_details->purchase_id = $request->purchase_id;
+        $purchase_details->product_id = $request->product_id;
+        $purchase_details->price = $request->price;
+        $purchase_details->quantity = $request->quantity;
+        $purchase_details->total = $request->total;
         $purchase_details->save();
 
-        $this->addQuantity($request->product_id,$request->quantity);
-        $this->updateCost($request->product_id,$request->quantity,$request->total );
+        $this->addQuantity($request->product_id, $request->quantity);
+        $this->updateCost($request->product_id, $request->quantity, $request->total);
 
         return ($purchase_details->id);
-        
-
     }
 
 

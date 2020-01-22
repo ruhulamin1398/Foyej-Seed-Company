@@ -450,7 +450,7 @@
         </div>
 
         <div id="footer">
-            <p>Software Developed and maintenance By <strong> AbasasIt Farm </strong> @ 01840000408</p>
+            <p>Software Developed and maintenance By <strong> Abasas It </strong> @ 01840000408</p>
         </div>
     </div>
 

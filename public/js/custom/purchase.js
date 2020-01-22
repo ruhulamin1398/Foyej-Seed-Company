@@ -481,7 +481,7 @@ $(document).ready(function () {
                     console.log("Row Start");
                     jQuery.each(purchaseTableData, function (row) {
                         
-                      console.log(purchaseTableData);
+                     /// console.log(purchaseTableData);
 
                         $("#orderProductAddPurchaseId").val(data);
                         $("#orderProductAddProductId").val(purchaseTableData[row].id);

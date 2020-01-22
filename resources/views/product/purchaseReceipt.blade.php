@@ -142,8 +142,8 @@
         }
 
         body {
-            height: 840px;
-            width: 592px;
+            /* height: 840px;
+            width: 592px; */
             margin: auto;
             font-family: 'Open Sans', sans-serif;
             font-size: 12px
@@ -238,7 +238,7 @@
         }
 
         #items>table th {
-            font-weight: 400;
+            font-weight: 800;
             padding: 1px 4px
         }
 
@@ -391,10 +391,10 @@
             <table>
                 <tr>
                     <th colspan="1">#</th>
-                    <th >ID</th>
-                    <th colspan="2">Name</th>
-                    <th>Weight</th>
-                    <th>Quentity</th>
+          
+                    <th colspan="3">Details</th>
+                   
+                    <th colspan="2" >Quantity  </th>
                     <th>Price</th>
                     <th>Amount</th>
                 </tr>
@@ -402,11 +402,35 @@
                 @foreach( $purchase->products as $product)
                 <tr>
                     <td colspan="1">{{$i++}}</td>
-                    <td >{{$product->product_id}}</td>
-                    <td colspan="2"> {{$product->product_detils->name}} </td>
-                    <td>{{$product->product_detils->weight}}</td>
-                    <td>{{$product->quantity}}</td>
-                    <td>{{$product->price}}</td>
+
+                    <td colspan="3"> 
+                        {{$product->product_detils->name}}
+                        @if($product->product_detils->product_type_id ==2)
+                        {{ " - ". $product->product_detils->weight ."gm"}} 
+                     
+
+                        @endif
+                    
+                    </td>
+                    
+                    <td colspan="2">{{$product->quantity}}
+                    @if($product->product_detils->product_type_id ==1)
+                        {{ "gm"}} 
+                        @else
+                        {{ "pcs"}} 
+                        @endif
+
+
+                    </td>
+                    <td>
+
+                    @if($product->product_detils->product_type_id ==1)
+                    {{$product->total}}
+                        @else
+                        {{$product->price}} 
+                        @endif
+
+                    </td>
                     <td>{{$product->total}}</td>
                 </tr>
                 @endforeach
@@ -450,7 +474,7 @@
         </div>
 
         <div id="footer">
-            <p>Software Developed and maintenance By <strong> AbasasIt Farm </strong> @ 01840000408</p>
+            <p>Software Developed and maintenance By <strong> Abasas It </strong> @ 01840000408</p>
         </div>
     </div>
 
