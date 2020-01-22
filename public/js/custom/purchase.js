@@ -89,7 +89,7 @@ $(document).ready(function () {
                 $.get(link, function (data, status) {
                     supplier_previous_due=data.due;
                 
-    
+                    supplier_id= data.id;
                     $("#purchasePageSupplierName").text(data.name);
                     $("#purchasePageSupplierPhone").text(data.phone);
                     $("#purchasePageSupplieCompany").text(data.company);
