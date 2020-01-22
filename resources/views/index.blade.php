@@ -139,7 +139,7 @@
               <div class="col-xl-4 col-md-6 mb-4  text-center  ">
                 <div class="card border-none  h-100 p-4">
                   <div class="card-img-top ">
-                  <a  href="{{ route('purchases.index') }}"> <i class="fas fa-shopping-cart fa-2x  text-info "></i></a>
+                  <a  href="{{ route('purchases.create') }}"> <i class="fas fa-shopping-cart fa-2x  text-info "></i></a>
                   </div>
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">

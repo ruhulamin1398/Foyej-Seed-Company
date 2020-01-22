@@ -308,7 +308,7 @@
                   <div class="modal-body" id="attachment-body-content">
 
 
-                    <button class="btn btn-success text-light"> <a href="{{route('purchases-receipt.index')}}" id="printInvoice"> Print Invoice </a> </button>
+                    <button class="btn btn-success text-white"> <a href="{{route('purchases-receipt-show',[0])}}" id="printInvoice"> Print Invoice </a> </button>
 
                   </div>
 

@@ -473,7 +473,7 @@ $(document).ready(function () {
                     console.log(' purchaseSubmitForm Submission was successful. and id is ' + data);
 
                     var invoiceLink= $("#printInvoice").attr('href');
-                    $("#printInvoice").attr('href',invoiceLink+'/'+data);
+                    $("#printInvoice").attr('href',invoiceLink+data);
 
 
                     /////////////////////////////////// saving 

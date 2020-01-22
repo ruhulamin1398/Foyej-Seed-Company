@@ -17,15 +17,7 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-
-        $products = Product::all();
-
-
-        $categories = Category::all();
-        $productTypes = Product_type::all();
-
-
-        return view('product.purchase', compact('categories', 'productTypes', 'products'));
+/////
     }
 
     /**
@@ -35,7 +27,12 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        //
+        
+        $products = Product::all();
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+        return view('product.purchase', compact('categories', 'productTypes', 'products'));
     }
 
     /**

@@ -15,7 +15,10 @@ class PurchaseReceiptController extends Controller
      */
     public function index()
     {
-        return  view('product.purchaseReceipt');
+        $purchases =  Purchase::orderBy('created_at', 'desc')->get();
+
+        //return $purchases;
+        return  view('product.purchaseList' , compact("purchases"));
     }
 
     /**
@@ -25,7 +28,7 @@ class PurchaseReceiptController extends Controller
      */
     public function create()
     {
-        //
+      
     }
 
     /**
@@ -45,7 +48,15 @@ class PurchaseReceiptController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Purchase $purchases_receipt)
+    {
+        
+        $purchase= Purchase::find($purchases_receipt);
+        //  return $purchase->supplier;
+        return  view('product.purchaseReceipt', compact('purchase'));
+    }
+
+    public function showPurchase($id)
     {
         
         $purchase= Purchase::find($id);

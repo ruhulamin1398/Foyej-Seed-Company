@@ -374,13 +374,13 @@
                 <p style="padding: 3px;" >Date : {{ $purchase->created_at->format('M d Y')}}  </p>
                 <p style="padding: 3px;" >Due :{{ $purchase->supplier->due }}</p>
                 </p>
-            </div>
+            </div> 
             <div id="to">
                 <p>
                     <div style="padding: 3px; font-weight:bold ; text-align:left">Supplier:</div>
-                    <div style="padding: 3px; font-weight:bold ; text-align:left">Ruhul Amin</div>
-                    <div style="padding: 3px; text-align:left " >01840000408</div>
-                    <div style="padding: 3px; text-align:left " >Tilagor Sylhet</div>
+                    <div style="padding: 3px; font-weight:bold ; text-align:left">{{$purchase->supplier->name}}</div>
+                    <div style="padding: 3px; text-align:left " >{{$purchase->supplier->phone}}</div>
+                    <div style="padding: 3px; text-align:left " >{{$purchase->supplier->address}}</div>
                    
                 </p>
             </div>
@@ -455,7 +455,7 @@
                     </tr>
                     <tr>
                         <td>Previous Due</td>
-                        <td>  {{ $purchase->supplier->due - $purchase->due}} </td>
+                        <td>  {{ $purchase->pre_due}} </td>
                     </tr>
                     <tr>
                         <td>Total </td>

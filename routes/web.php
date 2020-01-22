@@ -34,6 +34,7 @@ Route::resource('purchases', 'PurchaseController');
 Route::resource('purchases_details', 'PurchaseDetailsController');
 
 Route::resource('purchases-receipt', 'PurchaseReceiptController');
+Route::get('purchases-receipt-show/{id}', 'PurchaseReceiptController@showPurchase')->name('purchases-receipt-show');
 
 
 Route::resource('orders', 'OrderController');
