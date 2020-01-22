@@ -67,6 +67,7 @@ class RoleTableSeeder extends Seeder
         ]);
 
         DB::table('categories')->insert([
+            ['name' => 'no_category', 'description' => 'Not add in any category'],
             ['name' => 'stricer', 'description' => 'just a sign'],
             ['name' => 'complete', 'description' => 'now ready for sele'],
 

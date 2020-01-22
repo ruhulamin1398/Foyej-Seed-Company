@@ -34,6 +34,8 @@
 
 
 
+@include('layout.form-link')
+
     @include('layout.nav')
 
     <div style="margin :20px 50px;">

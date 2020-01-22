@@ -12,8 +12,6 @@
 
 
 
-
-
       <div class="card mb-4 shadow">
 
         <div class="card-header py-3 bg-dark  text-light ">
@@ -27,10 +25,6 @@
           <form id="purchaseProductInputForm">
 
             <div class="form-row align-items-center">
-              <div class="col-auto">
-                <input type="text" id="productCheckLink" size="10" value="{{route('product_check_api')}} " class="form-control  mb-2" hidden>
-                <input type="text" id="productViewLink" size="10" value="{{route('product_view_api')}} " class="form-control  mb-2" hidden>
-              </div>
               <div class="col-auto">
                 <span class="text-dark  pl-2"> Product Id</span>
                 <input type="text" name="product_id" id="purchaseProductInputId" size="10" value="" class="form-control  mb-2">
@@ -149,12 +143,10 @@
                     <form method="post">
 
 
-                      <input type="text" id="supplierViewLink" size="5" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
-                      <input type="text" id="supplierCheckLink" size="5" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
-
                       <div class=" col-auto">
                         <label class="text-light" for="purchasePageSupplierPhoneField">Supplier Phone</label>
                         <input type="text" name="phone" id="purchasePageSupplierPhoneField" class="form-control mb-2">
+                        <div class="text-danger text-small" id="purchasePageSupplierPhoneFieldLength">Enter a Valid Phone Number</div>
                       </div>
                       <input type=" number" name="efsd" hidden ">
                   </form>
@@ -212,30 +204,30 @@
         <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
           <div class="card border-none   bg-dark  h-100 p-1">
 
-    <div class="card-body">
-                                <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
-                                <div class="col-auto">
-                                    <label class="text-light" for="purchasePaymentField">Payment</label>
-                                    <input type="text" id="purchasePaymentField" class="form-control mb-2">
-                                </div>
+            <div class="card-body">
+              <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
+              <div class="col-auto">
+                <label class="text-light" for="purchasePaymentField">Payment</label>
+                <input type="text" id="purchasePaymentField" class="form-control mb-2" value="0" required>
+              </div>
 
-                                <hr class="sidebar-divider bg-light m-1 p-0 ">
+              <hr class="sidebar-divider bg-light m-1 p-0 ">
 
-                                <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
+              <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
 
-                                <div class="col-auto">
-                                    <label class="text-light" for="purchaseMoreDiscountField">More Discount</label>
-                                    <input type="text" id="purchaseMoreDiscountField" class="form-control mb-2">
-                                </div>
+              <div class="col-auto">
+                <label class="text-light" for="purchaseMoreDiscountField">More Discount</label>
+                <input type="text" id="purchaseMoreDiscountField" value="0" class="form-control mb-2" required>
+              </div>
 
-                                <!-- Divider -->
-                                <hr class="sidebar-divider bg-light m-1 p-0 ">
-                                <div class="text-light font-weight-bold">Due : <span id="totalDue"></span> </div>
+              <!-- Divider -->
+              <hr class="sidebar-divider bg-light m-1 p-0 ">
+              <div class="text-light font-weight-bold">Due : <span id="totalDue">0</span> </div>
 
-                                <!-- Divider -->
-                                <hr class="sidebar-divider bg-light m-1 p-0 ">
-                                <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
-                            </div>
+              <!-- Divider -->
+              <hr class="sidebar-divider bg-light m-1 p-0 ">
+              <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
+            </div>
 
             <!-- submit form start  -->
             <form action="{{ route('purchases.store') }}" id="purchaseSubmitForm" method="POST">
@@ -245,16 +237,18 @@
             <input type=" text" name="supplier_id" id="purchaseSubmitFormSupplierId" hidden ">
             <input type=" text" name="pay" id="purchaseSubmitFormPayment" hidden ">
             <input type=" text" name="due" id="purchaseSubmitFormDue" hidden ">
+            <input type=" text" name="pre_due" id="purchaseSubmitFormPreDue" hidden ">
+            
             <input type=" text" name="discount" id="purchaseSubmitFormDiscount" hidden ">
             <input type=" text" name="total" id="purchaseSubmitFormTotal" hidden ">
             </form>
             <!-- product add database link  -->
             
             <!-- submit form start  -->
-            <form action="{{route('purchases_details.store')}} " id="orderProductAddForm" method="POST">
+            <form action=" {{route('purchases_details.store')}} " id=" orderProductAddForm" method="POST">
               @csrf
 
-            <input type=" text" name="purchase_id" id="orderProductAddPurchaseId"  hidden ">
+              <input type=" text" name="purchase_id" id="orderProductAddPurchaseId" hidden ">
             <input type=" text" name="product_id" id="orderProductAddProductId" hidden ">
             <input type=" text" name="price" id="orderProductAddPrice" hidden ">
             <input type=" text" name="quantity" id="orderProductAddQuantity" hidden ">
@@ -286,5 +280,29 @@
 
 
 
+
+
+
+<!-- Create new product -->
+<div class="modal fade" id="Print-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="edit-modal-label ">Purchase Completed </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="attachment-body-content">
+
+
+            <button   class="btn btn-success" > <a href="{{route('purchases-receipt.index')}}" id="printInvoice" > Print Invoice </a> </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- /Create new product-->
 
   @endsection

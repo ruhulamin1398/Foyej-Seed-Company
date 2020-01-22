@@ -92,12 +92,12 @@
                             <td class="  word-break name">{{$productTypes ->name}}</td>
                             <td class=" word-break description ">{{$productTypes ->description}}</td>
 
-                            <td>{{'121'}}</td>
+                            <td>{{$productTypes ->products->count()}}</td>
 
 
                             <td class="align-middle">
                                 <button type="button" class="btn btn-success" id="edit-item" data-item-id={{$id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
-
+<!-- 
 
                                 <form method="POST" action="{{ route('product_type.destroy',  $productTypes ->id )}} " id="delete-form-{{ $productTypes ->id }}" style="display:none; ">
                                     {{csrf_field() }}
@@ -117,7 +117,7 @@
                                     <i class="fa fa-trash" aria-hidden="false">
 
                                     </i>
-                                </button>
+                                </button> -->
 
 
 

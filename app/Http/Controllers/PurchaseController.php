@@ -54,6 +54,8 @@ class PurchaseController extends Controller
         $purchase->supplier_id = $request->supplier_id;
         $purchase->pay = $request->pay;
         $purchase->due = $request->due;
+        $purchase->pre_due = $request->pre_due;
+        
         $purchase->discount = $request->discount;
         $purchase->total = $request->total;
 

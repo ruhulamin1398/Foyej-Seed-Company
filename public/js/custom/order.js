@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log("page Ready");
 
 
     var user_id;
@@ -52,7 +53,9 @@ $(document).ready(function () {
             data: frm.serialize(),
             success: function (data) {
     
-                $.get("/api/customer?phone=" + phoneNumber, function (data, status) {
+                var link = $("#customerViewLink").val().trim() + "?phone=" + $("#orderPageCustomerPhoneField").val();
+                //     console.log(link);
+                $.get(link, function (data, status) {
     
                     $("#orderPageCustomerName").text(data.name);
                     $("#orderPageCustomerPhone").text(data.phone);
@@ -66,7 +69,7 @@ $(document).ready(function () {
                 console.log('Submission was successful.');
                 $("#orderPageAddCustomerError").hide();
     
-                console.log(data);
+            //    console.log(data);
             },
             error: function (data) {
                 console.log('An error occurred.');
@@ -122,7 +125,7 @@ $(document).ready(function () {
                 $("#orderProductErrorId").hide();
     
                 $.get(viewLink, function (data) {
-                    console.log(data);
+                   //   console.log(data);
                     $("#orderProductInputName").val(data.name);
                     
                 $("#orderProductInputPrice").val(data.price);

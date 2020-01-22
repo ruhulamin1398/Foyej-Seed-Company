@@ -67,7 +67,7 @@ class ProductController extends Controller
 
 
         $product->weight = $request->weight;
-        $product->price_per_unit = (int) $request->price /  (int) $request->weight;
+        $product->price_per_unit =  $request->price /   $request->weight;
 
 
         $product->save();
@@ -169,7 +169,7 @@ class ProductController extends Controller
 
 
         $product->weight = $request->weight;
-        $product->price_per_unit = (int) $request->price /  (int) $request->weight;
+        $product->price_per_unit =  $request->price /  $request->weight;
 
         $product->save();
 

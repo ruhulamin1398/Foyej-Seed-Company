@@ -23,6 +23,8 @@ class CategoryController extends Controller
 
     public function apiIndex()
     {
+        
+   
         $categories= Category::all();
         
        

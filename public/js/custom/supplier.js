@@ -15,7 +15,6 @@ $(document).ready(function(){
       $('#supplier-edit-modal').on('show.bs.modal', function() {
         var el = $(".edit-item-trigger-clicked"); // See how its usefull right here? 
         var row = el.closest(".data-row");
-    
         // get the data
         var id = el.val();
         var supplierName = row.children("#supplierName").text();

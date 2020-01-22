@@ -27,7 +27,8 @@ class CreateOrdersTable extends Migration
             
             $table->unsignedBigInteger('discount')->nullable();;
             $table->unsignedBigInteger('payment')->nullable();;
-            $table->unsignedBigInteger('due')->nullable();;
+            $table->bigInteger('due')->default(0);;
+            $table->bigInteger('pre_due')->default(0);
             $table->timestamps();
 
             

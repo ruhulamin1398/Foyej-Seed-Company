@@ -151,5 +151,27 @@ class SupplierController extends Controller
         return 1;   
       
     }
+    public function suppliersDue(Request $request){
+// return $request;
+        $supplier= Supplier::find($request->id);
+        $supplier->due += $request->due;
+        $supplier->save();  
+        return $supplier->due;
+
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

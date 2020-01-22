@@ -33,12 +33,14 @@ Route::get('productsdrop', 'ProductController@productsdrop')->name("productsdrop
 Route::resource('purchases', 'PurchaseController');
 Route::resource('purchases_details', 'PurchaseDetailsController');
 
+Route::resource('purchases-receipt', 'PurchaseReceiptController');
+
+
 Route::resource('orders', 'OrderController');
 Route::resource('orders_details', 'OrderDetailController');
-
-
-
 Route::resource('orders', 'OrderController');
+
+Route::resource('invoices', 'InvoiceController');
 
 
 Route::resource('suppliers', 'SupplierController');

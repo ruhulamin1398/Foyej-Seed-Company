@@ -44,6 +44,17 @@ class PurchaseDetailsController extends Controller
 
     }
 
+
+    public function updateCost($id,$quantity , $cost){
+        
+        $newCost= $cost/$quantity;
+        $product= Product::find($id);
+        $product->cost = $newCost;
+        $product->price_per_unit = $newCost/$product->weight;
+        $product->save();
+
+    }
+
     public function store(Request $request)
     {
         $purchase_details= new Purchase_details();
@@ -57,7 +68,10 @@ class PurchaseDetailsController extends Controller
 
         $this->addQuantity($request->product_id,$request->quantity);
 
+        $this->updateCost($request->product_id,$request->quantity,$request->total );
+
         return ($purchase_details->id);
+        
 
     }
 

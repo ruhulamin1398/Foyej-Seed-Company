@@ -20,7 +20,7 @@ class CreatePurchaseDetailsTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('quantity');
-            $table->unsignedBigInteger('total');
+            $table->bigInteger('total');
             
             $table->timestamps();
             

@@ -27,13 +27,13 @@
 
                 <div class="form-group">
                     <label for="productName">Product Name</label>
-                    <input type="text" name="name" class="form-control" id="productName" placeholder="Enter product name">
+                    <input type="text" name="name" class="form-control" id="productName" placeholder="Enter product name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="catagory_id">Procuct Category</label>
-                    <select class="form-control form-control" name="category_id" id="catagory_id">
-                        <option value="0" selected="selected">Select Category </option>
+                    <select class="form-control form-control" name="category_id" id="catagory_id" required>
+                        <option value="1" selected="selected">Select Category </option>
                         @foreach ($categories as $category)
                         <option value="{{$category->id}}"> {{$category->name}}</option>
                         @endforeach
@@ -42,9 +42,9 @@
 
                 <div class="form-group">
                     <label for="product_type_id">Procuct Type</label>
-                    <select class="form-control form-control" name="product_type_id" id="product_type_id">
+                    <select class="form-control form-control" name="product_type_id" id="product_type_id" required>
 
-                        <option value="0" selected="selected">Select Product Type</option>
+                        <option value="1" selected="selected">Select Product Type</option>
                         @foreach ($productTypes as $productType)
                         <option value="{{$productType->id}}"> {{$productType->name}}</option>
                         @endforeach

@@ -22,7 +22,7 @@ class Order_detail extends Model
     }
 
     public function product_detils(){
-        return $this->hasOne('App\Product');
+        return $this->hasOne('App\Product','id', 'product_id');
     }
   
 }

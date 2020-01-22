@@ -20,7 +20,7 @@ class CreateCustomersTable extends Migration
             $table->string('name')->nullable();
             $table->string('address')->nullable();
             $table->unsignedBigInteger('customer_type_id')->nullable();
-            $table->unsignedBigInteger('due');
+            $table->bigInteger('due');
             $table->timestamps();
 
             $table->foreign('customer_type_id')->references('id')->on('customer_types');

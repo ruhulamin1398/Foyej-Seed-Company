@@ -18,12 +18,12 @@
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <span class="text-dark pl-2"> Category Name</span>
-                        <input type="text" name="name" class="form-control mb-2" id="inlineFormInput">
+                        <input type="text" name="name" class="form-control mb-2" id="inlineFormInput" required >
                     </div>
                     <div class="col-auto">
 
                         <span class="text-dark pl-2"> Description</span>
-                        <input type="text" name="description" size="55" class="form-control mb-2" id="inlineFormInput">
+                        <input type="text" name="description" size="55" class="form-control mb-2" id="inlineFormInput" required >
                     </div>
 
                     <div class="col-auto">
@@ -77,7 +77,7 @@
                             <td class="  word-break name">{{$category->name}}</td>
                             <td class=" word-break description ">{{$category->description}}</td>
 
-                            <td>{{'121'}}</td>
+                            <td>{{$category->products->count()}}</td>
 
 
                             <td class="align-middle">
@@ -143,13 +143,13 @@
                     <!-- /id -->
                     <!-- name -->
                     <div class="form-group">
-                        <label class="col-form-label" for="modal-input-name">Name</label>
+                        <label class="col-form-label" for="modal-input-name">Category Name</label>
                         <input type="text" name="name" class="form-control" id="modal-input-name" required autofocus>
                     </div>
                     <!-- /name -->
                     <!-- description -->
                     <div class="form-group">
-                        <label class="col-form-label" for="modal-input-description">Email</label>
+                        <label class="col-form-label" for="modal-input-description">Description</label>
                         <input type="text" name="description" class="form-control" id="modal-input-description" required>
                     </div>
 

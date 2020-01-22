@@ -1,104 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Foyej Seed Company </title>
 
-    <title>Hello, world!</title>
+    <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+
 </head>
 
-<body>
+<body id="page-top">
 
 
 
-    <div class="container pt-4 mt-4">
+    <div class="container-fluid pt-4 mt-4" id="printdata">
         <div class="row pl-4 ml-4 mb-1">
             <div class="h5">Format CODE_39</div>
         </div>
         <div class="row pl-4 ml-4 mb-4">
             <div class="h5">Type TEXT</div>
-        </div> 
-        <div class="row">
-            <div class="col-md-2">
-                
-            </div>
-            <div class="col-md-4">
-
-                <?php
-
-                use \Milon\Barcode\DNS1D;
-
-                $d = new DNS1D();
-                $d->setStorPath(__DIR__ . "/cache/");
-
-                echo $d->getBarcodeHTML("101", "C39");
-                echo "</br>101 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("102", "C39");
-                echo "</br>102 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("103", "C39");
-                echo "</br>103 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("104", "C39");
-                echo "</br>104 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("105", "C39");
-                echo "</br>105 </br> </br>";
-                echo "</br> ";
-                ?>
-
-            </div>
-
-
-            <div class="col-md-4 ">
-                <?php
-
-
-                $d = new DNS1D();
-                $d->setStorPath(__DIR__ . "/cache/");
-
-                echo $d->getBarcodeHTML("106", "C39");
-                echo "</br>106 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("107", "C39");
-                echo "</br>107 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("108", "C39");
-                echo "</br>108 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("109", "C39");
-                echo "</br>109 </br> </br>";
-                echo "</br> ";
-                echo $d->getBarcodeHTML("110", "C39");
-                echo "</br>110 </br> </br>";
-                echo "</br> ";
-                ?>
-
-            </div>
-
-            <div class="col-md-2">
-                
-            </div>
         </div>
+        <div class="row">
+
+
+        @for($i=1 ; $i< 61 ; $i++)
+ 
+        <div class="col-md-3 p-2">
+                
+            
+                <?php
+                $data=880+$i;
+                echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($data, "C39") . '"    />'.'<br>'.$data;
+                ?>
+            
+
+                    </div>
+@endfor
+
+                    
     </div>
 
 
+<button type="button" id="printPdf" style="color: royalblue;  background-color:black;  ">print </button>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{asset('file/jquery/jquery.min.js')}}"></script>
+
+
+    <script src="{{asset('file/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <script src="{{asset('js/printThis.js')}}"></script>
 
 
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        $("#printPdf").click(function() {
+
+            $("#page-top").printThis({
+                importCSS: true
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+

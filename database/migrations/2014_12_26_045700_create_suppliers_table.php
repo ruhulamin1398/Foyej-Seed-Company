@@ -21,7 +21,7 @@ class CreateSuppliersTable extends Migration
             $table->string('phone')->unique();
             $table->string('address')->nullable();
             $table->string('company')->nullable();
-            $table->unsignedBigInteger('due')->default(0);
+            $table->bigInteger('due')->default(0);
             $table->timestamps();
 
         });
