@@ -95,7 +95,7 @@
             margin: 0;
             padding: 0;
             border: 0;
-            font-size: 100%;
+            font-size: 130%;
             font: inherit;
             vertical-align: baseline
         }
@@ -142,15 +142,15 @@
         }
 
         body {
-            /* height: 840px;
-            width: 592px; */
+             /* height: 840px; */
+            width: 700px; 
             margin: auto;
             font-family: 'Open Sans', sans-serif;
-            font-size: 12px
+            font-size: 12px;
         }
 
         strong {
-            font-weight: 700
+            font-weight: 700;
         }
 
         #container {
@@ -173,14 +173,14 @@
 
         #header>#reference h4 {
             margin: 0;
-            font-size: 85%;
+            font-size: 130%;
             font-weight: 600
         }
 
         #header>#reference p {
             margin: 0;
             margin-top: 2%;
-            font-size: 85%
+            font-size: 130%
         }
 
         #header>#logo {
@@ -197,7 +197,7 @@
             width: 45%;
             min-height: 90px;
             margin-top: 30px;
-            font-size: 85%;
+            font-size: 130%;
             padding: 1.5%;
             line-height: 120%
         }
@@ -207,7 +207,7 @@
             width: 45%;
             background: #efefef;
             margin-top: 30px;
-            font-size: 85%;
+            font-size: 130%;
             padding: 1.5%
         }
 
@@ -224,12 +224,12 @@
             font-weight: 700;
             text-align: right;
             margin-bottom: 1%;
-            font-size: 65%
+            font-size: 130%
         }
 
         #items>table {
             width: 100%;
-            font-size: 85%;
+            font-size: 130%;
             border: solid grey 1px
         }
 
@@ -310,7 +310,7 @@
         }
 
         #summary #total table {
-            font-size: 85%;
+            font-size: 130%;
             width: 260px;
             float: right
         }
@@ -339,7 +339,7 @@
 
         #footer p {
             margin-top: 1%;
-            font-size: 65%;
+            font-size: 80%;
             line-height: 140%;
             text-align: center
         }
@@ -392,18 +392,18 @@
                 <tr>
                     <th colspan="1">#</th>
           
-                    <th colspan="3">Details</th>
+                    <th colspan="4">Details</th>
                    
                     <th colspan="2" >Quantity  </th>
-                    <th>Price</th>
-                    <th>Amount</th>
+                    <th colspan="2">Price</th>
+                    <th colspan="2" >Amount</th>
                 </tr>
                 <?php $i=1 ?>
                 @foreach( $purchase->products as $product)
                 <tr>
                     <td colspan="1">{{$i++}}</td>
 
-                    <td colspan="3"> 
+                    <td colspan="4"> 
                         {{$product->product_detils->name}}
                         @if($product->product_detils->product_type_id ==2)
                         {{ " - ". $product->product_detils->weight ."gm"}} 
@@ -413,7 +413,7 @@
                     
                     </td>
                     
-                    <td colspan="2">{{$product->quantity}}
+                    <td colspan="2" >{{$product->quantity}}
                     @if($product->product_detils->product_type_id ==1)
                         {{ "gm"}} 
                         @else
@@ -422,7 +422,7 @@
 
 
                     </td>
-                    <td>
+                    <td colspan="2" >
 
                     @if($product->product_detils->product_type_id ==1)
                     {{$product->total}}
@@ -431,7 +431,7 @@
                         @endif
 
                     </td>
-                    <td>{{$product->total}}</td>
+                    <td colspan="2">{{$product->total}}</td>
                 </tr>
                 @endforeach
             
