@@ -472,14 +472,16 @@ $(document).ready(function () {
                     
                     console.log(' purchaseSubmitForm Submission was successful. and id is ' + data);
 
+                    var invoiceLink= $("#printInvoice").attr('href');
+                    $("#printInvoice").attr('href',invoiceLink+'/'+data);
 
 
                     /////////////////////////////////// saving 
 
                     console.log("Row Start");
                     jQuery.each(purchaseTableData, function (row) {
-                        purchaseId= data;
-                      alert(purchaseId);
+                        
+                      console.log(purchaseTableData);
 
                         $("#orderProductAddPurchaseId").val(data);
                         $("#orderProductAddProductId").val(purchaseTableData[row].id);
@@ -489,13 +491,13 @@ $(document).ready(function () {
 
                         var OPfrm = $('#orderProductAddForm');
                         var act = OPfrm.attr('action');
-                        console.log("action " + act);
+                        console.log("---------- action " + act);
                         $.ajax({
                             type: OPfrm.attr('method'),
                             url: act,
                             data: OPfrm.serialize(),
                             success: function (successData) {
-                                console.log(' orderProductAddForm successful. and id is ' + successData + purchaseTableData[row].total);
+                               /// console.log(' orderProductAddForm successful. and id is ' + successData + purchaseTableData[row].total);
                             },
                             error: function (data) {
                                 alert("Failed order ..... Try Again !!!!!!!!!!!")
@@ -520,8 +522,7 @@ $(document).ready(function () {
             });
 
 
-           var invoiceLink= $("#printInvoice").attr('href');
-            $("#printInvoice").attr('href',invoiceLink+'/'+purchaseId);
+
             $('#Print-modal').modal();
         }
 

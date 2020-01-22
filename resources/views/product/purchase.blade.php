@@ -245,7 +245,7 @@
             <!-- product add database link  -->
             
             <!-- submit form start  -->
-            <form action=" {{route('purchases_details.store')}} " id=" orderProductAddForm" method="POST">
+            <!-- <form action=" {{route('purchases_details.store')}}" id=" orderProd-uctAddForm" method="POST">
               @csrf
 
               <input type=" text" name="purchase_id" id="orderProductAddPurchaseId" hidden ">
@@ -253,9 +253,22 @@
             <input type=" text" name="price" id="orderProductAddPrice" hidden ">
             <input type=" text" name="quantity" id="orderProductAddQuantity" hidden ">
             <input type=" text" name="total" id="orderProductAddTotal" hidden ">
-            </form>
+            </form> -->
 
-          
+                      <!-- submit form start  -->
+            <form action="{{route('purchases_details.store')}} " id="orderProductAddForm" method="POST">
+            
+              @csrf
+
+              <input type=" text" name="purchase_id" id="orderProductAddPurchaseId" hidden ">
+            <input type=" text" name="product_id" id="orderProductAddProductId" hidden ">
+            <input type=" text" name="price" id="orderProductAddPrice" hidden ">
+            <input type=" text" name="quantity" id="orderProductAddQuantity" hidden ">
+            <input type=" text" name="total" id="orderProductAddTotal" hidden ">
+              
+
+
+            </form>
 
 
 
@@ -284,25 +297,25 @@
 
 
 <!-- Create new product -->
-<div class="modal fade" id="Print-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-dark" id="edit-modal-label ">Purchase Completed </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="attachment-body-content">
+<div class=" modal fade" id="Print-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="edit-modal-label ">Purchase Completed </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" id="attachment-body-content">
 
 
-            <button   class="btn btn-success" > <a href="{{route('purchases-receipt.index')}}" id="printInvoice" > Print Invoice </a> </button>
+                    <button class="btn btn-success"> <a href="{{route('purchases-receipt.index')}}" id="printInvoice"> Print Invoice </a> </button>
 
-            </div>
+                  </div>
 
+                </div>
+              </div>
+          </div>
         </div>
-    </div>
-</div>
-</div>
-<!-- /Create new product-->
+        <!-- /Create new product-->
 
-  @endsection
+        @endsection

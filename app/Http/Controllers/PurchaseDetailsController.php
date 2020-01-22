@@ -65,9 +65,7 @@ class PurchaseDetailsController extends Controller
         $purchase_details->total= $request->total;
         $purchase_details->save();
 
-
         $this->addQuantity($request->product_id,$request->quantity);
-
         $this->updateCost($request->product_id,$request->quantity,$request->total );
 
         return ($purchase_details->id);
