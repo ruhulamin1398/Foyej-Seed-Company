@@ -37,23 +37,44 @@
     <hr class="sidebar-divider m-1 p-0 ">
 
     <!--sell -->
-   
-     <li class="nav-item  ">
-      <a class="nav-link p-3 " href="{{ route('orders.index') }}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Sell</span></a>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseSell" aria-expanded="true" aria-controls="collapseSell">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Sell</span>
+      </a>
+      <div id="collapseSell" class="collapse" aria-labelledby="headingSell" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+
+          <a class="collapse-item" href="{{ route('orders.index') }}">Add New</a>
+          <a class="collapse-item" href="{{ route('orders.index') }}">View All</a>
+
+        </div>
+      </div>
     </li>
+
+
   <!--sell -->
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
 <!--purchase -->
+<li class="nav-item">
+      <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapsePurchase" aria-expanded="true" aria-controls="collapsePurchase">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Purchase</span>
+      </a>
+      <div id="collapsePurchase" class="collapse" aria-labelledby="headingPurchase" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
 
- <li class="nav-item  ">
-  <a class="nav-link p-3 " href="{{ route('purchases.index') }}">
-    <i class="fas fa-fw fa-tachometer-alt"></i>
-    <span>Purchase</span></a>
-</li>
+          <a class="collapse-item" href="{{ route('purchases.index') }}">Add New</a>
+          <a class="collapse-item" href="{{ route('purchases.index') }}">View All</a>
+
+        </div>
+      </div>
+    </li>
+
+
 <!--purchase -->
 
   </div>
