@@ -29,9 +29,10 @@
                             <th>Product Id</th>
                             <th>Name</th>
                             <th>Weight</th>
+                            <th>Sell</th>
+                            <th>Category</th>
                             <th>Stock</th>
                             <th>Cost</th>
-                            <th>Sell</th>
                             <th>Limit</th>
                             <th>Expire</th>
                             <th>Action</th>
@@ -39,13 +40,14 @@
                     </thead>
                     <tfoot class="thead-dark">
                         <tr>
-                            
-                        <th>Product Id</th>
+
+                            <th>Product Id</th>
                             <th>Name</th>
                             <th>Weight</th>
+                            <th>Sell</th>
+                            <th>Category</th>
                             <th>Stock</th>
                             <th>Cost</th>
-                            <th>Sell</th>
                             <th>Limit</th>
                             <th>Expire</th>
                             <th>Action</th>
@@ -60,9 +62,10 @@
                             <td class="iteration">{{$id}}</td>
                             <td id="viewName">{{$product->name}}</td>
                             <td id="viewCategoryId">{{$product->weight}}</td>
+                            <td id="viewSell">{{$product->sell}}</td>
+                            <td id="viewProductTypeId">{{$product->category->name}}</td>
                             <td id="viewProductTypeId">{{$product->stock}}</td>
                             <td id="viewCost">{{$product->cost}}</td>
-                            <td id="viewSell">{{$product->sell}}</td>
                             <td id="viewLowLimit">{{$product->low_limit}}</td>
                             <td id="viewexpiredate">{{$product->expire_date}}</td>
 
@@ -102,7 +105,7 @@
 
                     </tbody>
                 </table>
-                
+
 
 
             </div>
@@ -233,10 +236,8 @@
                     <div class="form-group">
                         <label for="editProductCatagoryId">Procuct Category</label>
                         <select class="form-control form-control" name="category_id" id="editProductCatagoryId">
-                            <option value="0" selected="selected">Select Category </option>
-                            @foreach ($categories as $category)
-                            <option value="{{$category->id}}"> {{$category->name}}</option>
-                            @endforeach
+
+
                         </select>
                     </div>
 
@@ -244,10 +245,7 @@
                         <label for="editProductTypeId">Procuct Type</label>
                         <select class="form-control form-control" name="product_type_id" id="editProductTypeId">
 
-                            <option value="0" selected="selected">Select Product Type</option>
-                            @foreach ($productTypes as $productType)
-                            <option value="{{$productType->id}}"> {{$productType->name}}</option>
-                            @endforeach
+
                         </select>
                     </div>
 

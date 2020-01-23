@@ -48,12 +48,11 @@ $(document).ready(function(){
 
          var catagoryhtml='';
        
-        
-
+    
   
 
         
-         $.get("/api/categories", function(data, status){
+         $.get($("#productCategoryLink").val().trim(), function(data, status){
             
             data.forEach( function(i, item) {
              //   alert(viewCategoryId+'   '+i.name);

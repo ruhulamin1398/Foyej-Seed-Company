@@ -16,14 +16,28 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all()->where("category_id",3);
+        //   $products = Product::all()->where("category_id",3);
+        $products = Product::all();
 
 
         $categories = Category::all();
         $productTypes = Product_type::all();
 
         return view('product.view', compact('categories', 'productTypes', 'products'));
+    } 
+    
+    public function complete()
+    {
+          $products = Product::all()->where("category_id",3);
+       
+
+
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+        return view('product.complete', compact('categories', 'productTypes', 'products'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -146,13 +160,13 @@ class ProductController extends Controller
     {
 
         
-        $request->validate([
-            'name' => 'required:products',
-            'category_id' => 'required:products',
-            'product_type_id' => 'required:products',
-            'cost' => 'required:products',
-            'price' => 'required:products',
-        ]);
+        // $request->validate([
+        //     'name' => 'required:products',
+        //     'category_id' => 'required:products',
+        //     'product_type_id' => 'required:products',
+        //     'cost' => 'required:products',
+        //     'price' => 'required:products',
+        // ]);
 
 
 
@@ -169,7 +183,7 @@ class ProductController extends Controller
 
 
         $product->weight = $request->weight;
-        $product->price_per_unit =  $request->price /  $request->weight;
+       // $product->price_per_unit =  $request->price /  $request->weight;
 
         $product->save();
 

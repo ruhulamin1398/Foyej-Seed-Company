@@ -29,6 +29,7 @@ Route::post('product_typeupdate', 'ProductTypeController@Product_typeupdate')->n
 Route::resource('products', 'ProductController');
 Route::post('productsupdate', 'ProductController@Productsupdate')->name("productsupdate");
 Route::get('productsdrop', 'ProductController@productsdrop')->name("productsdrop");
+Route::get('complete-product', 'ProductController@complete')->name("complete-product");
 
 Route::resource('purchases', 'PurchaseController');
 Route::resource('purchases_details', 'PurchaseDetailsController');

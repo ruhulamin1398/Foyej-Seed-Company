@@ -17,14 +17,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-
-
-        $categories = Category::all();
-        $productTypes = Product_type::all();
-
-
-        return view('product.order', compact('categories', 'productTypes', 'products'));
+       
     }
 
     /**
@@ -34,7 +27,14 @@ class OrderController extends Controller
      */
     public function create()
     {
-        return view('new_invoice');
+        $products = Product::all();
+
+
+        $categories = Category::all();
+        $productTypes = Product_type::all();
+
+
+        return view('product.order', compact('categories', 'productTypes', 'products'));
     }
 
     /**
