@@ -82,8 +82,9 @@
     <script src="{{asset('js/custom/supplier.js')}}"></script>
     <script src="{{asset('js/custom/purchase.js')}}"></script>
     <script src="{{asset('js/custom/order.js')}}"></script>
+    <script src="{{asset('js/custom/cashReceive.js')}}"></script>
 
-
+    
 
 
 

@@ -33,26 +33,25 @@ Route::get('complete-product', 'ProductController@complete')->name("complete-pro
 
 Route::resource('purchases', 'PurchaseController');
 Route::resource('purchases_details', 'PurchaseDetailsController');
-
 Route::get('purchases-receipt-show/{id}', 'ReceiptController@purchaseShow')->name('purchases-receipt-show');
-Route::get('purchases-receipt-all', 'ReceiptController@purchaseAll')->name('purchases-receipt-all');
-
 
 Route::resource('orders', 'OrderController');
 Route::resource('orders_details', 'OrderDetailController');
-Route::resource('orders', 'OrderController');
+Route::get('order-receipt-show/{id}', 'ReceiptController@orderShow')->name('order-receipt-show');
 
 Route::resource('invoices', 'InvoiceController');
 
 
 Route::resource('suppliers', 'SupplierController');
-Route::post('suppliersupdate', 'SupplierController@suppliersupdate')->name("suppliersupdate");
+Route::post('suppliers_update', 'SupplierController@suppliersupdate')->name("suppliersupdate");
 
 // end Product area 
 
 // customer area start
 Route::resource('customers', 'CustomerController');
-Route::post('customersupdate', 'CustomerController@customersupdate')->name("customersupdate");
+Route::post('customers_update', 'CustomerController@customersupdate')->name("customersupdate");
+Route::get('customer_cash_receive', 'CustomerController@customersCashReceive')->name("customer_cash_receive");
+Route::post('customer_cash_receive', 'CustomerController@customersCashReceiveStore')->name("customer_cash_receive_store");
 
 // customer area end
 

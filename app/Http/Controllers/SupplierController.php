@@ -15,18 +15,18 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $suppliers= Supplier::all();
-        
-       
-       return view('product.suppliers',compact('suppliers'));
+        $suppliers = Supplier::all();
+
+
+        return view('supplier.suppliers', compact('suppliers'));
     }
 
     public function apiIndex()
     {
-        $suppliers= Supplier::all();
-        
-       
-       return ($suppliers);
+        $suppliers = Supplier::all();
+
+
+        return ($suppliers);
     }
 
 
@@ -52,17 +52,16 @@ class SupplierController extends Controller
             'phone' => 'required|unique:suppliers|max:11|min:11',
             'name' => 'required:suppliers',
         ]);
-    
-       $supplier= new Supplier();
 
-       $supplier-> name = $request->name;
-       $supplier-> phone = $request->phone;
-       $supplier-> company = $request->company;
-       $supplier-> address = $request->address;
-       $supplier-> due = 0;
-       $supplier->save();
-       return back();
+        $supplier = new Supplier();
 
+        $supplier->name = $request->name;
+        $supplier->phone = $request->phone;
+        $supplier->company = $request->company;
+        $supplier->address = $request->address;
+        $supplier->due = 0;
+        $supplier->save();
+        return back();
     }
     /**
      * Display the specified resource.
@@ -76,8 +75,8 @@ class SupplierController extends Controller
     }
     public function ApiShow(Request $request)
     {
-     ///   return $request->phone;
-        $supplier= Supplier::where('phone',$request->phone)->first();
+        ///   return $request->phone;
+        $supplier = Supplier::where('phone', $request->phone)->first();
         return $supplier;
     }
 
@@ -114,64 +113,48 @@ class SupplierController extends Controller
     {
 
         Supplier::find($id)->delete();
-         return redirect(route('suppliers.index'))->with('successMsg','Category Successfully Deleted');
+        return redirect(route('suppliers.index'))->with('successMsg', 'Category Successfully Deleted');
     }
-    public function suppliersupdate(Request $request){
-       
+    public function suppliersupdate(Request $request)
+    {
+
         $request->validate([
             'phone' => 'required|unique:suppliers|max:11|min:11',
             'name' => 'required:suppliers',
         ]);
 
         $supplier = Supplier::find($request->id);
-        
-       $supplier-> name = $request->name;
-       $supplier-> phone = $request->phone;
-       $supplier-> company = $request->company;
-       $supplier-> address = $request->address;
-     
-       $supplier->save();
 
-        return redirect(route('suppliers.index'))->with('successMsg','supplier Successfully updated');
+        $supplier->name = $request->name;
+        $supplier->phone = $request->phone;
+        $supplier->company = $request->company;
+        $supplier->address = $request->address;
 
+        $supplier->save();
+
+        return redirect(route('suppliers.index'))->with('successMsg', 'supplier Successfully updated');
     }
-    public function supplierscheck(Request $request){
-       
-        $phone=$request->phone;
+    public function supplierscheck(Request $request)
+    {
+
+        $phone = $request->phone;
         /// return $phone;
-       
-       
-        $supplier= Supplier::where('phone',$phone)->first();
+
+
+        $supplier = Supplier::where('phone', $phone)->first();
         // return $supplier;
-     
+
         if (is_null($supplier)) {
             return 0;
-        }
-        else
-        return 1;   
-      
+        } else
+            return 1;
     }
-    public function suppliersDue(Request $request){
-// return $request;
-        $supplier= Supplier::find($request->id);
+    public function suppliersDue(Request $request)
+    {
+        // return $request;
+        $supplier = Supplier::find($request->id);
         $supplier->due = $request->due;
-        $supplier->save();  
+        $supplier->save();
         return $supplier->due;
-
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

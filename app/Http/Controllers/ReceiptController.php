@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 use App\Purchase;
 class ReceiptController extends Controller
@@ -13,11 +14,19 @@ class ReceiptController extends Controller
     {
         
         $purchase= Purchase::find($id);
-        //  return $purchase->supplier;
-        return  view('product.purchaseReceipt', compact('purchase'));
+     
+        return  view('receipt.purchaseReceipt', compact('purchase'));
+    } 
+    
+
+    public function orderShow($id)
+    {
+        
+        $order= Order::find($id);
+        return  view('receipt.orderReceipt', compact('order'));
     } 
 
-    
+
 
 
 }

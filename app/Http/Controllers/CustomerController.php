@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use Illuminate\Http\Request;
-
+use App\customerCashReceive;
+use App\Order;
 use App\Supplier;
 
 class CustomerController extends Controller
@@ -75,8 +76,8 @@ class CustomerController extends Controller
     }
     public function ApiShow(Request $request)
     {
-     ///   return $request->phone;
-        $customer= Customer::where('phone',$request->phone)->first();
+        ///   return $request->phone;
+        $customer = Customer::where('phone', $request->phone)->first();
         return $customer;
     }
 
@@ -123,7 +124,7 @@ class CustomerController extends Controller
             'phone' => 'required|unique:customers|max:11|min:11',
         ]);
 
-        
+
 
         $customer = Customer::find($request->id);
         //  return $customer;
@@ -139,30 +140,54 @@ class CustomerController extends Controller
 
 
 
-    public function apiCustomerCheck(Request $request){
-       
-        $phone=$request->phone;
+    public function apiCustomerCheck(Request $request)
+    {
+
+        $phone = $request->phone;
         /// return $phone;
-       
-       
-        $customer= Customer::where('phone',$phone)->first();
+
+
+        $customer = Customer::where('phone', $phone)->first();
         // return $supplier;
-     
+
         if (is_null($customer)) {
             return 0;
-        }
-        else
-        return 1;   
-      
+        } else
+            return 1;
     }
-    public function customersDue(Request $request){
+    public function customersDue(Request $request)
+    {
         // return $request;
-                $customer= Customer::find($request->id);
-                $customer->due = $request->due;
-                $customer->save();  
-                return $customer->due;
-        
-            }
+        $customer = Customer::find($request->id);
+        $customer->due = $request->due;
+        $customer->save();
+        return $customer->due;
+    }
+
+    public function customersCashReceive(Request $request)
+    {
+        $orders = Order::all();
+        return view('customer.cashReceive', compact('orders'));
+    }
 
 
+    public function customersCashReceiveStore(Request $request)
+    {
+
+        // return $request;
+        $customerCashReceive = new customerCashReceive;
+        $customerCashReceive->user_id = 1;
+        $customerCashReceive->customer_id = $request->customer_id;
+        $customerCashReceive->amount = $request->amount;
+        $customerCashReceive->comment = $request->comment;  
+        $customerCashReceive->pre_due= $request->pre_due;
+        $customerCashReceive->save();
+
+        $customer = Customer::find( $request->customer_id);
+        $customer->due -= $request->amount;
+        $customer->save();
+      
+
+        return view( "receipt.customerCashReceive",compact('customerCashReceive', 'customerCashReceive') );
+    }
 }

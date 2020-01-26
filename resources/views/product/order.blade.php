@@ -144,9 +144,7 @@
                     <form method="post">
 
 
-                      <input type="text" id="customerViewLink" size="5" value="{{route('customer_view_api')}} " class="form-control  mb-2" hidden>
-                      <input type="text" id="customerCheckLink" size="5" value="{{route('customer_check_api')}} " class="form-control  mb-2" hidden>
-
+                    
                       <div class=" col-auto">
                         <label class="text-light" for="orderPageCustomerPhoneField">Customer Phone</label>
                         <input type="text" name="phone" id="orderPageCustomerPhoneField" class="form-control mb-2">
@@ -311,7 +309,7 @@
                   <div class="modal-body" id="attachment-body-content">
 
 
-                    <button class="btn btn-success text-white"> <ahref="{{route('purchases-receipt-show',[0])}}"  id="printInvoice"> Print Invoice </a> </button>
+                    <button class="btn btn-success text-white"> <a href="{{route('order-receipt-show',[0])}}"  id="printInvoice"> Print Invoice </a> </button>
 
                   </div>
 
