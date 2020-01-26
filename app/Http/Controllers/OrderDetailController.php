@@ -19,6 +19,7 @@ class OrderDetailController extends Controller
         //
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -35,6 +36,20 @@ class OrderDetailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+    public function removeQuantity($id, $quantity)
+    {
+        $product = Product::find($id);
+        $product->stock -= $quantity;
+        $product->save();
+    }
+
+
+
+
+
     public function store(Request $request)
     {
 
@@ -44,7 +59,6 @@ class OrderDetailController extends Controller
         $order_detail->price = $request->price;
         $order_detail->quantity = $request->quantity;
         $order_detail->total = $request->total;
-
         $order_detail->save();
 
         $this->removeQuantity($request->product_id, $request->quantity);
@@ -57,12 +71,6 @@ class OrderDetailController extends Controller
 
 
 
-    public function removeQuantity($id, $quantity)
-    {
-        $product = Product::find($id);
-        $product->stock -= $quantity;
-        $product->save();
-    }
     /**
      * Display the specified resource.
      *

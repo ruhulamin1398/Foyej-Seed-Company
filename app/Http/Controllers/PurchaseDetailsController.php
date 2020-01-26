@@ -51,11 +51,10 @@ class PurchaseDetailsController extends Controller
         $newCost = $cost / $quantity;
         $product = Product::find($id);
          $product->cost = $newCost;
-
-        
         $product->save();
     }
 
+    
     public function store(Request $request)
     {
         $purchase_details = new Purchase_details();

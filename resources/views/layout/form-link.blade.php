@@ -3,8 +3,10 @@
 
 <input type="text" id="productCategoryLink" size="10" value="{{route('categories_api')}} " class="form-control  mb-2" hidden>
 
-<input type="text" id="supplierViewLink" size="5" value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
-<input type="text" id="supplierCheckLink" size="5" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
-<input type="text" id="suppliersDue" size="5" value="{{route('suppliersdue_api')}} " class="form-control  mb-2" hidden>
+<input type="text" id="supplierViewLink"  value="{{route('supplier_view_api')}} " class="form-control  mb-2" hidden>
+<input type="text" id="supplierCheckLink" value="{{route('supplierscheck_api')}} " class="form-control  mb-2" hidden>
+<input type="text" id="suppliersDue"" value="{{route('suppliersdue_api')}} " class="form-control  mb-2" hidden>
+
+<input type="text" id="customersDue"  value="{{route('customersdue_api')}} " class="form-control  mb-2" hidden>
 
 

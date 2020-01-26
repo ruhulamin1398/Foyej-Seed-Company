@@ -17,7 +17,12 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-/////
+
+
+        $purchases =  Purchase::orderBy('created_at', 'desc')->get();
+
+        //return $purchases;
+        return  view('product.purchaseList', compact("purchases"));
     }
 
     /**
@@ -27,7 +32,7 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        
+
         $products = Product::all();
         $categories = Category::all();
         $productTypes = Product_type::all();
@@ -52,15 +57,8 @@ class PurchaseController extends Controller
         $purchase->pay = $request->pay;
         $purchase->due = $request->due;
         $purchase->pre_due = $request->pre_due;
-        
         $purchase->discount = $request->discount;
         $purchase->total = $request->total;
-
-        //   $purchase->user_id=1 ;   
-        //  $purchase->supplier_id=1 ;   
-        // $purchase->due= 101 ;   
-        // $purchase->discount= 121 ; 
-        // $purchase->total= 120; 
 
         $purchase->save();
 

@@ -2,6 +2,10 @@
 @section('content')
 
 
+
+
+
+
 <!-- Content Row -->
 <div class="container-fluid ">
 
@@ -12,11 +16,13 @@
 
 
 
+
+
       <div class="card mb-4 shadow">
 
         <div class="card-header py-3 bg-dark  text-light ">
           <nav class="navbar ">
-            <a class="navbar-brand">Order New</a>
+            <a class="navbar-brand">Sell New</a>
             <!-- <button class="btn btn-success orderProductCreateProduct" id="create-button">new Product</button> -->
           </nav>
 
@@ -26,8 +32,14 @@
 
             <div class="form-row align-items-center">
               <div class="col-auto">
+                <input type="text" id="productCheckLink" size="10" value="{{route('product_check_api')}} " class="form-control  mb-2" hidden>
+                <input type="text" id="productViewLink" size="10" value="{{route('product_view_api')}} " class="form-control  mb-2" hidden>
+              </div>
+              <div class="col-auto">
                 <span class="text-dark  pl-2"> Product Id</span>
                 <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2">
+                <div id="orderProductErrorId" class="text-danger "> Product Not Fount !!! </div>
+               
               </div>
 
               <div class="col-auto">
@@ -39,7 +51,6 @@
                 <span class="text-dark pl-1"> Price</span>
                 <input type="text" name="price" id="orderProductInputPrice" size="6" value=0 class="form-control  mb-2 " disabled="true">
               </div>
-     
               <div class="col-auto">
 
                 <span class="text-dark pl-1"> Quantity</span>
@@ -63,7 +74,7 @@
             </div>
 
           </form>
-          <div id="orderProductError" class="text-danger "> Product Not Fount , Try again !!! </div>
+       
 
 
 
@@ -129,8 +140,8 @@
 
 
 
-<!-- Customer Area Start -->
-<div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
+      <!-- Customer Area Start -->
+      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
         <div class="card border-none   bg-dark  h-100 p-2">
           <h3 class="text-white">Customer</h3>
           <div class="card-body">
@@ -207,30 +218,30 @@
         <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
           <div class="card border-none   bg-dark  h-100 p-1">
 
-            <div class="card-body">
-              <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
-              <div class="col-auto">
-                <label class="text-light" for="orderPaymentField">Payment</label>
-                <input type="text" id="orderPaymentField" class="form-control mb-2" value="0" required>
-              </div>
+    <div class="card-body">
+                                <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
+                                <div class="col-auto">
+                                    <label class="text-light" for="orderPaymentField">Payment</label>
+                                    <input type="text" id="orderPaymentField" class="form-control mb-2">
+                                </div>
 
-              <hr class="sidebar-divider bg-light m-1 p-0 ">
+                                <hr class="sidebar-divider bg-light m-1 p-0 ">
 
-              <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
+                                <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
 
-              <div class="col-auto">
-                <label class="text-light" for="orderMoreDiscountField">More Discount</label>
-                <input type="text" id="orderMoreDiscountField" value="0" class="form-control mb-2" required>
-              </div>
+                                <div class="col-auto">
+                                    <label class="text-light" for="orderMoreDiscountField">More Discount</label>
+                                    <input type="text" id="orderMoreDiscountField" class="form-control mb-2">
+                                </div>
 
-              <!-- Divider -->
-              <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <div class="text-light font-weight-bold">Due : <span id="totalDue">0</span> </div>
+                                <!-- Divider -->
+                                <hr class="sidebar-divider bg-light m-1 p-0 ">
+                                <div class="text-light font-weight-bold">Due : <span id="totalDue"></span> </div>
 
-              <!-- Divider -->
-              <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <button id="orderCompleteButton" class="btn btn-success"> Finish </button>
-            </div>
+                                <!-- Divider -->
+                                <hr class="sidebar-divider bg-light m-1 p-0 ">
+                                <button id="orderCompleteButton" class="btn btn-success"> Finish </button>
+                            </div>
 
             <!-- submit form start  -->
             <form action="{{ route('orders.store') }}" id="orderSubmitForm" method="POST">
@@ -240,38 +251,23 @@
             <input type=" text" name="customer_id" id="orderSubmitFormCustomerId" hidden ">
             <input type=" text" name="pay" id="orderSubmitFormPayment" hidden ">
             <input type=" text" name="due" id="orderSubmitFormDue" hidden ">
-            <input type=" text" name="pre_due" id="orderSubmitFormPreDue" hidden ">
-            
             <input type=" text" name="discount" id="orderSubmitFormDiscount" hidden ">
             <input type=" text" name="total" id="orderSubmitFormTotal" hidden ">
             </form>
             <!-- product add database link  -->
             
             <!-- submit form start  -->
-            <!-- <form action=" {{route('orders_details.store')}}" id=" orderProd-uctAddForm" method="POST">
-              @csrf
-
-              <input type=" text" name="order_id" id="orderProductAddOrderId" hidden ">
-            <input type=" text" name="product_id" id="orderProductAddProductId" hidden ">
-            <input type=" text" name="price" id="orderProductAddPrice" hidden ">
-            <input type=" text" name="quantity" id="orderProductAddQuantity" hidden ">
-            <input type=" text" name="total" id="orderProductAddTotal" hidden ">
-            </form> -->
-
-                      <!-- submit form start  -->
             <form action="{{route('orders_details.store')}} " id="orderProductAddForm" method="POST">
-            
               @csrf
 
-              <input type=" text" name="order_id" id="orderProductAddOrderId" hidden ">
+            <input type=" text" name="order_id" id="orderProductAddOrderId"  hidden ">
             <input type=" text" name="product_id" id="orderProductAddProductId" hidden ">
             <input type=" text" name="price" id="orderProductAddPrice" hidden ">
             <input type=" text" name="quantity" id="orderProductAddQuantity" hidden ">
             <input type=" text" name="total" id="orderProductAddTotal" hidden ">
-              
-
-
             </form>
+
+          
 
 
 
@@ -297,28 +293,4 @@
 
 
 
-
-
-<!-- Create new product -->
-<div class=" modal fade" id="Print-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title text-dark" id="edit-modal-label ">Order Completed </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body" id="attachment-body-content">
-
-
-                    <button class="btn btn-success text-white"> <ahref="{{route('purchases-receipt-show',[0])}}"  id="printInvoice"> Print Invoice </a> </button>
-
-                  </div>
-
-                </div>
-              </div>
-          </div>
-        </div>
-        <!-- /Create new product-->
-
-        @endsection
+  @endsection

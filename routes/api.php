@@ -29,6 +29,7 @@ Route::get('suppliersdue', 'SupplierController@suppliersDue')->name("suppliersdu
 Route::get('/customers', 'CustomerController@apiIndex')->name('customers_api');
 Route::get('/customer', 'CustomerController@ApiShow')->name('customer_view_api');
 Route::get('/customer_check', 'CustomerController@apiCustomerCheck')->name("customer_check_api");
+Route::get('customersdue_api', 'CustomerController@customersDue')->name("customersdue_api");
 
 
 

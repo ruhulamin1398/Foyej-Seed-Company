@@ -62,6 +62,7 @@ class CustomerController extends Controller
         return back();
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -154,5 +155,14 @@ class CustomerController extends Controller
         return 1;   
       
     }
+    public function customersDue(Request $request){
+        // return $request;
+                $customer= Customer::find($request->id);
+                $customer->due = $request->due;
+                $customer->save();  
+                return $customer->due;
+        
+            }
+
 
 }

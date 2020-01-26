@@ -34,8 +34,8 @@ Route::get('complete-product', 'ProductController@complete')->name("complete-pro
 Route::resource('purchases', 'PurchaseController');
 Route::resource('purchases_details', 'PurchaseDetailsController');
 
-Route::resource('purchases-receipt', 'PurchaseReceiptController');
-Route::get('purchases-receipt-show/{id}', 'PurchaseReceiptController@showPurchase')->name('purchases-receipt-show');
+Route::get('purchases-receipt-show/{id}', 'ReceiptController@purchaseShow')->name('purchases-receipt-show');
+Route::get('purchases-receipt-all', 'ReceiptController@purchaseAll')->name('purchases-receipt-all');
 
 
 Route::resource('orders', 'OrderController');
@@ -66,15 +66,4 @@ Route::view('/bar','bar');
 
 
 
-use App\Role;
-
-Route::get('admin/contacts', 'ContactController@getIndex');
-Route::get('table/data',  function () {
-       $contact= Role::all();
-        return ($contact);
-    });
-
-Route::post('admin/contacts/store', 'ContactController@postStore');
-Route::post('admin/contacts/update', 'ContactController@postUpdate');
-Route::post('admin/contacts/delete', 'ContactController@postDelete');
 
