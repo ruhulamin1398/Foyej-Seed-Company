@@ -125,9 +125,9 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item  ">
-      <a class="nav-link p-3 " href="index">
+      <a class="nav-link p-3 " href="{{ route('barcode') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Reports</span></a>
+        <span>Barcode Print</span></a>
     </li>
 
   </div>

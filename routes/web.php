@@ -56,6 +56,11 @@ Route::get('customer_cash_receive', 'CustomerController@customersCashReceive')->
 Route::post('customer_cash_receive', 'CustomerController@customersCashReceiveStore')->name("customer_cash_receive_store");
 
 // customer area end
+// barcode print  area start
+Route::get('barcode', 'BarCodePrinterController@index')->name("barcode");
+Route::post('barcode_print', 'BarCodePrinterController@print')->name("barcode_print");
+
+// barcode print  area end
 
 // testing  routes
 
