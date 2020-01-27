@@ -190,4 +190,8 @@ class CustomerController extends Controller
 
         return view( "receipt.customerCashReceive",compact('customerCashReceive', 'customerCashReceive') );
     }
+
+
+
+    
 }

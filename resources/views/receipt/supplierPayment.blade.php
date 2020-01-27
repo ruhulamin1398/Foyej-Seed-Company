@@ -358,27 +358,27 @@
                 <?php
 
 
-                echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($customerCashReceive->id, "C39") . '"    />' . '<br>';
+                echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($supplierPayment->id, "C39") . '"    />' . '<br>';
                 ?>
-                <h3 style="padding: 3px;"><strong>Payment: #{{ $customerCashReceive->id}}</strong></h3>
+                <h3 style="padding: 3px;"><strong>Payment: #{{ $supplierPayment->id}}</strong></h3>
             </div>
         </div>
 
         <div id="fromto">
             <div id="from">
                 <p>
-                    <h3 style="padding: 3px;"><strong>Payment: #{{$customerCashReceive->id}}</strong></h3>
+                    <h3 style="padding: 3px;"><strong>Payment: #{{$supplierPayment->id}}</strong></h3>
                     <h4 style="padding: 3px;">Réf : Foyej Ahmed</h4>
-                    <p style="padding: 3px;">Date : {{ $customerCashReceive->created_at->format('M d Y')}} </p>
-                    <p style="padding: 3px;">Due :{{ $customerCashReceive->customer->due }}</p>
+                    <p style="padding: 3px;">Date : {{ $supplierPayment->created_at->format('M d Y')}} </p>
+                    <p style="padding: 3px;">Due :{{ $supplierPayment->supplier->due }}</p>
                 </p>
             </div>
             <div id="to">
                 <p>
-                    <div style="padding: 3px; font-weight:bold ; text-align:left">customer:</div>
-                    <div style="padding: 3px; font-weight:bold ; text-align:left">{{$customerCashReceive->customer->name}}</div>
-                    <div style="padding: 3px; text-align:left ">{{$customerCashReceive->customer->phone}}</div>
-                    <div style="padding: 3px; text-align:left ">{{$customerCashReceive->customer->address}}</div>
+                    <div style="padding: 3px; font-weight:bold ; text-align:left">supplier:</div>
+                    <div style="padding: 3px; font-weight:bold ; text-align:left">{{$supplierPayment->supplier->name}}</div>
+                    <div style="padding: 3px; text-align:left ">{{$supplierPayment->supplier->phone}}</div>
+                    <div style="padding: 3px; text-align:left ">{{$supplierPayment->supplier->address}}</div>
 
                 </p>
             </div>
@@ -389,16 +389,16 @@
             <table border="2" >
                 <tr>
                     <td colspan="2">Previous Due</td>
-                    <td colspan="2"> {{ $customerCashReceive->pre_due}} </td>
+                    <td colspan="2"> {{ $supplierPayment->pre_due}} </td>
                 </tr>
 
                 <tr>
                     <td colspan="2">Pay </td>
-                    <td colspan="2"> {{ $customerCashReceive->amount}} </td>
+                    <td colspan="2"> {{ $supplierPayment->amount}} </td>
                 </tr>
                 <tr>
                     <td colspan="2">Due </td>
-                    <td colspan="2"> {{ $customerCashReceive->customer->due}} </td>
+                    <td colspan="2"> {{ $supplierPayment->supplier->due}} </td>
                 </tr>
 
 

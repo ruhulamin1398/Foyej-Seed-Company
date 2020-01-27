@@ -44,6 +44,8 @@ Route::resource('invoices', 'InvoiceController');
 
 Route::resource('suppliers', 'SupplierController');
 Route::post('suppliers_update', 'SupplierController@suppliersupdate')->name("suppliersupdate");
+Route::get('supplier_payment', 'SupplierController@suppplierPayment')->name("supplier_payment");
+Route::post('supplier_payment', 'SupplierController@suppplierPaymentStore')->name("supplier_paymnent_store");
 
 // end Product area 
 

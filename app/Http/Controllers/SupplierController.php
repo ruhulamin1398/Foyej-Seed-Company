@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Supplier;
+use App\supplierPayment;
 use Illuminate\Http\Request;
 
 
@@ -157,4 +158,34 @@ class SupplierController extends Controller
         $supplier->save();
         return $supplier->due;
     }
+
+
+
+    public function suppplierPayment(Request $request)
+    {
+        return view('supplier.cashpayment');
+    }
+
+
+    public function suppplierPaymentStore(Request $request)
+    {
+
+        // return $request;
+        $supplierPayment = new supplierPayment();
+        $supplierPayment->user_id = 1;
+        $supplierPayment->supplier_id = $request->supplier_id;
+        $supplierPayment->amount = $request->amount;
+        $supplierPayment->comment = $request->comment;  
+        $supplierPayment->pre_due= $request->pre_due;
+        $supplierPayment->save();
+        
+        $supplier = Supplier::find( $request->supplier_id);
+        $supplier->due -= $request->amount;
+        $supplier->save();
+      
+
+        return view( "receipt.supplierPayment",compact('supplierPayment', 'supplierPayment') );
+    }
+
+
 }
