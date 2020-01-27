@@ -164,7 +164,7 @@ class CustomerController extends Controller
         return $customer->due;
     }
 
-    public function customersCashReceive(Request $request)
+    public function customersCashReceiveCreate(Request $request)
     {
         $orders = Order::all();
         return view('customer.cashReceive', compact('orders'));

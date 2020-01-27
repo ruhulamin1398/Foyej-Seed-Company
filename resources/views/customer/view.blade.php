@@ -47,7 +47,10 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Customer's list</h6>
+        <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand">Customer list</a>
+                <button class="btn btn-success " id="create-button"> <a href="customer_cash_receive_create" class="text-light">Cash Receive</a> </button>
+            </nav>
         </div>
         <div class="card-body">
             <div class="table-responsive">

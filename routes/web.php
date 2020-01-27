@@ -52,7 +52,7 @@ Route::post('supplier_payment', 'SupplierController@suppplierPaymentStore')->nam
 // customer area start
 Route::resource('customers', 'CustomerController');
 Route::post('customers_update', 'CustomerController@customersupdate')->name("customersupdate");
-Route::get('customer_cash_receive', 'CustomerController@customersCashReceive')->name("customer_cash_receive");
+Route::get('customer_cash_receive_create', 'CustomerController@customersCashReceiveCreate')->name("customer_cash_receive_create");
 Route::post('customer_cash_receive', 'CustomerController@customersCashReceiveStore')->name("customer_cash_receive_store");
 
 // customer area end
