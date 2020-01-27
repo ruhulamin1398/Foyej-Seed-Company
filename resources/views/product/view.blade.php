@@ -237,7 +237,6 @@
                         <label for="editProductCatagoryId">Procuct Category</label>
                         <select class="form-control form-control" name="category_id" id="editProductCatagoryId">
 
-
                         </select>
                     </div>
 

@@ -17,7 +17,8 @@
         <div class="card-header py-3 bg-dark  text-light ">
           <nav class="navbar ">
             <a class="navbar-brand">Order New</a>
-            <!-- <button class="btn btn-success orderProductCreateProduct" id="create-button">new Product</button> -->
+            <button class="btn btn-success " id="create-button"> <a href="{{ route('customer_cash_receive_create') }} " class="text-light">Cash Receive</a> </button>
+           
           </nav>
 
         </div>

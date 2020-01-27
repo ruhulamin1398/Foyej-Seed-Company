@@ -127,7 +127,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="  {{ route('customer_cash_receive_create') }} ">Cash</a> </div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="  {{ route('customer_cash_receive_create') }} ">Cash (Customer)</a> </div>
                       </div>
                       
 
@@ -181,7 +181,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="{{ route('customers.index') }}">Clients</a> </div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="{{ route('customers.index') }}">Customer</a> </div>
                       </div>
                        
 
@@ -215,7 +215,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="{{ route('supplier_payment') }}">Payment</a> </div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="{{ route('supplier_payment') }}">Payment(Supplier)</a> </div>
                       </div>
                        
 

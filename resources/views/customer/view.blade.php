@@ -46,11 +46,10 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-        <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand">Customer list</a>
-                <button class="btn btn-success " id="create-button"> <a href="customer_cash_receive_create" class="text-light">Cash Receive</a> </button>
-            </nav>
+        <div class="card-header py-3  bg-dark ">
+        <nav class="navbar navbar-dark">
+                <a class="navbar-brand text-light">Customer list</a>
+             </nav>
         </div>
         <div class="card-body">
             <div class="table-responsive">

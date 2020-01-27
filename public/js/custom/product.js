@@ -80,8 +80,8 @@ $(document).ready(function(){
   
 
         var product_types_html="";
-          $.get("/api/product_types", function(data, status){
-            
+        
+            $.get($("#productTypeLink").val().trim(), function(data, status){
             data.forEach( function(i, item) {
              //   alert(viewCategoryId+'   '+i.name);
                if( viewProductTypeId==i.name )
