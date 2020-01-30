@@ -369,7 +369,7 @@
                 <p>
                     <h3 style="padding: 3px;"><strong>Payment: #{{$supplierPayment->id}}</strong></h3>
                     <h4 style="padding: 3px;">Réf : Foyej Ahmed</h4>
-                    <p style="padding: 3px;">Date : {{ $supplierPayment->created_at->format('M d Y')}} </p>
+                    <p style="padding: 3px;">Date : {{ $supplierPayment->created_at->format('M d Y m')}} </p>
                     <p style="padding: 3px;">Due :{{ $supplierPayment->supplier->due }}</p>
                 </p>
             </div>

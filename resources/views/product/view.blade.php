@@ -162,23 +162,23 @@
 
                     <div class="form-group">
                         <label for="price">Weight</label>
-                        <input type="number" name="weight" class="form-control" id="weight" placeholder="">
+                        <input type="number" name="weight" class="form-control" id="weight" placeholder="" required>
                     </div>
 
                     <div class="form-group">
                         <label for="cost">Cost</label>
-                        <input type="number" name="cost" class="form-control" id="cost" placeholder="">
+                        <input type="number" name="cost" class="form-control" id="cost" placeholder="" required>
                     </div>
 
 
                     <div class="form-group">
                         <label for="price">Sell Price</label>
-                        <input type="number" name="price" class="form-control" id="price" placeholder="">
+                        <input type="number" name="price" class="form-control" id="price" placeholder="" required>
                     </div>
 
                     <div class="form-group">
                         <label for="lowLimit">Low Limit</label>
-                        <input type="number" name="low_limit" class="form-control" id="lowLimit" placeholder="Enter Lowest Limit">
+                        <input type="number" name="low_limit" class="form-control" id="lowLimit" placeholder="Enter Lowest Limit" required>
                     </div>
 
 
@@ -230,19 +230,19 @@
 
                     <div class="form-group">
                         <label for="editProductName">Product Name</label>
-                        <input type="text" name="name" class="form-control" id="editProductName" placeholder="Enter product name">
+                        <input type="text" name="name" class="form-control" id="editProductName" placeholder="Enter product name"required>
                     </div>
 
                     <div class="form-group">
                         <label for="editProductCatagoryId">Procuct Category</label>
-                        <select class="form-control form-control" name="category_id" id="editProductCatagoryId">
+                        <select class="form-control form-control" name="category_id" id="editProductCatagoryId"required>
 
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="editProductTypeId">Procuct Type</label>
-                        <select class="form-control form-control" name="product_type_id" id="editProductTypeId">
+                        <select class="form-control form-control" name="product_type_id" id="editProductTypeId"required>
 
 
                         </select>
@@ -251,22 +251,22 @@
 
                     <div class="form-group">
                         <label for="editProductWeight">Weight</label>
-                        <input type="number" name="weight" class="form-control" id="editProductWeight" placeholder="120">
+                        <input type="number" name="weight" class="form-control" id="editProductWeight" placeholder="120"required>
                     </div>
 
                     <div class="form-group">
                         <label for="editProductCost">Cost</label>
-                        <input type="number" name="cost" class="form-control" id="editProductCost" placeholder="">
+                        <input type="number" name="cost" class="form-control" id="editProductCost" placeholder=""required>
                     </div>
 
                     <div class="form-group">
                         <label for="editProductPrice">Sell Price</label>
-                        <input type="number" name="price" class="form-control" id="editProductPrice" placeholder="120">
+                        <input type="number" name="price" class="form-control" id="editProductPrice" placeholder="120"required>
                     </div>
 
                     <div class="form-group">
                         <label for="editLowLimit">Low Limit</label>
-                        <input type="number" name="low_limit" class="form-control" id="editLowLimit" placeholder="Enter Lowest Limit">
+                        <input type="number" name="low_limit" class="form-control" id="editLowLimit" placeholder="Enter Lowest Limit"required>
                     </div>
 
 

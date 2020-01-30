@@ -187,7 +187,10 @@ class SupplierController extends Controller
         return view( "receipt.supplierPayment",compact('supplierPayment', 'supplierPayment') );
     }
     public function supplierPaymentIndex(){
+
         $supplierPayments = supplierPayment::all();
+        
+        return view('supplier.cashPaymentAll',compact('supplierPayments'));
     }
 
 

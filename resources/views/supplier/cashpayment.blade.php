@@ -14,7 +14,12 @@
             <div class="card mb-4 shadow">
 
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Cash Payment</h6>
+                 
+                    <nav class="navbar navbar-light">
+         <h6 class="m-0 font-weight-bold text-primary">Cash Payment</h6>
+                <button class="btn btn-success " id="create-button"> <a href="{{ route('supplier_paymnent_store_all') }} " class="text-light">Cash Receive</a> </button>
+        
+            </nav>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('supplier_paymnent_store') }}">

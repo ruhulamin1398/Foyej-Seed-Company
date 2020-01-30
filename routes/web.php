@@ -46,6 +46,7 @@ Route::resource('suppliers', 'SupplierController');
 Route::post('suppliers_update', 'SupplierController@suppliersupdate')->name("suppliersupdate");
 Route::get('supplier_payment', 'SupplierController@suppplierPayment')->name("supplier_payment");
 Route::post('supplier_payment', 'SupplierController@suppplierPaymentStore')->name("supplier_paymnent_store");
+Route::get('supplier_payment_all', 'SupplierController@supplierPaymentIndex')->name("supplier_paymnent_store_all");
 
 // end Product area 
 
@@ -54,8 +55,9 @@ Route::resource('customers', 'CustomerController');
 Route::post('customers_update', 'CustomerController@customersupdate')->name("customersupdate");
 Route::get('customer_cash_receive_create', 'CustomerController@customersCashReceiveCreate')->name("customer_cash_receive_create");
 Route::post('customer_cash_receive', 'CustomerController@customersCashReceiveStore')->name("customer_cash_receive_store");
-
+Route::get('customer_cash_receive_all', 'CustomerController@customersCashReceiveIndex')->name("customer_cash_receive_all");
 // customer area end
+
 // barcode print  area start
 Route::get('barcode', 'BarCodePrinterController@index')->name("barcode");
 Route::post('barcode_print', 'BarCodePrinterController@print')->name("barcode_print");

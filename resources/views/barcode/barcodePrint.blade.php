@@ -29,14 +29,14 @@
         <div class="row">
 
 
-        @for($i=1 ; $i< $amount ; $i++)
+        @for($i=1 ; $i<= $amount ; $i++)
  
         <div class="col-md-3 p-2">
                 
             
                 <?php
                 
-                echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($id, "C39") . '"    />'.'<br>'.$id   ;
+                echo '<img width="90%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($id, "C39") . '"    />'.'<br>'.$id   ;
                 ?>
             
 

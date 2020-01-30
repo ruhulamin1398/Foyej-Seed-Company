@@ -15,7 +15,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3 bg-dark text-light">
             <nav class="navbar navbar-light">
-                <a class="navbar-brand">Supplier Payment list</a>
+                <a class="navbar-brand">Customer Cash Receive list</a>
                
             </nav>
         </div>
@@ -27,7 +27,7 @@
 
                         <tr>
                             <th>Payment Id</th>
-                            <th>Supplier</th>
+                            <th>Customer</th>
                             <th>Ref</th>
                            
                             <th>Pre_due</th>
@@ -38,7 +38,7 @@
                     <tfoot class="thead-dark">
                     <tr>
                             <th>Payment Id</th>
-                            <th>Supplier</th>
+                            <th>Customer</th>
                             <th>Ref</th>
                            
                             <th>Pre_due</th>
@@ -49,14 +49,14 @@
                     </tfoot>
                     <tbody>
                         <?php $id = 1 ?>
-                        @foreach ($supplierPayments as $supplierPayment)
-                        <?php $id = $supplierPayment->id; ?>
+                        @foreach ($customerCashReceives as $customerCashReceive)
+                        <?php $id = $customerCashReceive->id; ?>
                         <tr class="data-row">
                             <td class="iteration">{{$id}}</td>
-                            <td id="">{{$supplierPayment->supplier->name}}</td>
+                            <td id="">{{$customerCashReceive->customer->name}}</td>
                             <td id="">{{"Foyej Ahmed"}}</td>                           
-                            <td id="">{{$supplierPayment->pre_due}}</td>
-                            <td id="viewProductTypeId">{{$supplierPayment->amount}}</td>
+                            <td id="">{{$customerCashReceive->pre_due}}</td>
+                            <td id="viewProductTypeId">{{$customerCashReceive->amount}}</td>
 
 
 

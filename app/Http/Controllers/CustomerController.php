@@ -191,7 +191,13 @@ class CustomerController extends Controller
         return view( "receipt.customerCashReceive",compact('customerCashReceive', 'customerCashReceive') );
     }
 
+    
+    public function customersCashReceiveIndex(){
 
+        $customerCashReceives = customerCashReceive::all();
+        
+        return view('customer.customerCashReceiveAll',compact('customerCashReceives'));
+    }
 
     
 }
