@@ -48,7 +48,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $order = new Order();
-        $order->user_id = 1;
+        $order->user_id = 100;
         $order->customer_id = $request->customer_id;
         $order->pay = $request->pay;
         $order->due = $request->due;

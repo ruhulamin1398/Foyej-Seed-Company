@@ -31,7 +31,7 @@
                             <div class="col-auto">
 
                                 <span class="text-dark pl-2"> Amount</span>
-                                <input type="number" name="amount" class="form-control mb-2">
+                                <input type="number" name="amount" class="form-control mb-2" required>
                             </div>
 
 

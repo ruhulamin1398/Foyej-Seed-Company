@@ -16,13 +16,11 @@ class CreateProductTypesTable extends Migration
         Schema::create('product_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->unsignedBigInteger('sell_type_id');  
             $table->string('description')->nullable();
             $table->timestamps();
             /// like as packet, normal
 
             
-            $table->foreign('sell_type_id')->references('id')->on('sell_types');
         });
     }
 

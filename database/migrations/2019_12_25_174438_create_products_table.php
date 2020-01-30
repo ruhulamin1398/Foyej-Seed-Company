@@ -20,7 +20,8 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('product_type_id');
             $table->double('cost',8,2)->nullable();
             $table->unsignedBigInteger('weight')->nullable();
-            $table->double('price_per_unit',8,2)->nullable();
+            $table->double('price_per_unit',8,2);
+            $table->double('cost_per_unit',8,2);
             $table->unsignedBigInteger('price');
             $table->date('expire_date')->nullable();
             

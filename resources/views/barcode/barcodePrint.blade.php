@@ -1,7 +1,11 @@
 
+<div>
 
+<button type="button" id="printPdf" style="color: royalblue;  background-color:black;  ">print </button>
+<a href="{{route("barcode")}}"><button type="button" " style="color: royalblue;  background-color:black;  ">Go Back </button> </a>
+</div>
 
-
+<div id="page-top" >  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,34 +24,47 @@
 
 </head>
 
-<body id="page-top">
+<body  >
 
 
 
-    <div class="container-fluid " id="printdata">
+    <div  class="container-fluid " id="printdata">
       
         <div class="row">
 
-
-        @for($i=1 ; $i<= $amount ; $i++)
  
-        <div class="col-md-3 p-2">
-                
-            
-                <?php
-                
-                echo '<img width="90%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($id, "C39") . '"    />'.'<br>'.$id   ;
-                ?>
-            
 
-                    </div>
+
+@for($i=0 ; $i< $amount ; $i++)
+ 
+        <?php if( $i % 4 ==0  ){ ?>
+        <div style="float:left;  padding-top:12px; padding-bottom:15px;" >
+        <?php
+                
+                echo '<img width="120%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($id, "C39") . '"    />'.'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$id   ;
+                ?>
+                    </div> 
+
+        <?php }else { ?>
+
+        <div style="float:left;  padding-left:80px; padding-top:12px; padding-bottom:15px; "  >
+        <?php
+                
+                echo '<img width="120%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($id, "C39") . '"    />'.'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$id   ;
+                ?>
+                    </div> 
+        <?php } ?>
+    
 @endfor
 
+
+
+        </div>
                     
     </div>
 
 
-<button type="button" id="printPdf" style="color: royalblue;  background-color:black;  ">print </button>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('file/jquery/jquery.min.js')}}"></script>
@@ -57,21 +74,12 @@
 
     <script src="{{asset('js/printThis.js')}}"></script>
 
+    <script src="{{asset('js/custom/print.js')}}"></script>
 
 
 
 
 
-
-
-    <script>
-        $("#printPdf").click(function() {
-
-            $("#page-top").printThis({
-                importCSS: true
-            });
-        });
-    </script>
 
 
 </body>
@@ -81,7 +89,7 @@
 
 
 
-
+</div>
 
 
 

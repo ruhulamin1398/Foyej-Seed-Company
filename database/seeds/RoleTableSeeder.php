@@ -26,24 +26,27 @@ class RoleTableSeeder extends Seeder
         DB::table('users')->insert(
             [
                 [
+
+                    'id'    => 100,
                     'name' => 'ruhul',
                     'role_id' => 1,
                     'email' => 'ruhul.ok@gmail.com',
                     'address' => 'Habigong',
                     'phone' => '01840000408',
                     'salary' => '50000',
-                    'password' => Hash::make(1116430725),
+                    'password' => Hash::make(1234),
                     'status'    => 1
                 ],
 
                 [
+                    'id'    => 101,
                     'name' => 'sagor',
                     'role_id' => 2,
                     'email' => 'sagor.sec@gmail.com',
                     'address' => 'Tangail',
                     'phone' => '01799076632',
                     'salary' => '20000',
-                    'password' => Hash::make(1116430725),
+                    'password' => Hash::make(1234),
                     'status'    => 1
                 ],
 
@@ -51,95 +54,139 @@ class RoleTableSeeder extends Seeder
         );
 
         DB::table('suppliers')->insert([
-            ['name' => 'ruhul', 'phone' => '01840000408', 'address' => 'Habigong', 'company' => 'Pran', 'due' => '5000'],
-            ['name' => 'sagor', 'phone' => '01799076632', 'address' => 'Tangail', 'company' => 'Arong', 'due' => '7000'],
+            [
+                'id'    => 100,
+                'name' => 'ruhul',
+                'phone' => '01840000408',
+                'address' => 'Habigong',
+                'company' => 'Pran',
+                'due' => '5000'
+            ],
+            [
+                'id'    => 101,
+                'name' => 'sagor',
+                'phone' => '01799076632',
+                'address' => 'Tangail',
+                'company' => 'Arong',
+                'due' => '7000'
+            ],
         ]);
 
 
-        DB::table('sell_types')->insert([
-            [
-                'name' => 'packet'
-            ],
-            [
-                'name' => 'normal'
-            ],
-
-        ]);
 
         DB::table('categories')->insert([
-            ['name' => 'no_category', 'description' => 'Not add in any category'],
-            ['name' => 'stricer', 'description' => 'just a sign'],
-            ['name' => 'complete', 'description' => 'now ready for sele'],
+            [
+                'id'    => 100,
+                'name' => 'no_category',
+                'description' => 'Not add in any category'
+            ],
+            [
+                'id'    => 101,
+                'name' => 'stricer',
+                'description' => 'just a sign'
+            ],
+            [
+                'id'    => 102,
+                'name' => 'complete',
+                'description' => 'now ready for sele'
+            ],
 
         ]);
 
         DB::table('payment_types')->insert([
-            ['type' => 'invoice'],
-            ['type' => 'due'],
+            [
+                'type' => 'invoice'
+            ],
+            [
+                'type' => 'due'
+            ],
 
         ]);
 
         DB::table('cost_types')->insert([
-            ['type' => 'ABCD'],
-            ['type' => 'WXYZ'],
+            [
+                'id'    => 100,
+                'type' => 'Daily Cost'
+            ],
+            [
+                'id'    => 101,
+                'type' => 'Sallery'
+            ],
 
         ]);
 
         DB::table('product_types')->insert([
-            ['name' => 'normal', 'description' => 'normal sale with weight ', 'sell_type_id' => 1],
-            ['name' => 'packet', 'description' => 'sale as a packet', 'sell_type_id' => 2],
+            [
+                'name' => 'normal',
+                'description' => 'normal sale with weight ',
+              
+            ],
+            [
+                'name' => 'packet',
+                'description' => 'sale as a packet',
+                
+            ],
 
         ]);
 
         DB::table('products')->insert([
             [
-                'id' => 881,
+                'id' => 100,
                 'name' => 'লাল শাক ',
-                'category_id' => 1,
+                'category_id' => 100,
                 'product_type_id' => 2,
                 'cost' => 10,
                 'price' => 12,
                 'weight' => 1000,
                 'stock' => 100,
                 'sell' => 50,
-                'low_limit' => 10
+                'low_limit' => 10,
+                'price_per_unit' => 1.3,
+                'cost_per_unit' => 1.3
+
             ],
 
             [
-                'id' => 882,
+                'id' => 101,
                 'name' => 'পালং শাক',
-                'category_id' => 2,
+                'category_id' => 101,
                 'product_type_id' => 1,
                 'cost' => 20,
                 'price' => 24,
                 'stock' => 100,
                 'weight' => 500,
                 'sell' => 50,
-                'low_limit' => 10
+                'low_limit' => 10,
+                'price_per_unit' => 1.3,
+                'cost_per_unit' => 1.3
             ],
             [
-                'id' => 883,
+                'id' => 102,
                 'name' => 'মূলা',
-                'category_id' => 2,
+                'category_id' => 102,
                 'product_type_id' => 2,
                 'cost' => 20,
                 'price' => 24,
                 'weight' => 10,
                 'stock' => 100,
                 'sell' => 50,
-                'low_limit' => 10
+                'low_limit' => 10,
+                'price_per_unit' => 1.3,
+                'cost_per_unit' => 1.3
             ],
             [
-                'id' => 884,
+                'id' => 103,
                 'name' => 'গাজর',
-                'category_id' => 2,
+                'category_id' => 102,
                 'product_type_id' => 2,
                 'cost' => 20,
                 'price' => 24,
                 'weight' => 20,
                 'stock' => 100,
                 'sell' => 50,
-                'low_limit' => 10
+                'low_limit' => 10,
+                'price_per_unit' => 1.3,
+                'cost_per_unit' => 1.3
             ],
 
         ]);

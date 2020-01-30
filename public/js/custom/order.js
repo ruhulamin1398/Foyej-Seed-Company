@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     console.log("page is ready");
 
-    var user_id=1;
+    var user_id=100;
     var customer_id;
     var customer_previous_due=0;
     var due ;

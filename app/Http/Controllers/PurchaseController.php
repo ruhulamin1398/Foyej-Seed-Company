@@ -52,7 +52,7 @@ class PurchaseController extends Controller
         $purchase = new Purchase();
 
         //  $purchase->user_id= $request->user_id ;
-        $purchase->user_id = 1;
+        $purchase->user_id = 100;
         $purchase->supplier_id = $request->supplier_id;
         $purchase->pay = $request->pay;
         $purchase->due = $request->due;
