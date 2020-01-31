@@ -28,7 +28,7 @@ class ProductController extends Controller
 
     public function complete()
     {
-        $products = Product::all()->where("category_id", 3);
+        $products = Product::all()->where("category_id", 102);
 
 
 
