@@ -370,7 +370,7 @@
             <div id="from">
                 <p> 
                 <h3 style="padding: 3px;"><strong>Invoice: {{$order->id}}</strong></h3>
-                <h4 style="padding: 3px;">Réf : Foyej Ahmed</h4>
+                <h4 style="padding: 3px;">Réf : {{Auth::user()->name}}</h4>
                 <p style="padding: 3px;" >Date : {{ $order->created_at->format('M d Y')}}  </p>
                 <p style="padding: 3px;" >Due :{{ $order->customer->due }}</p>
                 </p>

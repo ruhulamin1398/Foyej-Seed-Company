@@ -7,6 +7,7 @@ use App\Product;
 use App\Product_type;
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -48,7 +49,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $order = new Order();
-        $order->user_id = 100;
+        $order->user_id = Auth::user()->id;
         $order->customer_id = $request->customer_id;
         $order->pay = $request->pay;
         $order->due = $request->due;

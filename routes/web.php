@@ -17,6 +17,8 @@
 
 Route::get('/', 'IndexController@index')->name('index');
 
+Route::get('/profile', 'UserController@index')->name('profile');
+
 Auth::routes();
 
 // Product Area 
@@ -75,3 +77,23 @@ Route::view('/bar','bar');
 
 
 
+
+// api route 
+
+
+
+
+Route::get('apicategories', 'CategoryController@apiIndex')->name('categories_api');
+Route::get('apiproduct_types', 'ProductTypeController@apiIndex')->name('product_type_api');
+Route::get('apiproduct', 'ProductController@ApiShow')->name('product_view_api');
+Route::get('apiproduct_check', 'ProductController@apiProducutCheck')->name("product_check_api");
+
+Route::get('apisuppliers', 'SupplierController@apiIndex')->name('suppliers_api');
+Route::get('apisupplier', 'SupplierController@ApiShow')->name('supplier_view_api');
+Route::get('apisupplierscheck', 'SupplierController@supplierscheck')->name("supplierscheck_api");
+Route::get('apisuppliersdue', 'SupplierController@suppliersDue')->name("suppliersdue_api");
+
+Route::get('apicustomers', 'CustomerController@apiIndex')->name('customers_api');
+Route::get('apicustomer', 'CustomerController@ApiShow')->name('customer_view_api');
+Route::get('apicustomer_check', 'CustomerController@apiCustomerCheck')->name("customer_check_api");
+Route::get('apicustomersdue_api', 'CustomerController@customersDue')->name("customersdue_api");

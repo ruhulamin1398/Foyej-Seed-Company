@@ -115,8 +115,9 @@
 
                                     </i>
                                 </button>
+                                <button type="button" class="btn btn-success" > <a href="{{ route('customers.show',  $customer->id )}}"> <i class="fa fa-eye text-white" aria-hidden="false"> </i> </a></button>
 
-
+                               
 
                             </td>
 

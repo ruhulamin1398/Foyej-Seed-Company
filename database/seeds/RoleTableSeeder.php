@@ -28,9 +28,10 @@ class RoleTableSeeder extends Seeder
                 [
 
                     'id'    => 100,
-                    'name' => 'ruhul',
+                    'username' => 'ruhul',
                     'role_id' => 1,
                     'email' => 'ruhul.ok@gmail.com',
+                    'name' => 'Ruhul Amin',
                     'address' => 'Habigong',
                     'phone' => '01840000408',
                     'salary' => '50000',
@@ -40,9 +41,10 @@ class RoleTableSeeder extends Seeder
 
                 [
                     'id'    => 101,
-                    'name' => 'sagor',
+                    'username' => 'sagor',
                     'role_id' => 2,
                     'email' => 'sagor.sec@gmail.com',
+                    'name' => 'Sajjad Hossain Sagor ',
                     'address' => 'Tangail',
                     'phone' => '01799076632',
                     'salary' => '20000',

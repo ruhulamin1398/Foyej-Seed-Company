@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -16,8 +17,8 @@ class UserController extends Controller
     public function index()
     {
 
-        $user = User::find(1);
-        return view('profile',compact('user'));
+        $user = Auth::user();
+        return view('user.profile',compact('user'));
        
 
     }

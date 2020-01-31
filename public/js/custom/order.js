@@ -195,22 +195,6 @@ $(document).ready(function () {
 
 
 
-        // var request = $.get(link);
-        // request.success(function(data) {
-
-
-        //     console.log(data);
-
-        //     $("#orderProductInputName").val(data.name);
-
-        // });
-        // request.error(function(jqXHR, textStatus, errorThrown){
-        //     console.log(jqXHR);
-        //     console.log(textStatus);
-        //     console.log(errorThrown);
-        // });
-
-
 
 
 
@@ -264,8 +248,8 @@ $(document).ready(function () {
         totalPaurchase = 0;
         var totalPaurchaseRow = 0;
 
-        totalPaurchase = parseInt(totalPaurchase);
-        totalPaurchaseRow = parseInt(totalPaurchaseRow);
+        totalPaurchase = parseFloat(totalPaurchase);
+        totalPaurchaseRow = parseFloat(totalPaurchaseRow);
 
         productDiscount = totalPaurchaseRow - totalPaurchase;
 
@@ -273,13 +257,13 @@ $(document).ready(function () {
         var i = 0;
         jQuery.each(orderTableData, function (row) {
 
-            totalPaurchase += parseInt(orderTableData[row].total.trim());
-            totalPaurchaseRow += parseInt(orderTableData[row].quantity.trim()) * parseInt(orderTableData[row].price.trim())
+            totalPaurchase += parseFloat(orderTableData[row].total.trim());
+            totalPaurchaseRow += parseFloat(orderTableData[row].quantity.trim()) * parseFloat(orderTableData[row].price.trim())
             html += '<tr>'
             html += '<td>' + ++i + '</td>'
             html += '<td>' + orderTableData[row].id + '</td>'
             html += '<td>' + orderTableData[row].name + '</td>'
-            html += '<td>' + orderTableData[row].price + '</td>'
+            html += '<td>' + orderTableData[row].price_per_unit + '</td>'
             html += '<td>' + orderTableData[row].quantity + '</td>'
             html += '<td>' + orderTableData[row].total + '</td>'
             html += '<td>'

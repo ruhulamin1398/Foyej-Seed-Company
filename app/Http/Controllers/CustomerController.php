@@ -72,7 +72,7 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+            return 'hhhaha';
     }
     public function ApiShow(Request $request)
     {

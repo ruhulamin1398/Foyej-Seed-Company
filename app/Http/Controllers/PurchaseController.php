@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Product_type;
 use App\Category;
+use Illuminate\Support\Facades\Auth;
 
 class PurchaseController extends Controller
 {
@@ -52,7 +53,7 @@ class PurchaseController extends Controller
         $purchase = new Purchase();
 
         //  $purchase->user_id= $request->user_id ;
-        $purchase->user_id = 100;
+        $purchase->user_id = Auth::user()->id;
         $purchase->supplier_id = $request->supplier_id;
         $purchase->pay = $request->pay;
         $purchase->due = $request->due;
