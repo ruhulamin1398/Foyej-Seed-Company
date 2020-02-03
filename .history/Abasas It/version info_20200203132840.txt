@@ -1,0 +1,5 @@
+                    Aasas Shop Version Lambda
+******************************************************************
+Product Types 
+1.Normal Product - you can sell these type of product By Types 
+2.Packet    - Y
