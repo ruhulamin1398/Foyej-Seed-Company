@@ -11,13 +11,7 @@
 
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Add New Product</h6>
-        </div>
-        <div class="card-body">
-
-
-
-
-
+        </div>     <div class="card-body">
 
 
 
@@ -40,6 +34,7 @@
                     </select>
                 </div>
 
+
                 <div class="form-group">
                     <label for="product_type_id">Procuct Type</label>
                     <select class="form-control form-control" name="product_type_id" id="product_type_id" required>
@@ -58,15 +53,11 @@
                     <input type="number" name="weight" class="form-control" id="weight" placeholder="120">
                 </div>
                 
-                <div class="form-group">
-                    <label for="cost">Cost</label>
-                    <input type="number" name="cost" class="form-control" id="cost" placeholder="">
-                </div>
 
 
                 <div class="form-group">
-                    <label for="price">Sell Price</label>
-                    <input type="number" name="price" class="form-control" id="price" placeholder="120">
+                    <label for="price_per_unit"> Price Per Unit</label>
+                    <input type="number" name="price_per_unit" class="form-control" id="price_per_unit" placeholder="120">
                 </div>
 
                 <div class="form-group">

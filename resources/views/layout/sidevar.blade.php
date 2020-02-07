@@ -6,7 +6,7 @@
 
 
 
-  <div class="card  bg-dark mb-2">
+  <div class="card    mb-2"  style="background-color:#2a3f5c;">
 
 
     <!-- Nav Item - Dashboard -->
@@ -19,7 +19,7 @@
     <!-- Product Collapse Menu -->
     <li class="nav-item">
       <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true" aria-controls="collapseProducts">
-        <i class="fas fa-fw fa-cog "></i>
+        <i class="fas fa-fw fa-cog  "></i>
         <span>Products</span>
       </a>
       <div id="collapseProducts" class="collapse" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
@@ -79,7 +79,7 @@
 
   </div>
   <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
-  <div class="card  bg-dark mb-2">
+  <div class="card  mb-2"style="background-color:#2a3f5c;">
 
 
     <!-- Nav Item - Dashboard -->
@@ -133,7 +133,7 @@
   </div>
   <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 
-  <div class="card  bg-dark mb-2">
+  <div class="card  mb-2"style="background-color:#2a3f5c;">
 
 
     <hr class="sidebar-divider m-1 p-0 ">

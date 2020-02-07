@@ -66,8 +66,6 @@ class ProductController extends Controller
             'name' => 'required:products',
             'category_id' => 'required:products',
             'product_type_id' => 'required:products',
-            'cost' => 'required:products',
-            'price' => 'required:products',
         ]);
 
         $product = new Product;

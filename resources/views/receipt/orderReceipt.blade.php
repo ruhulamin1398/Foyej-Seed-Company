@@ -360,9 +360,9 @@
             <?php
                 
               
-                echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG ( $order->id , "C39") . '"    />'.'<br>';
-                ?>
-                <h3 style="padding: 3px;"><strong>Invoice: #{{ $order->id}}</strong></h3>
+                // echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG ( $order->id , "C39") . '"    />'.'<br>';
+                // ?>
+                <!-- <h3 style="padding: 3px;"><strong>Invoice: #{{ $order->id}}</strong></h3> -->
             </div>
         </div>
 
