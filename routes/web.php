@@ -40,6 +40,7 @@ Route::get('purchases-receipt-show/{id}', 'ReceiptController@purchaseShow')->nam
 Route::resource('orders', 'OrderController');
 Route::resource('orders_details', 'OrderDetailController');
 Route::get('order-receipt-show/{id}', 'ReceiptController@orderShow')->name('order-receipt-show');
+Route::resource('order_return_product', 'OrderReturnProductController');
 
 Route::resource('invoices', 'InvoiceController');
 
@@ -58,6 +59,7 @@ Route::post('customers_update', 'CustomerController@customersupdate')->name("cus
 Route::get('customer_cash_receive_create', 'CustomerController@customersCashReceiveCreate')->name("customer_cash_receive_create");
 Route::post('customer_cash_receive', 'CustomerController@customersCashReceiveStore')->name("customer_cash_receive_store");
 Route::get('customer_cash_receive_all', 'CustomerController@customersCashReceiveIndex')->name("customer_cash_receive_all");
+
 // customer area end
 
 // barcode print  area start
