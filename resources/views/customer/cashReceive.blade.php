@@ -15,7 +15,7 @@
 
                 <div class="card-header py-3">
                     <nav class="navbar navbar-light">
-         <h6 class="m-0 font-weight-bold text-primary">Cash Receive</h6>
+         <h6 class="m-0 font-weight-bold text-primary">Cash Receive List </h6>
                 <button class="btn btn-success " id="create-button"> <a href="{{ route('customer_cash_receive_all') }} " class="text-light">Cash Receive</a> </button>
         
             </nav>

@@ -54,7 +54,7 @@
                         <tr class="data-row">
                             <td class="iteration">{{$id}}</td>
                             <td id="">{{$customerCashReceive->customer->name}}</td>
-                            <td id="">{{"Foyej Ahmed"}}</td>                           
+                            <td id="">{{$customerCashReceive->user->name}}</td>                           
                             <td id="">{{$customerCashReceive->pre_due}}</td>
                             <td id="viewProductTypeId">{{$customerCashReceive->amount}}</td>
 

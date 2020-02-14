@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Seeder;
@@ -84,7 +85,7 @@ class RoleTableSeeder extends Seeder
             ],
             [
                 'id'    => 101,
-                'name' => 'stricer',
+                'name' => 'striker',
                 'description' => 'just a sign'
             ],
             [

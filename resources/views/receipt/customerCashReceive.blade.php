@@ -361,6 +361,7 @@
                 echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG($customerCashReceive->id, "C39") . '"    />' . '<br>';
                 ?>
                 <h3 style="padding: 3px;"><strong>Payment: #{{ $customerCashReceive->id}}</strong></h3>
+         
             </div>
         </div>
 

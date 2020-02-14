@@ -8,6 +8,8 @@ use App\customerCashReceive;
 use App\Order;
 use App\Supplier;
 
+use Illuminate\Support\Facades\Auth;
+
 class CustomerController extends Controller
 {
     /**
@@ -72,7 +74,11 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-            return 'hhhaha';
+        $customerCashReceives= customerCashReceive::where('customer_id', $customer->id)->get(); 
+        $orders= order::where('customer_id', $customer->id)->get(); 
+
+
+            return view('customer.show',compact('customer',"customerCashReceives",'orders'));
     }
     public function ApiShow(Request $request)
     {
@@ -176,7 +182,7 @@ class CustomerController extends Controller
 
         // return $request;
         $customerCashReceive = new customerCashReceive;
-        $customerCashReceive->user_id = 1;
+        $customerCashReceive->user_id = Auth::user()->id;
         $customerCashReceive->customer_id = $request->customer_id;
         $customerCashReceive->amount = $request->amount;
         $customerCashReceive->comment = $request->comment;  
