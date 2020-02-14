@@ -30,7 +30,6 @@
           <a class="collapse-item" href="{{ route('categories.store') }}">Categories</a>
           <a class="collapse-item" href="{{ route('product_type.index') }}">Type</a>
           <a class="collapse-item" href=" {{ route('order_return_product.index') }}">Return Product</a>
-          <a class="collapse-item" href=" {{ route('productsdrop') }}">Drop</a>
         </div>
       </div>
     </li>

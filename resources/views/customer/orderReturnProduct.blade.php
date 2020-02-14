@@ -15,11 +15,11 @@
 
                 <div class="card-header py-3">
                     <nav class="navbar navbar-light">
-                       Return Product 
+                        Return Product
                     </nav>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('customer_cash_receive_store') }}">
+                    <form method="POST" action="{{ route('order_return_product.store') }}">
                         @csrf
                         <div class="form-row align-items-center">
 
@@ -33,34 +33,28 @@
 
 
                             <div class="col-auto">
-                <span class="text-dark  pl-2"> Product Id</span>
-                <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2">
-              </div>
+                                <span class="text-dark  pl-2"> Product Id</span>
+                                <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2">
+                            </div>
 
-              <div class="col-auto">
-                <span class="text-dark  pl-2"> Product Name</span>
-                <input type="text" name="name" id="orderProductInputName" size="20" value="" class="form-control  mb-2" disabled="true">
-              </div>
+                            <div class="col-auto">
+                                <span class="text-dark  pl-2"> Product Name</span>
+                                <input type="text" name="name" id="orderProductInputName" size="20" value="" class="form-control  mb-2" disabled="true">
+                            </div>
+
+
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Commment</span>
-                                <input type="text" name="comment" class="form-control mb-2">
+                                <span class="text-dark pl-2"> Quantity</span>
+                                <input type="text" name="quantity" class="form-control mb-2">
                             </div>
+
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Commment</span>
-                                <input type="text" name="comment" class="form-control mb-2">
+                                <span class="text-dark pl-2"> Price</span>
+                                <input type="text" name="price" class="form-control mb-2">
                             </div>
-                            <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Commment</span>
-                                <input type="text" name="comment" class="form-control mb-2">
-                            </div>
-                            <div class="col-auto">
-
-                                <span class="text-dark pl-2"> Commment</span>
-                                <input type="text" name="comment" class="form-control mb-2">
-                            </div>
 
 
                             <div class="col-auto">
@@ -123,13 +117,13 @@
                                 @foreach ($orderReturnProducts as $orderReturnProduct)
 
                                 <tr class="data-row">
-                                    <td >{{$id++}}</td>
-                                    <td >{{$orderReturnProduct->user->name}}</td>
-                                    <td >{{$orderReturnProduct->customer->phone}}</td>
-                                    <td >{{$orderReturnProduct->product_id}}</td>
-                                    <td >{{$orderReturnProduct->product->name}}</td>
-                                    <td >{{$orderReturnProduct->price}}</td>
-                                    <td >{{$orderReturnProduct->profit}}</td>
+                                    <td>{{$id++}}</td>
+                                    <td>{{$orderReturnProduct->user->name}}</td>
+                                    <td>{{$orderReturnProduct->customer->phone}}</td>
+                                    <td>{{$orderReturnProduct->product_id}}</td>
+                                    <td>{{$orderReturnProduct->product->name}}</td>
+                                    <td>{{$orderReturnProduct->price}}</td>
+                                    <td>{{$orderReturnProduct->profit}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -211,7 +205,9 @@
 
 
         </div>
+      
     </div>
+   
 
     <!-- Content Row -->
 
