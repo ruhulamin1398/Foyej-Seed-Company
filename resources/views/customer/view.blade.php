@@ -10,30 +10,30 @@
     <div class="card mb-4 shadow">
 
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Add New Customer</h6>
+            <h6 class="m-0 font-weight-bold text-primary"> নতুন কাস্টমার যোগ করুন </h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('customers.store') }}">
                 @csrf
                 <div class="form-row align-items-center">
                     <div class="col-auto">
-                        <span class="text-dark pl-2"> Customer's Name</span>
+                        <span class="text-dark pl-2"> কাস্টমারের নাম </span>
                         <input type="text" name="name" class="form-control mb-2">
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Phone</span>
+                        <span class="text-dark pl-2"> নাম্বার </span>
                         <input type="text" name="phone"  class="form-control mb-2" >
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Address</span>
+                        <span class="text-dark pl-2"> ঠিকানা </span>
                         <input type="text" name="address"  class="form-control mb-2">
                     </div>
 
 
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                        <button type="submit" class="btn btn-primary mt-3"> সাবমিট </button>
                     </div>
 
                 </div>
@@ -48,7 +48,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3  bg-dark ">
         <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">Customer list</a>
+                <a class="navbar-brand text-light"> কাস্টমার তালিকা </a>
              </nav>
         </div>
         <div class="card-body">
@@ -59,21 +59,21 @@
 
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Due</th>
-                            <th>Action</th>
+                            <th> নাম </th>
+                            <th> নাম্বার </th>
+                            <th> ঠিকানা </th>
+                            <th> বকেয়া </th>
+                            <th> একশন </th>
                         </tr>
                     </thead>
                     <tfoot class="thead-dark">
                     <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Due</th>
-                            <th>Action</th>
+                            <th> নাম </th>
+                            <th> নাম্বার </th>
+                            <th> ঠিকানা </th>
+                            <th> বকেয়া </th>
+                            <th> একশন </th>
                         </tr>
 
                     </tfoot>
@@ -138,7 +138,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-dark" id="edit-modal-label ">Edit Supplier</h5>
+                <h5 class="modal-title text-dark" id="edit-modal-label ">কাস্টমার সংশোধন </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -150,27 +150,27 @@
 
                     <!-- id -->
                     <div class="form-group">
-                        <label class="col-form-label" for="customerEditId">Phone </label>
+                        <label class="col-form-label" for="customerEditId"> নাম্বার </label>
                         <input type="number" name="id" class="form-control" id="customerEditId" required readonly>
                     </div>
                     <!-- /id -->
                     <!-- name -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierName">Name</label>
+                        <label class="col-form-label" for="editModalSupplierName"> নাম </label>
                         <input type="text" name="name" class="form-control" id="editModalSupplierName" required >
                     </div>
                     <!-- /name -->
                     
                     <!-- name -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierPhone">phone</label>
+                        <label class="col-form-label" for="editModalSupplierPhone"> নাম্বার </label>
                         <input type="text" name="phone" class="form-control" id="editModalSupplierPhone" required >
                     </div>
                     <!-- /name -->
 
                     <!-- Address -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierAddress">Address</label>
+                        <label class="col-form-label" for="editModalSupplierAddress"> ঠিকানা </label>
                         <input type="text" name="address" class="form-control" id="editModalSupplierAddress" required >
                     </div>
                     <!-- /Address -->
