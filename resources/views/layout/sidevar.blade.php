@@ -114,6 +114,7 @@
 
           <a class="collapse-item" href="#">Add New</a>
           <a class="collapse-item" href="#">View All</a>
+          <a class="collapse-item" href="#">Sallery</a>
 
         </div>
       </div>
@@ -139,20 +140,44 @@
     <hr class="sidebar-divider m-1 p-0 ">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item  ">
-      <a class="nav-link p-3 " href="index">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Profile</span></a>
+  
+    <li class="nav-item">
+      <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseExpenses" aria-expanded="true" aria-controls="collapseExpenses">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Expenses</span>
+      </a>
+      <div id="collapseExpenses" class="collapse" aria-labelledby="headingExpenses" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+
+          <a class="collapse-item" href="{{ route('expenses.create') }}">Daily</a>
+          <a class="collapse-item" href="{{ route('expenses.index') }}">Monthly</a>
+          <a class="collapse-item" href="{{ route('expenses.index') }}">Yearly</a>
+
+        </div>
+      </div>
     </li>
 
-    <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
+
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item  ">
-      <a class="nav-link p-3 " href="index">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Sallery</span></a>
+  
+    <li class="nav-item">
+      <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Report</span>
+      </a>
+      <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+
+          <a class="collapse-item" href="{{ route('expenses.create') }}">Sale</a>
+          <a class="collapse-item" href="{{ route('expenses.index') }}">Purchase</a>
+          <a class="collapse-item" href="{{ route('expenses.index') }}">Profit</a>
+          <a class="collapse-item" href="{{ route('expenses.index') }}">Expense</a>
+
+        </div>
+      </div>
     </li>
+    
 
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">

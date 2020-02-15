@@ -52,6 +52,18 @@ class RoleTableSeeder extends Seeder
                     'password' => Hash::make(1234),
                     'status'    => 1
                 ],
+                [
+                    'id'    => 102,
+                    'username' => 'sagor',
+                    'role_id' => 2,
+                    'email' => 'rahmanhasanur715@gmail.com',
+                    'name' => 'Hasan ',
+                    'address' => 'Tangail',
+                    'phone' => '01799076632',
+                    'salary' => '20000',
+                    'password' => Hash::make(1234),
+                    'status'    => 1
+                ],
 
             ]
         );
