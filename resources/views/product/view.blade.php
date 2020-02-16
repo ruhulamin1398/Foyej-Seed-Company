@@ -32,7 +32,7 @@
                             <th>বিক্রয়</th>
                             <th> ক্যাটাগরি</th>
                             <th>মজুদ</th>
-                            <th> ক্রয়মুল্য</th>
+                            <th> ক্রয়মূল্য</th>
                             <th> লিমিট</th>
                             <th>মেয়াদ</th>
                             <th> একশন</th>
@@ -47,7 +47,7 @@
                             <th> বিক্রয়</th>
                             <th> ক্যাটাগরি</th>
                             <th> মজুদ</th>
-                            <th>ক্রয়মুল্য</th>
+                            <th>ক্রয়মূল্য</th>
                             <th> লিমিট</th>
                             <th> মেয়াদ</th>
                             <th> একশন</th>
@@ -166,13 +166,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="cost"> ক্রয়মুল্য</label>
+                        <label for="cost"> ক্রয়মূল্য</label>
                         <input type="number" name="cost" class="form-control" id="cost" placeholder="" required>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="price"> বিক্রয় মুল্য</label>
+                        <label for="price"> বিক্রয় মূল্য</label>
                         <input type="number" name="price" class="form-control" id="price" placeholder="" required>
                     </div>
 
@@ -255,12 +255,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="editProductCost"> ক্রয়মুল্য</label>
+                        <label for="editProductCost"> ক্রয়মূল্য</label>
                         <input type="number" name="cost" class="form-control" id="editProductCost" placeholder=""required>
                     </div>
 
                     <div class="form-group">
-                        <label for="editProductPrice">বিক্রয় মুল্য</label>
+                        <label for="editProductPrice">বিক্রয় মূল্য</label>
                         <input type="number" name="price" class="form-control" id="editProductPrice" placeholder="120"required>
                     </div>
 

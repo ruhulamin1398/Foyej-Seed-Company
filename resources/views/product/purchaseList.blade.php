@@ -7,7 +7,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Purchase List</h6>
+            <h6 class="m-0 font-weight-bold text-primary"> ক্রয়ের তালিকা </h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -17,21 +17,21 @@
 
                         <tr>
                             <th>#</th>
-                            <th>Purchase Id</th>
-                            <th>Supplier</th>
-                            <th>Total</th>
-                            <th>Date</th>
-                            <th>Action</th>
+                            <th>ক্রয় আইডি</th>
+                            <th> সরবরাহকারী </th>
+                            <th> মোট </th>
+                            <th> তথ্য </th>
+                            <th> একশন </th>
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                         <tr>
                             <th>#</th>
-                            <th>Purchase Id</th>
-                            <th>Supplier</th>
-                            <th>Total</th>
-                            <th>Date</th>
-                            <th>Action</th>
+                            <th>ক্রয় আইডি</th>
+                            <th> সরবরাহকারী </th>
+                            <th> মোট </th>
+                            <th> তথ্য </th>
+                            <th> একশন </th>
                         </tr>
 
                     </tfoot>

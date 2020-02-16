@@ -16,8 +16,8 @@
 
         <div class="card-header py-3 bg-abasas-dark  text-light ">
           <nav class="navbar ">
-            <a class="navbar-brand">Purchase New</a>
-            <button class="btn btn-success " id="create-button"> <a href="{{ route('supplier_payment') }} " class="text-light">Cash Payment</a> </button>
+            <a class="navbar-brand"> নতুন পণ্য কেনা </a>
+            <button class="btn btn-success " id="create-button"> <a href="{{ route('supplier_payment') }} " class="text-light"> টাকা পরিশোধ </a> </button>
             
           </nav>
 
@@ -27,22 +27,22 @@
 
             <div class="form-row align-items-center">
               <div class="col-auto">
-                <span class="text-dark  pl-2"> Product Id</span>
+                <span class="text-dark  pl-2"> পণ্যের তালিকা </span>
                 <input type="text" name="product_id" id="purchaseProductInputId" size="10" value="" class="form-control  mb-2">
               </div>
 
               <div class="col-auto">
-                <span class="text-dark  pl-2"> Product Name</span>
+                <span class="text-dark  pl-2"> পণ্যের নাম </span>
                 <input type="text" name="name" id="purchaseProductInputName" size="20" value="" class="form-control  mb-2" disabled="true">
               </div>
               <div class="col-auto">
 
-                <span class="text-dark pl-1"> Price</span>
+                <span class="text-dark pl-1">  মূল্য </span>
                 <input type="text" name="price" id="purchaseProductInputPrice" size="6" value=0 class="form-control  mb-2 " disabled="true">
               </div>
               <div class="col-auto">
 
-                <span class="text-dark pl-1"> Quantity</span>
+                <span class="text-dark pl-1">  পরিমান </span>
                 <input type="text" name="quantity" id="purchaseProductInputQuantity" size="6" value=0 class="form-control  mb-2 " disabled="true">
               </div>
 
@@ -50,20 +50,20 @@
 
               <div class="col-auto">
 
-                <span class="text-dark pl-1"> Total</span>
+                <span class="text-dark pl-1"> মোট </span>
                 <input type="text" name="total" id="purchaseProductInputTotal" size="10" value=0 class="form-control  mb-2 " disabled="true">
               </div>
 
 
 
               <div class="col-auto">
-                <button type="button" id="purchaseProductInputSubmit" class="btn btn-success mt-3" disabled="true">Submit</button>
+                <button type="button" id="purchaseProductInputSubmit" class="btn btn-success mt-3" disabled="true"> সাবমিট </button>
               </div>
 
             </div>
 
           </form>
-          <div id="purchaseProductError" class="text-danger "> Product Not Fount , Try again !!! </div>
+          <div id="purchaseProductError" class="text-danger "> পণ্যটি পাওয়া যায়নি , আবার চেষ্টা করুন !!! </div>
 
 
 
@@ -76,11 +76,10 @@
 
 
 
-
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <b>Product list</b>
+          <b> পণ্যের তালিকা </b>
 
         </div>
         <div class="card-body">
@@ -91,23 +90,23 @@
 
                 <tr>
                   <th>#</th>
-                  <th>Id</th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Total</th>
-                  <th>Action</th>
+                  <th> আইডি </th>
+                  <th> নাম </th>
+                  <th> মূল্য </th>
+                  <th> পরিমান </th>
+                  <th> মোট </th>
+                  <th> একশন </th>
                 </tr>
               </thead>
               <tfoot class="bg-abasas-dark">
                 <tr>
-                  <th>#</th>
-                  <th>Id</th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Total</th>
-                  <th>Action</th>
+                <th>#</th>
+                  <th> আইডি </th>
+                  <th> নাম </th>
+                  <th> মূল্য </th>
+                  <th> পরিমান </th>
+                  <th> মোট </th>
+                  <th> একশন </th>
                 </tr>
 
               </tfoot>
@@ -130,9 +129,11 @@
 
 
       <!-- Supplier Area Start -->
-      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
-        <div class="card border-none   bg-abasas-dark  h-100 p-2">
-          <h3 class="text-white">Supplier</h3>
+
+      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
+        <div class="card border-none   bg-dark  h-100 p-2">
+          <h3 class="text-white"> সরবরাহকারি </h3>
+
           <div class="card-body">
             <div class="row no-gutters ">
 
@@ -145,9 +146,9 @@
 
 
                       <div class=" col-auto">
-                        <label class="text-light" for="purchasePageSupplierPhoneField">Supplier Phone</label>
+                        <label class="text-light" for="purchasePageSupplierPhoneField"> সরবরাহকারি  নাম্বার </label>
                         <input type="text" name="phone" id="purchasePageSupplierPhoneField" class="form-control mb-2">
-                        <div class="text-danger text-small" id="purchasePageSupplierPhoneFieldLength">Enter a Valid Phone Number</div>
+                        <div class="text-danger text-small" id="purchasePageSupplierPhoneFieldLength"> সঠিক নাম্বার দিন </div>
                       </div>
                       <input type=" number" name="efsd" hidden ">
                   </form>
@@ -183,7 +184,7 @@
                       </div>
 
                       <div class="col-auto">
-                        <button type="button" id="purchasePageAddSupplierButton" class="btn btn-primary mt-3">done</button>
+                        <button type="button" id="purchasePageAddSupplierButton" class="btn btn-primary mt-3"> শেষ </button>
                       </div>
 
 
@@ -206,28 +207,28 @@
           <div class="card border-none   bg-abasas-dark  h-100 p-1">
 
             <div class="card-body">
-              <div class="font-weight-blod h3 text-light">Total: <span id="totalPrice">0</span> </div>
+              <div class="font-weight-blod h3 text-light"> মোট <span id="totalPrice">0</span> </div>
               <div class="col-auto">
-                <label class="text-light" for="purchasePaymentField">Payment</label>
+                <label class="text-light" for="purchasePaymentField"> পরিশোধ </label>
                 <input type="text" id="purchasePaymentField" class="form-control mb-2" value="0" required>
               </div>
 
               <hr class="sidebar-divider bg-light m-1 p-0 ">
 
-              <div class="font-weight-blod  text-light">Discount: <span id="totalPriceDiscount">0</span> </div>
+              <div class="font-weight-blod  text-light"> ছাড় <span id="totalPriceDiscount">0</span> </div>
 
               <div class="col-auto">
-                <label class="text-light" for="purchaseMoreDiscountField">More Discount</label>
+                <label class="text-light" for="purchaseMoreDiscountField"> অতিরিক্ত ছাড় </label>
                 <input type="text" id="purchaseMoreDiscountField" value="0" class="form-control mb-2" required>
               </div>
 
               <!-- Divider -->
               <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <div class="text-light font-weight-bold">Due : <span id="totalDue">0</span> </div>
+              <div class="text-light font-weight-bold"> বকেয়া : <span id="totalDue">0</span> </div>
 
               <!-- Divider -->
               <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <button id="purchaseCompleteButton" class="btn btn-success"> Finish </button>
+              <button id="purchaseCompleteButton" class="btn btn-success">  সম্পন্ন </button>
             </div>
 
             <!-- submit form start  -->
@@ -302,14 +303,14 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title text-dark" id="edit-modal-label ">Purchase Completed </h5>
+                    <h5 class="modal-title text-dark" id="edit-modal-label "> কেনা সম্পূর্ন </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body" id="attachment-body-content">
 
 
-                    <button class="btn btn-success text-white"> <a href="{{route('purchases-receipt-show',[0])}}" id="printInvoice"> Print Invoice </a> </button>
+                    <button class="btn btn-success text-white"> <a href="{{route('purchases-receipt-show',[0])}}" id="printInvoice">  রিসিপ্ট প্রিন্ট </a> </button>
 
                   </div>
 

@@ -15,8 +15,8 @@
 
                 <div class="card-header py-3">
                     <nav class="navbar navbar-light">
-         <h6 class="m-0 font-weight-bold text-primary">Cash Receive List </h6>
-                <button class="btn btn-success " id="create-button"> <a href="{{ route('customer_cash_receive_all') }} " class="text-light">Cash Receive</a> </button>
+         <h6 class="m-0 font-weight-bold text-primary">বকেয়া গ্রহনের তালিকা </h6>
+                <button class="btn btn-success " id="create-button"> <a href="{{ route('customer_cash_receive_all') }} " class="text-light">বকেয়া গ্রহন</a> </button>
         
             </nav>
                 </div>
@@ -34,19 +34,20 @@
                             </div>
 
                             <div class="col-auto">
-                                <span class="text-dark pl-2"> Amount</span>
+                                <span class="text-dark pl-2"> পরিমান</span>
                                 <input type="text" id="CustomerCashAmount" name="amount"  class="form-control mb-2" required >
                             </div>
 
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Comment</span>
+                                <span class="text-dark pl-2"> মন্তব্য</span>
+
                                 <input type="text" name="comment" class="form-control mb-2">
                             </div>
 
 
                             <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mt-3" id="customerCashReceiveSubmit" disabled="true" >Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3" id="customerCashReceiveSubmit" disabled="true" >সাবমিট</button>
                             </div>
 
                         </div>
@@ -68,9 +69,11 @@
 
 
             <!-- Supplier Area Start -->
-            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
-                <div class="card border-none   bg-abasas-dark  h-100 p-2">
-                    <h3 class="text-white">Customer</h3>
+
+            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
+                <div class="card border-none   bg-dark  h-100 p-2">
+                    <h3 class="text-white"> ক্রেতা</h3>
+
                     <div class="card-body">
                         <div class="row no-gutters ">
 
@@ -83,10 +86,10 @@
 
 
                                             <div class=" col-auto">
-                                                <label class="text-light" for="cashReceiveCustomerPhoneField">Customer Phone</label>
+                                                <label class="text-light" for="cashReceiveCustomerPhoneField">ক্রেতার নাম্বার</label>
                                                 <input type="text" name="phone" id="cashReceiveCustomerPhoneField" class="form-control mb-2">
-                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldLength">Enter a Valid Phone Number</div>
-                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldNotFound">Customer Not Found</div>
+                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldLength"> সঠিক নাম্বার দিন</div>
+                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldNotFound"> ক্রেতা পাওয়া যায়নি </div>
                                             </div>
                                             <input type=" number" name="efsd" hidden ">
                   </form>

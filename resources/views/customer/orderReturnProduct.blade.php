@@ -15,7 +15,7 @@
 
                 <div class="card-header py-3">
                     <nav class="navbar navbar-light">
-                        Return Product
+                         পণ্য  ফেরত
                     </nav>
                 </div>
                 <div class="card-body">
@@ -33,32 +33,32 @@
 
 
                             <div class="col-auto">
-                                <span class="text-dark  pl-2"> Product Id</span>
+                                <span class="text-dark  pl-2"> পণ্যের আইডি</span>
                                 <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2">
                             </div>
 
                             <div class="col-auto">
-                                <span class="text-dark  pl-2"> Product Name</span>
+                                <span class="text-dark  pl-2"> পণ্যের নাম </span>
                                 <input type="text" name="name" id="orderProductInputName" size="20" value="" class="form-control  mb-2" disabled="true">
                             </div>
 
 
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Quantity</span>
+                                <span class="text-dark pl-2"> পরিমান</span>
                                 <input type="text" name="quantity" class="form-control mb-2">
                             </div>
 
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Price</span>
+                                <span class="text-dark pl-2"> মূল্য</span>
                                 <input type="text" name="price" class="form-control mb-2">
                             </div>
 
 
 
                             <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mt-3" id="customerCashReceiveSubmit" disabled="true">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3" id="customerCashReceiveSubmit" disabled="true"> সাবমিট</button>
                             </div>
 
                         </div>
@@ -77,7 +77,7 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <nav class="navbar navbar-light bg-light">
-                        <a class="navbar-brand">Product Return list</a>
+                        <a class="navbar-brand">পণ্য ফেরতের তালিকা</a>
 
                     </nav>
                 </div>
@@ -89,25 +89,25 @@
 
                                 <tr>
                                     <th>#</th>
-                                    <th>Ref</th>
-                                    <th>Customer</th>
-                                    <th>Product Id</th>
-                                    <th>Product Name</th>
-                                    <th>Price</th>
-                                    <th>Profit</th>
+                                    <th>রেফারেন্স</th>
+                                    <th>ক্রেতা</th>
+                                    <th>পণ্যের আইডি</th>
+                                    <th>পণ্যের নাম</th>
+                                    <th>মূল্য</th>
+                                    <th>লাভ</th>
                                 </tr>
                             </thead>
                             <tfoot class="bg-abasas-dark">
                                 <tr>
 
                                 <tr>
-                                    <th>#</th>
-                                    <th>Ref</th>
-                                    <th>Customer</th>
-                                    <th>Product Id</th>
-                                    <th>Product Name</th>
-                                    <th>Price</th>
-                                    <th>Profit</th>
+                                <th>#</th>
+                                    <th>রেফারেন্স</th>
+                                    <th>ক্রেতা</th>
+                                    <th>পণ্যের আইডি</th>
+                                    <th>পণ্যের নাম</th>
+                                    <th>মূল্য</th>
+                                    <th>লাভ</th>
                                 </tr>
                                 </tr>
 
@@ -147,9 +147,11 @@
 
 
             <!-- Supplier Area Start -->
-            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
-                <div class="card border-none   bg-abasas-dark  h-100 p-2">
-                    <h3 class="text-white">Customer</h3>
+
+            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
+                <div class="card border-none   bg-dark  h-100 p-2">
+                    <h3 class="text-white">ক্রেতা</h3>
+
                     <div class="card-body">
                         <div class="row no-gutters ">
 
@@ -162,10 +164,10 @@
 
 
                                             <div class=" col-auto">
-                                                <label class="text-light" for="cashReceiveCustomerPhoneField">Customer Phone</label>
+                                                <label class="text-light" for="cashReceiveCustomerPhoneField">ক্রেতার নাম্বার </label>
                                                 <input type="text" name="phone" id="cashReceiveCustomerPhoneField" class="form-control mb-2">
-                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldLength">Enter a Valid Phone Number</div>
-                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldNotFound">Customer Not Found</div>
+                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldLength"> সঠিক নাম্বার দিন </div>
+                                                <div class="text-danger text-small" id="cashReceiveCustomerPhoneFieldNotFound"> ক্রেতা পাওয়া যায়নি </div>
                                             </div>
                                             <input type=" number" name="efsd" hidden ">
                   </form>
