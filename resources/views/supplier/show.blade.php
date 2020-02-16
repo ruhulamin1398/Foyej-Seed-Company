@@ -14,14 +14,14 @@
             <div class="card mb-4 shadow">
 
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"> Customer Details </h6>
+                    <h6 class="m-0 font-weight-bold text-primary"> Supplier Details </h6>
                 </div>
                 <div class="card-body">
 
-                    <h1>Name: {{$customer->name}}</h1>
-                    <b>Phone: {{$customer->phone}}</b><br>
-                    <b>Address: {{$customer->address}}</b><br>
-                    <b>Due: {{$customer->due}}</b>
+                    <h1>Name: {{$supplier->name}}</h1>
+                    <b>Phone: {{$supplier->phone}}</b><br>
+                    <b>Address: {{$supplier->address}}</b><br>
+                    <b>Due: {{$supplier->due}}</b>
 
                 </div>
 
@@ -31,13 +31,13 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3 bg-abasas-dark text-light">
                     <nav class="navbar navbar-light">
-                        <a class="navbar-brand">Customer Cash Receive list</a>
+                        <a class="navbar-brand">Supplier Cash Receive list</a>
 
                     </nav>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <table class="table table-striped table-bpurchaseed" id="dataTable1" width="100%" cellspacing="0">
                             <thead class="bg-abasas-dark">
 
 
@@ -61,13 +61,13 @@
                             </tfoot>
                             <tbody>
                                 <?php $id = 1 ?>
-                                @foreach ($customerCashReceives as $customerCashReceive)
-                                <?php $id = $customerCashReceive->id ?>
+                                @foreach ($supplierPayments as $supplierPayment)
+                                <?php $id = $supplierPayment->id ?>
                                 <tr class="data-row">
                                     <td class="iteration">{{$id}}</td>
-                                    <td id="">{{$customerCashReceive->user->name}}</td>
-                                    <td id="">{{$customerCashReceive->pre_due}}</td>
-                                    <td id="viewProductTypeId">{{$customerCashReceive->amount}}</td>
+                                    <td id="">{{$supplierPayment->user->name}}</td>
+                                    <td id="">{{$supplierPayment->pre_due}}</td>
+                                    <td id="viewProductTypeId">{{$supplierPayment->amount}}</td>
 
 
 
@@ -92,19 +92,19 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3 bg-abasas-dark text-light">
                     <nav class="navbar navbar-light">
-                        <a class="navbar-brand">Customer Order list</a>
+                        <a class="navbar-brand">Supplier Purchase list</a>
 
                     </nav>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <table class="table table-striped table-bpurchaseed" id="dataTable1" width="100%" cellspacing="0">
                             <thead class="bg-abasas-dark">
 
 
                                 <tr>
                                     <th>#</th>
-                                    <th>order Id</th>
+                                    <th>purchase Id</th>
                                     <th>Ref</th>
                                     <th>Total</th>
                                     <th>Discount</th>
@@ -117,7 +117,7 @@
                             <tfoot class="bg-abasas-dark">
                                 <tr>
                                     <th>#</th>
-                                    <th>order Id</th>
+                                    <th>purchase Id</th>
                                     <th>Ref</th>
                                     <th>Total</th>
                                     <th>Discount</th>
@@ -131,23 +131,23 @@
                             <tbody>
 
                                 <?php $i = 1; ?>
-                                @foreach ($orders as $order )
+                                @foreach ($purchases as $purchase )
 
                                 <tr class="data-row">
                                     <td>{{$i++}}</td>
-                                    <td>{{$order->id}}</td>
-                                    <td>{{$order->user->name}}</td>
-                                    <td>{{$order->total}}</td>
-                                    <td>{{$order->discount}}</td>
-                                    <td>{{$order->pay}}</td>
-                                    <td>{{$order->due}}</td>
+                                    <td>{{$purchase->id}}</td>
+                                    <td>{{$purchase->user->name}}</td>
+                                    <td>{{$purchase->total}}</td>
+                                    <td>{{$purchase->discount}}</td>
+                                    <td>{{$purchase->pay}}</td>
+                                    <td>{{$purchase->due}}</td>
 
 
-                                    <td>{{ $order->created_at->format('M d Y')}}</td>
+                                    <td>{{ $purchase->created_at->format('M d Y')}}</td>
 
 
                                     <td class="align-middle">
-                                        <a href=" {{ route('order-receipt-show', ['id' => $order->id] ) }}"> <button type="button" class="btn btn-success" id="edit-item"> <i class="fa fa-eye" aria-hidden="false"> </i></button></a>
+                                        <a href=" {{ route('order-receipt-show', ['id' => $purchase->id] ) }}"> <button type="button" class="btn btn-success" id="edit-item"> <i class="fa fa-eye" aria-hidden="false"> </i></button></a>
 
 
 

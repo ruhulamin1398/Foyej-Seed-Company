@@ -13,7 +13,7 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3 bg-dark text-light">
+        <div class="card-header py-3 bg-abasas-dark text-light">
             <nav class="navbar navbar-light">
                 <a class="navbar-brand">Supplier Payment list</a>
                
@@ -22,7 +22,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
-                    <thead class="thead-dark">
+                    <thead class="bg-abasas-dark">
 
 
                         <tr>
@@ -35,7 +35,7 @@
                             
                         </tr>
                     </thead>
-                    <tfoot class="thead-dark">
+                    <tfoot class="bg-abasas-dark">
                     <tr>
                             <th>Payment Id</th>
                             <th>Supplier</th>

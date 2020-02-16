@@ -56,7 +56,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
-                    <thead class="thead-dark">
+                    <thead class="bg-abasas-dark">
 
 
                         <tr>
@@ -69,7 +69,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot class="thead-dark">
+                    <tfoot class="bg-abasas-dark">
                     <tr>
                             <th>#</th>
                             <th>Name</th>
@@ -106,7 +106,9 @@
                                     {{ method_field("delete") }}
                                 </form>
 
+                                <button type="button" class="btn btn-success" > <a href="{{ route('suppliers.show',  $supplier->id )}}"> <i class="fa fa-eye text-white" aria-hidden="false"> </i> </a></button>
 
+               
 
 
                                 <button onclick="if(confirm('are you sure to delete this')){

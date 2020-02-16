@@ -68,6 +68,20 @@ Route::post('barcode_print', 'BarCodePrinterController@print')->name("barcode_pr
 
 // barcode print  area end
 
+
+
+/// Staff area 
+
+
+Route::resource('staffs', 'StaffController');
+Route::post('staffsupdate', 'StaffController@staffsUpdate')->name("staffsupdate");
+/// Expenses area 
+
+
+Route::resource('expenses', 'ExpenseController');
+
+
+
 // testing  routes
 
 Route::get('/home', 'HomeController@index')->name('home');

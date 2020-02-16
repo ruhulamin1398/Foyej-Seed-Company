@@ -46,7 +46,7 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3  bg-dark ">
+        <div class="card-header py-3  bg-abasas-dark ">
         <nav class="navbar navbar-dark">
                 <a class="navbar-brand text-light"> কাস্টমার তালিকা </a>
              </nav>
@@ -54,7 +54,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
-                    <thead class="thead-dark">
+                    <thead class="bg-abasas-dark">
 
 
                         <tr>
@@ -66,7 +66,7 @@
                             <th> একশন </th>
                         </tr>
                     </thead>
-                    <tfoot class="thead-dark">
+                    <tfoot class="bg-abasas-dark">
                     <tr>
                             <th>#</th>
                             <th> নাম </th>

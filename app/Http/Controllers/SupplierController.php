@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Purchase;
 use App\Supplier;
 use App\supplierPayment;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class SupplierController extends Controller
 {
@@ -72,7 +73,11 @@ class SupplierController extends Controller
      */
     public function show(Supplier $supplier)
     {
-        //
+        $supplierPayments = supplierPayment::where('supplier_id', $supplier->id)->get();
+        $purchases = Purchase::where('supplier_id', $supplier->id)->get();
+        //   dd($supplier, $purchases, $supplierPayments);
+
+        return view('supplier.show', compact('supplier', "supplierPayments", 'purchases'));
     }
     public function ApiShow(Request $request)
     {
@@ -172,26 +177,25 @@ class SupplierController extends Controller
 
         // return $request;
         $supplierPayment = new supplierPayment();
-        $supplierPayment->user_id = 1;
+        $supplierPayment->user_id = Auth::user()->id;
         $supplierPayment->supplier_id = $request->supplier_id;
         $supplierPayment->amount = $request->amount;
-        $supplierPayment->comment = $request->comment;  
-        $supplierPayment->pre_due= $request->pre_due;
+        $supplierPayment->comment = $request->comment;
+        $supplierPayment->pre_due = $request->pre_due;
         $supplierPayment->save();
-        
-        $supplier = Supplier::find( $request->supplier_id);
+
+        $supplier = Supplier::find($request->supplier_id);
         $supplier->due -= $request->amount;
         $supplier->save();
-      
 
-        return view( "receipt.supplierPayment",compact('supplierPayment', 'supplierPayment') );
+
+        return view("receipt.supplierPayment", compact('supplierPayment', 'supplierPayment'));
     }
-    public function supplierPaymentIndex(){
+    public function supplierPaymentIndex()
+    {
 
         $supplierPayments = supplierPayment::all();
-        
-        return view('supplier.cashPaymentAll',compact('supplierPayments'));
+
+        return view('supplier.cashPaymentAll', compact('supplierPayments'));
     }
-
-
 }

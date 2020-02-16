@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Customer;
-use App\Index;
-use App\Order;
-use App\Product;
-use App\Supplier;
+use App\staff;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +14,9 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $customers = Customer::count();
-        $suppliers = Supplier::count();
-        $orders = Order::count();
-        $products = Product::where('stock','>',0)->count();
-
-        return view('index',compact('customers','suppliers','orders','products'));
+        $staffs= staff::all();
+        
+        return view('staff.staff',compact('staffs'));
     }
 
     /**
@@ -33,7 +26,7 @@ class IndexController extends Controller
      */
     public function create()
     {
-        //
+    
     }
 
     /**
@@ -44,16 +37,24 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $staff = new staff;
+        $staff->name= $request->name;
+        $staff->phone= $request->phone;
+        $staff->address= $request->address;
+        $staff->sallery= $request->sallery;
+        $staff->post= $request->post;
+
+        $staff->save();
+        return back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Index  $index
+     * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function show(Index $index)
+    public function show(staff $staff)
     {
         //
     }
@@ -61,10 +62,10 @@ class IndexController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Index  $index
+     * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function edit(Index $index)
+    public function edit(staff $staff)
     {
         //
     }
@@ -73,21 +74,37 @@ class IndexController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Index  $index
+     * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Index $index)
+    public function update(Request $request, staff $staff)
     {
         //
     }
 
+
+
+    public function staffsUpdate(Request $request)
+    {
+        $staff =  staff::find($request->id);
+        $staff->name= $request->name;
+        $staff->phone= $request->phone;
+        $staff->address= $request->address;
+        $staff->sallery= $request->sallery;
+        $staff->post= $request->post;
+
+        $staff->save();
+        return redirect(route('staffs.index'))->with('successMsg', 'supplier Successfully updated');
+    }
+
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Index  $index
+     * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Index $index)
+    public function destroy(staff $staff)
     {
         //
     }
