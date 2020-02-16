@@ -26,6 +26,14 @@
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <!-- Custom style-->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <style type="text/css">
+    .bg-abasas-dark{
+   
+        background-color:#2a3f5c;
+        color: #fff;
+
+    }
+</style>
 
 </head>
 
@@ -84,6 +92,7 @@
     <script src="{{asset('js/custom/order.js')}}"></script>
     <script src="{{asset('js/custom/cashReceive.js')}}"></script>
     <script src="{{asset('js/custom/cashPayment.js')}}"></script>
+    <script src="{{asset('js/custom/staff.js')}}"></script>
 
     
 

@@ -54,12 +54,23 @@ class RoleTableSeeder extends Seeder
                 ],
                 [
                     'id'    => 102,
-                    'username' => 'sagor',
+                    'username' => 'hasan',
                     'role_id' => 2,
                     'email' => 'rahmanhasanur715@gmail.com',
                     'name' => 'Hasan ',
                     'address' => 'Tangail',
-                    'phone' => '01799076632',
+                    'phone' => '01748437672',
+                    'salary' => '20000',
+                    'password' => Hash::make(1234),
+                    'status'    => 1
+                ],  [
+                    'id'    => 103,
+                    'username' => 'joyed',
+                    'role_id' => 2,
+                    'email' => 'jabirjoyed99@gmail.com',
+                    'name' => 'joyed ',
+                    'address' => 'Tangail',
+                    'phone' => '01754549401',
                     'salary' => '20000',
                     'password' => Hash::make(1234),
                     'status'    => 1

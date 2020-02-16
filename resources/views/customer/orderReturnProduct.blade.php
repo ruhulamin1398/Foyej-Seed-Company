@@ -84,7 +84,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
-                            <thead class="thead-dark">
+                            <thead class="bg-abasas-dark">
 
 
                                 <tr>
@@ -97,7 +97,7 @@
                                     <th>Profit</th>
                                 </tr>
                             </thead>
-                            <tfoot class="thead-dark">
+                            <tfoot class="bg-abasas-dark">
                                 <tr>
 
                                 <tr>
@@ -147,8 +147,8 @@
 
 
             <!-- Supplier Area Start -->
-            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
-                <div class="card border-none   bg-dark  h-100 p-2">
+            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
+                <div class="card border-none   bg-abasas-dark  h-100 p-2">
                     <h3 class="text-white">Customer</h3>
                     <div class="card-body">
                         <div class="row no-gutters ">

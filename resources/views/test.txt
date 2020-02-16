@@ -16,7 +16,7 @@
 
       <div class="card mb-4 shadow">
 
-        <div class="card-header py-3 bg-dark  text-light ">
+        <div class="card-header py-3 bg-abasas-dark  text-light ">
           <nav class="navbar ">
             <a class="navbar-brand">Purchase New</a>
             <!-- <button class="btn btn-success purchaseProductCreateProduct" id="create-button">new Product</button> -->
@@ -135,8 +135,8 @@
 
 
       <!-- Supplier Area Start -->
-      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-3 ">
-        <div class="card border-none   bg-dark  h-100 p-4">
+      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-3 ">
+        <div class="card border-none   bg-abasas-dark  h-100 p-4">
           <h3 class="text-white">Supplier</h3>
           <div class="card-body">
             <div class="row no-gutters ">
@@ -210,8 +210,8 @@
       <!-- sumit Area Start -->
 
 
-      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-1 ">
-        <div class="card border-none   bg-dark  h-100 p-1">
+      <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-1 ">
+        <div class="card border-none   bg-abasas-dark  h-100 p-1">
 
 
           <div class="card-body">

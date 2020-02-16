@@ -29,7 +29,7 @@
             </div>
 
             <div class="card shadow mb-4">
-                <div class="card-header py-3 bg-dark text-light">
+                <div class="card-header py-3 bg-abasas-dark text-light">
                     <nav class="navbar navbar-light">
                         <a class="navbar-brand">Supplier Cash Receive list</a>
 
@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bpurchaseed" id="dataTable1" width="100%" cellspacing="0">
-                            <thead class="thead-dark">
+                            <thead class="bg-abasas-dark">
 
 
                                 <tr>
@@ -49,7 +49,7 @@
 
                                 </tr>
                             </thead>
-                            <tfoot class="thead-dark">
+                            <tfoot class="bg-abasas-dark">
                                 <tr>
                                     <th>Payment Id</th>
                                     <th>Ref</th>
@@ -90,7 +90,7 @@
 
 
             <div class="card shadow mb-4">
-                <div class="card-header py-3 bg-dark text-light">
+                <div class="card-header py-3 bg-abasas-dark text-light">
                     <nav class="navbar navbar-light">
                         <a class="navbar-brand">Supplier Purchase list</a>
 
@@ -99,7 +99,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bpurchaseed" id="dataTable1" width="100%" cellspacing="0">
-                            <thead class="thead-dark">
+                            <thead class="bg-abasas-dark">
 
 
                                 <tr>
@@ -114,7 +114,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tfoot class="thead-dark">
+                            <tfoot class="bg-abasas-dark">
                                 <tr>
                                     <th>#</th>
                                     <th>purchase Id</th>

@@ -40,7 +40,7 @@
 
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Commment</span>
+                                <span class="text-dark pl-2"> Comment</span>
                                 <input type="text" name="comment" class="form-control mb-2">
                             </div>
 
@@ -68,8 +68,8 @@
 
 
             <!-- Supplier Area Start -->
-            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
-                <div class="card border-none   bg-dark  h-100 p-2">
+            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
+                <div class="card border-none   bg-abasas-dark  h-100 p-2">
                     <h3 class="text-white">Customer</h3>
                     <div class="card-body">
                         <div class="row no-gutters ">

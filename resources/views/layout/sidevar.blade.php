@@ -6,7 +6,7 @@
 
 
 
-  <div class="card    mb-2"  style="background-color:#2a3f5c;">
+  <div class="card    mb-2 bg-abasas-dark">
 
 
     <!-- Nav Item - Dashboard -->
@@ -79,7 +79,7 @@
 
   </div>
   <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
-  <div class="card  mb-2"style="background-color:#2a3f5c;">
+  <div class="card  mb-2 bg-abasas-dark ">
 
 
     <!-- Nav Item - Dashboard -->
@@ -111,9 +111,7 @@
       </a>
       <div id="collapseStaff" class="collapse" aria-labelledby="headingStaff" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-
-          <a class="collapse-item" href="#">Add New</a>
-          <a class="collapse-item" href="#">View All</a>
+          <a class="collapse-item" href="{{route('staffs.index')}}">View All</a>
           <a class="collapse-item" href="#">Sallery</a>
 
         </div>
@@ -134,7 +132,7 @@
   </div>
   <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 
-  <div class="card  mb-2"style="background-color:#2a3f5c;">
+  <div class="card  mb-2   bg-abasas-dark  ">
 
 
     <hr class="sidebar-divider m-1 p-0 ">
@@ -169,6 +167,7 @@
       <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
 
+        <a class="collapse-item" href="{{ route('expenses.create') }}">Over All</a>
           <a class="collapse-item" href="{{ route('expenses.create') }}">Sale</a>
           <a class="collapse-item" href="{{ route('expenses.index') }}">Purchase</a>
           <a class="collapse-item" href="{{ route('expenses.index') }}">Profit</a>

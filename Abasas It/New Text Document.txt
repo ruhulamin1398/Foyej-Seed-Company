@@ -1,0 +1,36 @@
+Stats 
+------------
+Total Sale Product Price
+Total Sale Product Cost
+Total Sale Discount
+Total Return Prduct Profit
+Total Purchase Product Price 
+Total Purchase Discount 
+Total Daily Cost
+ 
+Profit 
+
+Est Rent and Others
+Est Staff Sallery
+
+Est Profit 
+
+---------------------------------------
+
+Monthly Stats
+----------
+Total Sale Product Price
+Total Sale Product Cost
+Total Sale Discount
+Total Return Prduct Profit
+Total Purchase Product Price 
+Total Purchase Discount 
+Total Daily Cost
+ 
+Profit 
+
+Rent
+Others
+Staff Sallery
+
+Est Profit 

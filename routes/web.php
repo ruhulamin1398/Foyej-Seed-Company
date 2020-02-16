@@ -70,6 +70,11 @@ Route::post('barcode_print', 'BarCodePrinterController@print')->name("barcode_pr
 
 
 
+/// Staff area 
+
+
+Route::resource('staffs', 'StaffController');
+Route::post('staffsupdate', 'StaffController@staffsUpdate')->name("staffsupdate");
 /// Expenses area 
 
 
