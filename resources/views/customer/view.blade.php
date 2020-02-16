@@ -179,7 +179,7 @@
 
                     <div class="form-group">
 
-                        <input type="submit" value="submit" class="form-control btn btn-success">
+                        <input type="submit" value=" সাবমিট " class="form-control btn btn-success">
                     </div>
                     <!-- /description -->
                 
