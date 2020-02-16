@@ -41,6 +41,7 @@
                             <div class="col-auto">
 
                                 <span class="text-dark pl-2"> মন্তব্য</span>
+
                                 <input type="text" name="comment" class="form-control mb-2">
                             </div>
 
@@ -68,9 +69,11 @@
 
 
             <!-- Supplier Area Start -->
+
             <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
                 <div class="card border-none   bg-dark  h-100 p-2">
                     <h3 class="text-white"> ক্রেতা</h3>
+
                     <div class="card-body">
                         <div class="row no-gutters ">
 

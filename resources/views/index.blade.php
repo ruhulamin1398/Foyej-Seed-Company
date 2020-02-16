@@ -32,8 +32,8 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Growth</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">20%</div>
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Customer</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{$customers}}</div>
                 </div>
 
               </div>
@@ -50,8 +50,8 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Order</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Supplier</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{$suppliers}}</div>
                 </div>
 
               </div>
@@ -68,8 +68,8 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Item</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">200</div>
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Order</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{$orders}}</div>
                 </div>
 
               </div>
@@ -86,8 +86,8 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Amount</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">2500</div>
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Products</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{$products}}</div>
                 </div>
 
               </div>

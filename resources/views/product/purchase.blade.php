@@ -14,7 +14,7 @@
 
       <div class="card mb-4 shadow">
 
-        <div class="card-header py-3 bg-dark  text-light ">
+        <div class="card-header py-3 bg-abasas-dark  text-light ">
           <nav class="navbar ">
             <a class="navbar-brand"> নতুন পণ্য কেনা </a>
             <button class="btn btn-success " id="create-button"> <a href="{{ route('supplier_payment') }} " class="text-light"> টাকা পরিশোধ </a> </button>
@@ -85,7 +85,7 @@
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-striped table-bordered" id="purchaseProductTable" width="100%" cellspacing="0">
-              <thead class="thead-dark">
+              <thead class="bg-abasas-dark">
 
 
                 <tr>
@@ -98,7 +98,7 @@
                   <th> একশন </th>
                 </tr>
               </thead>
-              <tfoot class="thead-dark">
+              <tfoot class="bg-abasas-dark">
                 <tr>
                 <th>#</th>
                   <th> আইডি </th>
@@ -129,9 +129,11 @@
 
 
       <!-- Supplier Area Start -->
+
       <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
         <div class="card border-none   bg-dark  h-100 p-2">
           <h3 class="text-white"> সরবরাহকারি </h3>
+
           <div class="card-body">
             <div class="row no-gutters ">
 
@@ -201,8 +203,8 @@
         <!-- sumit Area Start -->
 
 
-        <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
-          <div class="card border-none   bg-dark  h-100 p-1">
+        <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
+          <div class="card border-none   bg-abasas-dark  h-100 p-1">
 
             <div class="card-body">
               <div class="font-weight-blod h3 text-light"> মোট <span id="totalPrice">0</span> </div>
