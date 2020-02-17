@@ -17,6 +17,7 @@ class CreateYearliesTable extends Migration
             
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('year');
             $table->double('amount',8,2);
             $table->string('reason')->nullable();
             $table->string('comment')->nullable();

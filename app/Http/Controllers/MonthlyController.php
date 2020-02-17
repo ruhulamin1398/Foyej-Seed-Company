@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\monthly;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MonthlyController extends Controller
 {
@@ -14,7 +15,12 @@ class MonthlyController extends Controller
      */
     public function index()
     {
-        //
+        
+     
+     $monthlies= monthly::orderBy('id', 'DESC')->get();
+
+     // dd($monthlies2);
+        return view('expense.monthly',compact('monthlies'));
     }
 
     /**
@@ -35,7 +41,19 @@ class MonthlyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+
+        $monthly = new monthly;
+  
+        $monthly->user_id= Auth::user()->id;;
+        $monthly->amount= $request->amount;
+        $monthly->month= $request->month;
+        $monthly->reason= $request->reason;
+        $monthly->comment= $request->comment;
+   
+
+        $monthly->save();
+        return redirect(route('monthly-expenses.index'))->with('successMsg', 'Salary Successfully Added');
     }
 
     /**

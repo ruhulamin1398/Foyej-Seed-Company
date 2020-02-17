@@ -20,6 +20,7 @@ class DailyController extends Controller
         return view('expense.daily',compact('dailies'));
     }
 
+    
     /**
      * Show the form for creating a new resource.
      *

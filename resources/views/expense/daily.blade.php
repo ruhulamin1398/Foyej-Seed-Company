@@ -11,7 +11,7 @@
 
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">Add New Salary</a>
+                <a class="navbar-brand text-light">Add Daily Expense</a>
             </nav>
         </div>
         <div class="card-body">
@@ -53,7 +53,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">Staff list</a>
+                <a class="navbar-brand text-light">Expense list</a>
             </nav>
         </div>
         <div class="card-body">

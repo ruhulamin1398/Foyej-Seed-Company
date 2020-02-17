@@ -148,8 +148,8 @@
         <div class="bg-white py-2 collapse-inner rounded">
 
           <a class="collapse-item" href="{{ route('daily-expenses.index') }}">Daily</a>
-          <a class="collapse-item" href="{{ route('expenses.index') }}">Monthly</a>
-          <a class="collapse-item" href="{{ route('expenses.index') }}">Yearly</a>
+          <a class="collapse-item" href="{{ route('monthly-expenses.index') }}">Monthly</a>
+          <a class="collapse-item" href="{{ route('yearly-expenses.index') }}">Yearly</a>
 
         </div>
       </div>

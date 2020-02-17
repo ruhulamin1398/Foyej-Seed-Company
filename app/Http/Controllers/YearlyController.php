@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\yearly;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class YearlyController extends Controller
 {
@@ -14,7 +15,11 @@ class YearlyController extends Controller
      */
     public function index()
     {
-        //
+        
+     $yearlies= yearly::orderBy('id', 'DESC')->get();
+
+     // dd($yearlies2);
+        return view('expense.yearly',compact('yearlies'));
     }
 
     /**
@@ -35,7 +40,18 @@ class YearlyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $yearly = new yearly;
+
+        $yearly->user_id= Auth::user()->id;;
+        $yearly->amount= $request->amount;
+        $yearly->year= $request->year;
+        $yearly->reason= $request->reason;
+        $yearly->comment= $request->comment;
+   
+
+        $yearly->save();
+        return redirect(route('yearly-expenses.index'))->with('successMsg', 'Salary Successfully Added');
+  
     }
 
     /**
