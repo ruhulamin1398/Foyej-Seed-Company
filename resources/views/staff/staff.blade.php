@@ -34,8 +34,8 @@
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Sallery</span>
-                        <input type="text" name="sallery" class="form-control mb-2">
+                        <span class="text-dark pl-2"> Salary</span>
+                        <input type="text" name="salary" class="form-control mb-2">
                     </div>
 
                     <div class="col-auto">
@@ -79,7 +79,7 @@
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Address</th>
-                            <th>Sallery</th>
+                            <th>Salary</th>
                             <th>Post</th>
                             <th>Action</th>
                         </tr>
@@ -90,7 +90,7 @@
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Address</th>
-                            <th>Sallery</th>
+                            <th>Salary</th>
                             <th>Post</th>
                             <th>Action</th>
                         </tr>
@@ -106,7 +106,7 @@
                             <td id="staffName" >{{$staff->name}}</td>
                             <td id="staffPhone" >{{$staff->phone}}</td>
                             <td id="staffAddress" >{{$staff->address}}</td>
-                            <td id="staffSallery" >{{$staff->sallery}}</td>
+                            <td id="staffSalary" >{{$staff->salary}}</td>
                             <td id="staffPost" >{{$staff->post}}</td>
 
 
@@ -200,18 +200,18 @@
                     </div>
                     <!-- /Address -->
 
-                    <!-- Sallery -->
+                    <!-- Salary -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffSallery">Sallery</label>
-                        <input type="text" name="sallery" class="form-control" id="editModalStaffSallery" required >
+                        <label class="col-form-label" for="editModalStaffSalary">Salary</label>
+                        <input type="text" name="salary" class="form-control" id="editModalStaffSalary" required >
                     </div>
-                    <!-- /Sallery -->
+                    <!-- /Salary -->
 
 
 
                     <!-- Post -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffSallery">Post</label>
+                        <label class="col-form-label" for="editModalStaffSalary">Post</label>
                         <select name='post' class="form-control mb-2">
                             <option value="Manager">Manager</option>
                             <option value="Other">Other</option>

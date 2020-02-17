@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStaffTable extends Migration
+class CreateYearliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateStaffTable extends Migration
      */
     public function up()
     {
-        Schema::create('staff', function (Blueprint $table) {
+        Schema::create('yearlies', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
-            $table->string('phone')->unique();
-            $table->string('name')->nullable();
-            $table->string('address')->nullable();
-            $table->bigInteger('due')->nullable();
-            $table->bigInteger('salary')->nullable();
-            $table->string('post')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->double('amount',8,2);
+            $table->string('reason')->nullable();
+            $table->string('comment')->nullable();
             $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -32,6 +33,6 @@ class CreateStaffTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff');
+        Schema::dropIfExists('yearlies');
     }
 }

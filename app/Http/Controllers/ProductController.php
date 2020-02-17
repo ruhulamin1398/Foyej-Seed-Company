@@ -75,7 +75,7 @@ class ProductController extends Controller
         $product->cost = $request->cost;
         $product->price = $request->price;
         $product->low_limit = $request->low_limit;
-        //  $product->price_per_unit =  $request->price;
+        $product->expire_date =  $request->expire_date;
 
         $product->weight = $request->weight;
         if ($product->product_type_id == 1) {

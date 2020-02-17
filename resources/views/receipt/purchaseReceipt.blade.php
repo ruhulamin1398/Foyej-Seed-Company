@@ -371,7 +371,7 @@
                 <p> 
                 <h3 style="padding: 3px;"><strong>Invoice: {{$purchase->id}}</strong></h3>
                 <h4 style="padding: 3px;">Réf : {{Auth::user()->name}}</h4>
-                <p style="padding: 3px;" >Date : {{ $purchase->created_at}}  </p>
+                <p style="padding: 3px;" >Date : {{ $purchase->created_at->format('M d Y h:i:s a')}}  </p>
                 <p style="padding: 3px;" >Due :{{ $purchase->supplier->due }}</p>
                 </p>
             </div> 

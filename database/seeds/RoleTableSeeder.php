@@ -136,7 +136,7 @@ class RoleTableSeeder extends Seeder
             ],
             [
                 'id'    => 101,
-                'type' => 'Sallery'
+                'type' => 'Salary'
             ],
 
         ]);
@@ -240,6 +240,18 @@ class RoleTableSeeder extends Seeder
                 'customer_type_id' => 2,
                 'due' => 20000
             ],
+
+        ]);
+        
+        DB::table('goals')->insert([
+            [
+                'id' => 1,
+                'daily' => 10000,
+                'weekly' => 800000,
+                'monthly' => 120000,
+                'yearly' => 999999
+            ],
+
 
         ]);
     }

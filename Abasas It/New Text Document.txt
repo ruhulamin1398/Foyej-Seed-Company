@@ -3,7 +3,7 @@ Stats
 Total Sale Product Price
 Total Sale Product Cost
 Total Sale Discount
-Total Return Prduct Profit
+Total Return Product Profit
 Total Purchase Product Price 
 Total Purchase Discount 
 Total Daily Cost
@@ -11,7 +11,7 @@ Total Daily Cost
 Profit 
 
 Est Rent and Others
-Est Staff Sallery
+Est Staff Salary
 
 Est Profit 
 
@@ -22,7 +22,7 @@ Monthly Stats
 Total Sale Product Price
 Total Sale Product Cost
 Total Sale Discount
-Total Return Prduct Profit
+Total Return Product Profit
 Total Purchase Product Price 
 Total Purchase Discount 
 Total Daily Cost
@@ -31,6 +31,6 @@ Profit
 
 Rent
 Others
-Staff Sallery
+Staff Salary
 
 Est Profit 

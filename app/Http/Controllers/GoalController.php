@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\sallery;
+use App\goal;
 use Illuminate\Http\Request;
 
-class SalleryController extends Controller
+class GoalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,13 @@ class SalleryController extends Controller
      */
     public function index()
     {
-        //
+        $goal= goal::find(1);
+        $daily=$goal->daily;
+        $weekly=$goal->weekly;
+        $monthly=$goal->monthly;
+        $yearly=$goal->yearly;
+    
+        return view('goal',compact('daily','weekly','monthly','yearly'));
     }
 
     /**
@@ -41,10 +47,10 @@ class SalleryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\sallery  $sallery
+     * @param  \App\goal  $goal
      * @return \Illuminate\Http\Response
      */
-    public function show(sallery $sallery)
+    public function show(goal $goal)
     {
         //
     }
@@ -52,10 +58,10 @@ class SalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\sallery  $sallery
+     * @param  \App\goal  $goal
      * @return \Illuminate\Http\Response
      */
-    public function edit(sallery $sallery)
+    public function edit(goal $goal)
     {
         //
     }
@@ -64,21 +70,36 @@ class SalleryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\sallery  $sallery
+     * @param  \App\goal  $goal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, sallery $sallery)
+    public function update(Request $request, goal $goal)
     {
         //
     }
+    public function goalUpdate(Request $request)
+    {
+      $goal= goal::find(1);
 
+      $goal->daily = $request->daily;
+      $goal->weekly = $request->weekly;
+      $goal->monthly = $request->monthly;
+      $goal->yearly = $request->yearly;
+
+      $goal->save();
+
+
+      
+      return redirect(route('goals.index'))->with('successMsg', 'Goal Successfully updated');
+    }
+    
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\sallery  $sallery
+     * @param  \App\goal  $goal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(sallery $sallery)
+    public function destroy(goal $goal)
     {
         //
     }

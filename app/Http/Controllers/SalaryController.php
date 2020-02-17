@@ -2,22 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\salary;
 use App\staff;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class StaffController extends Controller
+class SalaryController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * 
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $staffs= staff::all();
-        
-        return view('staff.staff',compact('staffs'));
+       $staffs=  staff::all();
+        $salaries=salary::all();
+        return view('staff.salary',compact('salaries','staffs'));
     }
 
     /**
@@ -27,7 +29,7 @@ class StaffController extends Controller
      */
     public function create()
     {
-    
+        //
     }
 
     /**
@@ -38,24 +40,29 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        $staff = new staff;
-        $staff->name= $request->name;
-        $staff->phone= $request->phone;
-        $staff->address= $request->address;
-        $staff->salary= $request->salary;
-        $staff->post= $request->post;
+        
+        $salary = new salary;
+        $salary->user_id= Auth::user()->id;
+        $salary->staff_id= $request->staff;
+        // $salary->month= $request->month.now()->format('-d H:i:s');;
+       // $salary->month= $request->month.'-10 0:0:0';
+        $salary->month= $request->month;
+      
+        $salary->price= $request->price;
+        $salary->comment= $request->comment;
+   
 
-        $staff->save();
-        return back();
+        $salary->save();
+        return redirect(route('salaries.index'))->with('successMsg', 'Salary Successfully Added');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\staff  $staff
+     * @param  \App\salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function show(staff $staff)
+    public function show(salary $salary)
     {
         //
     }
@@ -63,10 +70,10 @@ class StaffController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\staff  $staff
+     * @param  \App\salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function edit(staff $staff)
+    public function edit(salary $salary)
     {
         //
     }
@@ -75,37 +82,21 @@ class StaffController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\staff  $staff
+     * @param  \App\salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, staff $staff)
+    public function update(Request $request, salary $salary)
     {
         //
     }
 
-
-
-    public function staffsUpdate(Request $request)
-    {
-        $staff =  staff::find($request->id);
-        $staff->name= $request->name;
-        $staff->phone= $request->phone;
-        $staff->address= $request->address;
-        $staff->salary= $request->salary;
-        $staff->post= $request->post;
-
-        $staff->save();
-        return redirect(route('staffs.index'))->with('successMsg', 'supplier Successfully updated');
-    }
-
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\staff  $staff
+     * @param  \App\salary  $salary
      * @return \Illuminate\Http\Response
      */
-    public function destroy(staff $staff)
+    public function destroy(salary $salary)
     {
         //
     }

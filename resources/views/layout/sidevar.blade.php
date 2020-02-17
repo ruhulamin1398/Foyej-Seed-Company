@@ -112,7 +112,7 @@
       <div id="collapseStaff" class="collapse" aria-labelledby="headingStaff" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <a class="collapse-item" href="{{route('staffs.index')}}">View All</a>
-          <a class="collapse-item" href="#">Sallery</a>
+          <a class="collapse-item" href="{{{route('salaries.index')}}}">Salary</a>
 
         </div>
       </div>
@@ -147,7 +147,7 @@
       <div id="collapseExpenses" class="collapse" aria-labelledby="headingExpenses" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
 
-          <a class="collapse-item" href="{{ route('expenses.create') }}">Daily</a>
+          <a class="collapse-item" href="{{ route('daily-expenses.index') }}">Daily</a>
           <a class="collapse-item" href="{{ route('expenses.index') }}">Monthly</a>
           <a class="collapse-item" href="{{ route('expenses.index') }}">Yearly</a>
 
@@ -177,7 +177,14 @@
       </div>
     </li>
     
-
+    <!-- Divider -->
+    <hr class="sidebar-divider m-1 p-0 ">
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item  ">
+      <a class="nav-link p-3 " href="{{ route('goals.index') }}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Goal</span></a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->

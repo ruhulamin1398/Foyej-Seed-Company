@@ -370,7 +370,7 @@
                 <p>
                     <h3 style="padding: 3px;"><strong>Payment: #{{$customerCashReceive->id}}</strong></h3>
                     <h4 style="padding: 3px;">Réf : {{Auth::user()->name}}</h4>
-                    <p style="padding: 3px;">Date : {{ $customerCashReceive->created_at->format('M d Y')}} </p>
+                    <p style="padding: 3px;">Date : {{ $customerCashReceive->created_at->format('M d Y h:i:s a')}} </p>
                     <p style="padding: 3px;">Due :{{ $customerCashReceive->customer->due }}</p>
                 </p>
             </div>

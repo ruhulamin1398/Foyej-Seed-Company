@@ -75,12 +75,26 @@ Route::post('barcode_print', 'BarCodePrinterController@print')->name("barcode_pr
 
 Route::resource('staffs', 'StaffController');
 Route::post('staffsupdate', 'StaffController@staffsUpdate')->name("staffsupdate");
+
+
+/// Salary area 
+
+
+Route::resource('salaries', 'SalaryController');
+
 /// Expenses area 
 
-
 Route::resource('expenses', 'ExpenseController');
+Route::resource('daily-expenses', 'DailyController');
+Route::resource('monthly-expenses', 'MonthlyController');
+Route::resource('yearly-expenses', 'YearlyController');
 
 
+/////goal
+
+
+Route::resource('goals', 'GoalController');
+Route::post('goalsupdate', 'GoalController@goalUpdate')->name("goalsupdate");
 
 // testing  routes
 

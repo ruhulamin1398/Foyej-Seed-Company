@@ -20,7 +20,7 @@ $(document).ready(function(){
         var staffName = row.children("#staffName").text();
         var staffPhone  = row.children("#staffPhone").text();
         var staffAddress = row.children("#staffAddress").text();
-        var staffSallery = row.children("#staffSallery").text();
+        var staffSalary = row.children("#staffSalary").text();
         // fill the data in the input fields
         
         $("#customerEditId").val('0'+id);
@@ -28,7 +28,7 @@ $(document).ready(function(){
         $("#editModalStaffName").val(staffName);
         $("#editModalStaffPhone").val(staffPhone);
         $("#editModalStaffAddress").val(staffAddress);
-        $("#editModalStaffSallery").val(staffSallery);
+        $("#editModalStaffSalary").val(staffSalary);
         
         
        
