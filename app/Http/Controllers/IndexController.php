@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\goal;
 use App\Index;
 use App\Order;
 use App\Product;
@@ -23,7 +24,38 @@ class IndexController extends Controller
         $orders = Order::count();
         $products = Product::where('stock','>',0)->count();
 
-        return view('index',compact('customers','suppliers','orders','products'));
+
+       
+        $yearlySale = 0;
+        $monthlySale = 0;
+        $weeklySale = 0;
+        $DailySale = 0; 
+        $sales = Order::get();
+        foreach ($sales as $order) {
+            if ($order->created_at->format('y') == now()->format('y')) {
+                $yearlySale += $order->total;
+                if ($order->created_at->format('ym') == now()->format('ym')) {
+                    $monthlySale += $order->total;
+                    if ($order->created_at->format('ymd') <= now()->format('ymd') and $order->created_at->format('ymd') >= now()->format('ymd')-7  ) {
+                        $weeklySale += $order->total;
+                        if ($order->created_at->format('ymd') == now()->format('ymd')) {
+                            $DailySale += $order->total;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        $goal = goal::find(1);
+        $daily = $DailySale  / $goal->daily   *100;
+        $weekly = $weeklySale / $goal->weekly   *100;
+        $monthly = $monthlySale  /  $goal->monthly  *100;
+        $yearly =  $yearlySale / $goal->yearly   *100;
+
+        // //////////////////////
+
+        return view('index',compact('customers','suppliers','orders','products','daily','weekly','monthly','yearly'  ));
     }
 
     /**

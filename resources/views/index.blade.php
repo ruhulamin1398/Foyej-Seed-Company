@@ -233,7 +233,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="#">Low</a> </div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> <a href="{{ route('daily-expenses.index') }}">Expense</a> </div>
                       </div>
                        
 
@@ -352,21 +352,21 @@
 
               <div class="card-body">
 
-                <h4 class="small font-weight-bold">Daily Goal <span class="float-right">40%</span></h4>
+                <h4 class="small font-weight-bold">Daily Goal <span class="float-right">{{$daily}}%</span></h4>
                 <div class="progress mb-4">
-                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-secondary" role="progressbar" style="width: {{$daily}}%" aria-valuenow="{{$daily}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Weekly Goal <span class="float-right">60%</span></h4>
+                <h4 class="small font-weight-bold">Weekly Goal <span class="float-right">{{$weekly}}%</span></h4>
                 <div class="progress mb-4">
-                  <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" style="width: {{$weekly}}%" aria-valuenow="{{$weekly}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Monthly Goal <span class="float-right">80%</span></h4>
+                <h4 class="small font-weight-bold">Monthly Goal <span class="float-right">{{$monthly}}%</span></h4>
                 <div class="progress mb-4">
-                  <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-info" role="progressbar" style="width: {{$monthly}}%" aria-valuenow="{{$monthly}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Yearly Goal <span class="float-right">Complete!</span></h4>
+                <h4 class="small font-weight-bold">Yearly Goal <span class="float-right"> {{$yearly}}%</span></h4>
                 <div class="progress">
-                  <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-success" role="progressbar" style="width: {{$yearly}}%" aria-valuenow=" {{$yearly}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
 
@@ -382,7 +382,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Developed By</h6>
               </div>
               <div class="card-body">
-                <div class="text-success h3 font-weight-bold"> Abasas IT Farm</div>
+                <div class="text-success h3 font-weight-bold"> Abasas IT </div>
                 <div class="text-dark">01840000408</div>
               </div>
             </div>

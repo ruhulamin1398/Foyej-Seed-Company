@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\goal;
+use App\Order;
 use Illuminate\Http\Request;
 
 class GoalController extends Controller
@@ -14,13 +15,13 @@ class GoalController extends Controller
      */
     public function index()
     {
-        $goal= goal::find(1);
-        $daily=$goal->daily;
-        $weekly=$goal->weekly;
-        $monthly=$goal->monthly;
-        $yearly=$goal->yearly;
-    
-        return view('goal',compact('daily','weekly','monthly','yearly'));
+        $goal = goal::find(1);
+        $daily = $goal->daily;
+        $weekly = $goal->weekly;
+        $monthly = $goal->monthly;
+        $yearly = $goal->yearly;
+
+        return view('goal', compact('daily', 'weekly', 'monthly', 'yearly'));
     }
 
     /**
@@ -52,7 +53,9 @@ class GoalController extends Controller
      */
     public function show(goal $goal)
     {
-        //
+
+     
+      
     }
 
     /**
@@ -79,20 +82,20 @@ class GoalController extends Controller
     }
     public function goalUpdate(Request $request)
     {
-      $goal= goal::find(1);
+        $goal = goal::find(1);
 
-      $goal->daily = $request->daily;
-      $goal->weekly = $request->weekly;
-      $goal->monthly = $request->monthly;
-      $goal->yearly = $request->yearly;
+        $goal->daily = $request->daily;
+        $goal->weekly = $request->weekly;
+        $goal->monthly = $request->monthly;
+        $goal->yearly = $request->yearly;
 
-      $goal->save();
+        $goal->save();
 
 
-      
-      return redirect(route('goals.index'))->with('successMsg', 'Goal Successfully updated');
+
+        return redirect(route('goals.index'))->with('successMsg', 'Goal Successfully updated');
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *
