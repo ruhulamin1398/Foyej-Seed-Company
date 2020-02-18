@@ -50,7 +50,7 @@ $(document).ready(function () {
                         $("#orderPageCustomerName").text(data.name);
                         $("#orderPageCustomerPhone").text(data.phone);
                         $("#orderPageCustomerCompany").text(data.company);
-                        $("#orderPageCustomerDue").html("Due : " + data.due);
+                        $("#orderPageCustomerDue").html("বকেয়া  : " + data.due);
 
                         $('#orderPageAddCustomerForm').hide();
                         $("#orderPageCustomerView").show();

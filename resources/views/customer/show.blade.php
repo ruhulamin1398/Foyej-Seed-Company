@@ -13,15 +13,19 @@
 
             <div class="card mb-4 shadow">
 
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"> Customer Details </h6>
+              
+                <div class="card-header py-3 bg-abasas-dark text-light">
+                    <nav class="navbar navbar-light">
+                        <a class="navbar-brand">কাস্টমার বিবরন</a>
+
+                    </nav>
                 </div>
                 <div class="card-body">
 
-                    <h1>Name: {{$customer->name}}</h1>
-                    <b>Phone: {{$customer->phone}}</b><br>
-                    <b>Address: {{$customer->address}}</b><br>
-                    <b>Due: {{$customer->due}}</b>
+                    <h1> নাম : {{$customer->name}}</h1>
+                    <b> নাম্বার : {{$customer->phone}}</b><br>
+                    <b>ঠিকানা : {{$customer->address}}</b><br>
+                    <b> বকেয়া : {{$customer->due}}</b>
 
                 </div>
 
@@ -31,7 +35,7 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3 bg-abasas-dark text-light">
                     <nav class="navbar navbar-light">
-                        <a class="navbar-brand">Customer Cash Receive list</a>
+                        <a class="navbar-brand">কাস্টমার পেমেন্ট লিস্ট</a>
 
                     </nav>
                 </div>
@@ -42,19 +46,19 @@
 
 
                                 <tr>
-                                    <th>Payment Id</th>
-                                    <th>Ref</th>
-                                    <th>Pre_due</th>
-                                    <th>Amount</th>
+                                    <th>পেমেন্ট আইডি</th>
+                                    <th>রেফারেন্স</th>
+                                    <th>পূর্বের বকেয়া</th>
+                                    <th>পরিমান</th>
 
                                 </tr>
                             </thead>
                             <tfoot class="bg-abasas-dark">
                                 <tr>
-                                    <th>Payment Id</th>
-                                    <th>Ref</th>
-                                    <th>Pre_due</th>
-                                    <th>Amount</th>
+                                    <th>পেমেন্ট আইডি</th>
+                                    <th>রেফারেন্স</th>
+                                    <th>পূর্বের বকেয়া</th>
+                                    <th>পরিমান</th>
 
                                 </tr>
 
@@ -92,7 +96,7 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3 bg-abasas-dark text-light">
                     <nav class="navbar navbar-light">
-                        <a class="navbar-brand">Customer Order list</a>
+                        <a class="navbar-brand"> কাস্টমার ক্রয় লিস্ট</a>
 
                     </nav>
                 </div>
@@ -104,27 +108,27 @@
 
                                 <tr>
                                     <th>#</th>
-                                    <th>order Id</th>
-                                    <th>Ref</th>
-                                    <th>Total</th>
-                                    <th>Discount</th>
-                                    <th>Pay</th>
-                                    <th>Due</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
+                                    <th>ক্রয় আইডি</th>
+                                    <th>রেফারেন্স</th>
+                                    <th>টোটাল</th>
+                                    <th> ডিস্কাউন্ট</th>
+                                    <th>পেমেন্ট</th>
+                                    <th>বকেয়া</th>
+                                    <th>সময়</th>
+                                    <th> একশন</th>
                                 </tr>
                             </thead>
                             <tfoot class="bg-abasas-dark">
                                 <tr>
                                     <th>#</th>
-                                    <th>order Id</th>
-                                    <th>Ref</th>
-                                    <th>Total</th>
-                                    <th>Discount</th>
-                                    <th>Pay</th>
-                                    <th>Due</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
+                                    <th>ক্রয় আইডি</th>
+                                    <th>রেফারেন্স</th>
+                                    <th>টোটাল</th>
+                                    <th> ডিস্কাউন্ট</th>
+                                    <th>পেমেন্ট</th>
+                                    <th>বকেয়া</th>
+                                    <th>সময়</th>
+                                    <th> একশন</th>
                                 </tr>
 
                             </tfoot>
@@ -157,7 +161,7 @@
                                 </tr>
                                 @endforeach
 
-                            </tbody>
+                            </tbody> 
                         </table>
                     </div>
                 </div>

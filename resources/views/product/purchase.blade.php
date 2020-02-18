@@ -27,7 +27,7 @@
 
             <div class="form-row align-items-center">
               <div class="col-auto">
-                <span class="text-dark  pl-2"> পণ্যের তালিকা </span>
+                <span class="text-dark  pl-2"> পণ্যের লিস্ট </span>
                 <input type="text" name="product_id" id="purchaseProductInputId" size="10" value="" class="form-control  mb-2">
               </div>
 
@@ -79,7 +79,7 @@
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <b> পণ্যের তালিকা </b>
+          <b> পণ্যের লিস্ট </b>
 
         </div>
         <div class="card-body">
@@ -207,28 +207,28 @@
           <div class="card border-none   bg-abasas-dark  h-100 p-1">
 
             <div class="card-body">
-              <div class="font-weight-blod h3 text-light"> মোট <span id="totalPrice">0</span> </div>
+              <div class="font-weight-blod h3 text-light"> মোট : <span id="totalPrice">0</span> </div>
               <div class="col-auto">
-                <label class="text-light" for="purchasePaymentField"> পরিশোধ </label>
+                <label class="text-light" for="purchasePaymentField"> পরিশোধ : </label>
                 <input type="text" id="purchasePaymentField" class="form-control mb-2" value="0" required>
               </div>
 
               <hr class="sidebar-divider bg-light m-1 p-0 ">
 
-              <div class="font-weight-blod  text-light"> ছাড় <span id="totalPriceDiscount">0</span> </div>
+              <div class="font-weight-blod  text-light"> ছাড় : <span id="totalPriceDiscount">0</span> </div>
 
               <div class="col-auto">
-                <label class="text-light" for="purchaseMoreDiscountField"> অতিরিক্ত ছাড় </label>
+                <label class="text-light" for="purchaseMoreDiscountField"> অতিরিক্ত ছাড় :  </label>
                 <input type="text" id="purchaseMoreDiscountField" value="0" class="form-control mb-2" required>
               </div>
 
               <!-- Divider -->
               <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <div class="text-light font-weight-bold"> বকেয়া : <span id="totalDue">0</span> </div>
+              <div class="text-light font-weight-bold"> বকেয়া :  <span id="totalDue">0</span> </div>
 
               <!-- Divider -->
               <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <button id="purchaseCompleteButton" class="btn btn-success">  সম্পন্ন </button>
+              <button id="purchaseCompleteButton" class="btn btn-success">  সাবমিট </button>
             </div>
 
             <!-- submit form start  -->

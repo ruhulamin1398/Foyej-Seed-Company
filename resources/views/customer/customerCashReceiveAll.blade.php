@@ -15,7 +15,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3 bg-abasas-dark text-light">
             <nav class="navbar navbar-light">
-                <a class="navbar-brand">Customer Cash Receive list</a>
+                <a class="navbar-brand">কাস্টমার বকেয়া গ্রহন লিস্ট</a>
                
             </nav>
         </div>
@@ -26,23 +26,21 @@
 
 
                         <tr>
-                            <th>Payment Id</th>
-                            <th>Customer</th>
-                            <th>Ref</th>
-                           
-                            <th>Pre_due</th>
-                            <th>Amount</th>
+                            <th>পেমেন্ট আইডি</th>
+                            <th>কাস্টমার</th>
+                            <th>রেফারেন্স</th>
+                            <th>পূর্বের বকেয়া</th>
+                            <th>পরিমান</th>
                             
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                     <tr>
-                            <th>Payment Id</th>
-                            <th>Customer</th>
-                            <th>Ref</th>
-                           
-                            <th>Pre_due</th>
-                            <th>Amount</th>
+                            <th>পেমেন্ট আইডি</th>
+                            <th>কাস্টমার</th>
+                            <th>রেফারেন্স</th>
+                            <th>পূর্বের বকেয়া</th>
+                            <th>পরিমান</th>
                             
                         </tr>
 

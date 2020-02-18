@@ -13,29 +13,29 @@
 
             <div class="card mb-4 shadow">
 
-                <div class="card-header py-3">
-                    <nav class="navbar navbar-light">
-         <h6 class="m-0 font-weight-bold text-primary">বকেয়া গ্রহনের তালিকা </h6>
-                <button class="btn btn-success " id="create-button"> <a href="{{ route('customer_cash_receive_all') }} " class="text-light">বকেয়া গ্রহন</a> </button>
-        
-            </nav>
+                <div class="card-header bg-abasas-dark py-3">
+                    <nav class="navbar navbar-dark">
+                        <h6 class="m-0 font-weight-bold ">বকেয়া গ্রহন</h6>
+                        <button class="btn btn-success " id="create-button"> <a href="{{ route('customer_cash_receive_all') }} " class="text-light">বকেয়া গ্রহনের লিস্ট</a> </button>
+
+                    </nav>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('customer_cash_receive_store') }}">
                         @csrf
                         <div class="form-row align-items-center">
 
-                        <div class="col-auto">
-                                <input type="text" name="customer_id"  id="CustomerCashcustomerId" value=0 class="form-control mb-2" hidden >
+                            <div class="col-auto">
+                                <input type="text" name="customer_id" id="CustomerCashcustomerId" value=0 class="form-control mb-2" hidden>
                             </div>
 
                             <div class="col-auto">
-                                <input type="text" name="pre_due"  id="CustomerCashcustomerPreviousDue" value=0 class="form-control mb-2" hidden >
+                                <input type="text" name="pre_due" id="CustomerCashcustomerPreviousDue" value=0 class="form-control mb-2" hidden>
                             </div>
 
                             <div class="col-auto">
                                 <span class="text-dark pl-2"> পরিমান</span>
-                                <input type="text" id="CustomerCashAmount" name="amount"  class="form-control mb-2" required >
+                                <input type="text" id="CustomerCashAmount" name="amount" class="form-control mb-2" required>
                             </div>
 
                             <div class="col-auto">
@@ -47,7 +47,7 @@
 
 
                             <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mt-3" id="customerCashReceiveSubmit" disabled="true" >সাবমিট</button>
+                                <button type="submit" class="btn btn-primary mt-3" id="customerCashReceiveSubmit" disabled="true">সাবমিট</button>
                             </div>
 
                         </div>
@@ -59,7 +59,7 @@
 
 
 
-            
+
 
         </div>
 
@@ -70,8 +70,8 @@
 
             <!-- Supplier Area Start -->
 
-            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
-                <div class="card border-none   bg-dark  h-100 p-2">
+            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
+                <div class="card border-none   bg-abasas-dark  h-100 p-2">
                     <h3 class="text-white"> ক্রেতা</h3>
 
                     <div class="card-body">

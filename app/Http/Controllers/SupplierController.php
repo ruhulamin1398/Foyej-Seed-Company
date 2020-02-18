@@ -124,10 +124,7 @@ class SupplierController extends Controller
     public function suppliersupdate(Request $request)
     {
 
-        $request->validate([
-            'phone' => 'required|unique:suppliers|max:11|min:11',
-            'name' => 'required:suppliers',
-        ]);
+        
 
         $supplier = Supplier::find($request->id);
 

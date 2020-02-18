@@ -1,8 +1,8 @@
 
 <div>
 
-<button type="button" id="printPdf" style="color: royalblue;  background-color:black;  ">print </button>
-<a href="{{route("barcode")}}"><button type="button" " style="color: royalblue;  background-color:black;  ">Go Back </button> </a>
+<button type="button" id="printPdf" style="color: white;  background-color:green;  ">প্রিন্ট </button>
+<a href="{{route("barcode")}}"><button type="button" " style="color: white;  background-color:red;  ">বাতিল </button> </a>
 </div>
 
 <div id="page-top" >  

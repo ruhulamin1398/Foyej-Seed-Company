@@ -11,7 +11,7 @@
 
     <div class="card-header py-3  bg-abasas-dark ">
         <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">Add New Staff</a>
+                <a class="navbar-brand text-light">নতুন কর্মচারী</a>
              </nav>
         </div>
         <div class="card-body">
@@ -19,38 +19,38 @@
                 @csrf
                 <div class="form-row align-items-center">
                     <div class="col-auto">
-                        <span class="text-dark pl-4"> Staff's Name</span>
+                        <span class="text-dark pl-4"> কর্মচারীর নাম</span>
                         <input type="text" name="name" class="form-control mb-2">
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-4"> Phone</span>
+                        <span class="text-dark pl-4">নাম্বার</span>
                         <input type="text" name="phone" class="form-control mb-2">
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Address</span>
+                        <span class="text-dark pl-2"> ঠিকানা</span>
                         <input type="text" name="address" class="form-control mb-2">
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Salary</span>
+                        <span class="text-dark pl-2"> বেতন</span>
                         <input type="text" name="salary" class="form-control mb-2">
                     </div>
 
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Post</span>
+                        <span class="text-dark pl-2"> পোস্ট</span>
                         <select name='post' class="form-control mb-2">
-                            <option value="Manager">Manager</option>
-                            <option value="Other">Other</option>
+                            <option value="ম্যানাজার">ম্যানাজার</option>
+                            <option value="অন্যান্য">অন্যান্য</option>
                         </select>
 
                     </div>
 
 
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                        <button type="submit" class="btn btn-primary mt-3">সাবমিট</button>
                     </div>
 
                 </div>
@@ -65,7 +65,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3  bg-abasas-dark ">
         <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">Staff list</a>
+                <a class="navbar-brand text-light">কর্মচারী লিস্ট</a>
              </nav>
         </div>
         <div class="card-body">
@@ -76,23 +76,23 @@
 
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Salary</th>
-                            <th>Post</th>
-                            <th>Action</th>
+                            <th>নাম</th>
+                            <th>নাম্বার</th>
+                            <th> ঠিকানা</th>
+                            <th> বেতন</th>
+                            <th> পোস্ট</th>
+                            <th> একশন </th>
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                     <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Salary</th>
-                            <th>Post</th>
-                            <th>Action</th>
+                            <th>নাম</th>
+                            <th>নাম্বার</th>
+                            <th> ঠিকানা</th>
+                            <th> বেতন</th>
+                            <th> পোস্ট</th>
+                            <th> একশন </th>
                         </tr>
 
                     </tfoot>
@@ -161,7 +161,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-dark" id="edit-modal-label ">Edit Staff</h5>
+                <h5 class="modal-title text-dark" id="edit-modal-label ">কর্মচারী সংশোধন</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -173,13 +173,13 @@
 
                     <!-- id -->
                     <div class="form-group">
-                        <label class="col-form-label" for="StaffEditId">Id </label>
+                        <label class="col-form-label" for="StaffEditId"> আইডি </label>
                         <input type="text" name="id" class="form-control" id="StaffEditId" required readonly>
                     </div>
                     <!-- /id -->
                     <!-- name -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffName">Name</label>
+                        <label class="col-form-label" for="editModalStaffName">নাম </label>
                         <input type="text" name="name" class="form-control" id="editModalStaffName" required >
                     </div>
                     <!-- /name -->
@@ -188,21 +188,21 @@
                 
                     <!-- phone -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffPhone">Phone</label>
+                        <label class="col-form-label" for="editModalStaffPhone">নাম্বার </label>
                         <input type="text" name="phone" class="form-control" id="editModalStaffPhone" required >
                     </div>
                     <!-- /phone -->
 
                     <!-- Address -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffAddress">Address</label>
+                        <label class="col-form-label" for="editModalStaffAddress">ঠিকানা </label>
                         <input type="text" name="address" class="form-control" id="editModalStaffAddress" required >
                     </div>
                     <!-- /Address -->
 
                     <!-- Salary -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffSalary">Salary</label>
+                        <label class="col-form-label" for="editModalStaffSalary">বেতন </label>
                         <input type="text" name="salary" class="form-control" id="editModalStaffSalary" required >
                     </div>
                     <!-- /Salary -->
@@ -211,10 +211,10 @@
 
                     <!-- Post -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalStaffSalary">Post</label>
+                        <label class="col-form-label" for="editModalStaffSalary">পোস্ট</label>
                         <select name='post' class="form-control mb-2">
-                            <option value="Manager">Manager</option>
-                            <option value="Other">Other</option>
+                            <option value="ম্যানাজার">ম্যানাজার</option>
+                            <option value="অন্যান্য">অন্যান্য</option>
                         </select>
                     </div>
                     <!-- /Post -->
@@ -226,7 +226,7 @@
 
                     <div class="form-group">
 
-                        <input type="submit" value="submit" class="form-control btn btn-success">
+                        <input type="submit" value="সাবমিট" class="form-control btn btn-success">
                     </div>
                     <!-- /description -->
                 

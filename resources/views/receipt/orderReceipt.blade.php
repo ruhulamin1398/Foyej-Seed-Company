@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +14,7 @@
     <title>Foyej Seed Company </title>
 </head>
 
-<body>
+<body >
 
     <style>
     
@@ -360,24 +368,24 @@
             <?php
                 
               
-                // echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG ( $order->id , "C39") . '"    />'.'<br>';
-                // ?>
-                <!-- <h3 style="padding: 3px;"><strong>Invoice: #{{ $order->id}}</strong></h3> -->
+                echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG ( $order->id , "C39") . '"    />'.'<br><br>';
+                ?>
+                <h3 style="padding: 3px;"><strong>বিক্রয়: # {{ $order->id}}</strong></h3>
             </div>
         </div>
 
         <div id="fromto">
             <div id="from">
                 <p> 
-                <h3 style="padding: 3px;"><strong>Invoice: {{$order->id}}</strong></h3>
-                <h4 style="padding: 3px;">Réf : {{Auth::user()->name}}</h4>
-                <p style="padding: 3px;" >Date : {{ $order->created_at->format('M d Y h:i:s a')}}  </p>
-                <p style="padding: 3px;" >Due :{{ $order->customer->due }}</p>
+                <h3 style="padding: 3px;"><strong>বিক্রয়: {{$order->id}}</strong></h3>
+                <h4 style="padding: 3px;">রেফারেন্স : {{Auth::user()->name}}</h4>
+                <p style="padding: 3px;" >সময় : {{ $order->created_at->format('M d Y h:i:s a')}}  </p>
+                <p style="padding: 3px;" > বর্তমান বকেয়া :{{ $order->customer->due }}</p>
                 </p>
             </div> 
             <div id="to">
                 <p>
-                    <div style="padding: 3px; font-weight:bold ; text-align:left">customer:</div>
+                    <div style="padding: 3px; font-weight:bold ; text-align:left">কাস্টমার :</div>
                     <div style="padding: 3px; font-weight:bold ; text-align:left">{{$order->customer->name}}</div>
                     <div style="padding: 3px; text-align:left " >{{$order->customer->phone}}</div>
                     <div style="padding: 3px; text-align:left " >{{$order->customer->address}}</div>
@@ -392,11 +400,11 @@
                 <tr>
                     <th colspan="1">#</th>
           
-                    <th colspan="4">Details</th>
+                    <th colspan="4">বিবরন</th>
                    
-                    <th colspan="2" >Quantity  </th>
-                    <th colspan="2">Price</th>
-                    <th colspan="2" >Amount</th>
+                    <th colspan="2" >পরিমান  </th>
+                    <th colspan="2"> দাম </th>
+                    <th colspan="2" >মূল্য</th>
                 </tr>
                 <?php $i=1 ?>
                 @foreach( $order->products as $product)
@@ -410,7 +418,7 @@
                      
 
                         @endif
-                    
+                     
                     </td>
                     
                     <td colspan="2" >{{$product->quantity}}
@@ -440,33 +448,38 @@
 
         <div id="summary">
             <div id="note">
-                <h4>Note :</h4>
-                <p>You can't return Product.</p>
+                <h4>বি.দ্র:</h4><br>
+                <ul>
+                    <li>#. বিক্রিত মাল ফেরতযোগ্য নয় ।</li><br>
+                    <li>#. ক্রয়ের সাত দিনের মধ্যে পরিবর্তন করতে পারবেন ।</li><br>
+                    <li>#. বিক্রিত মালের পরিবর্তে টাকা প্রদান করা হবে না ।</li><br>
+                </ul>
+                
             </div>
             <div id="total">
                 <table border="1">
                     <tr>
-                        <td>Sub Total </td>
+                        <td>সাব টোটাল </td>
                         <td>{{ $order->total}}</td>
                     </tr>
                     <tr>
-                        <td>Discount</td>
+                        <td>ডিস্কাউন্ট</td>
                         <td> {{ $order->discount}} </td>
                     </tr>
                     <tr>
-                        <td>Previous Due</td>
+                        <td>পুর্বের বকেয়া</td>
                         <td>  {{ $order->pre_due}} </td>
                     </tr>
                     <tr>
-                        <td>Total </td>
+                        <td>টোটাল </td>
                         <td>{{ $order->total}}</td>
                     </tr>
                     <tr>
-                        <td>Pay </td>
+                        <td> পেমেন্ট </td>
                         <td> {{ $order->pay}} </td>
                     </tr>
                     <tr>
-                        <td>Due </td>
+                        <td>বকেয়া </td>
                         <td> {{ $order->due}} </td>
                     </tr>
                 </table>
@@ -478,6 +491,16 @@
         </div>
     </div>
 
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{asset('file/jquery/jquery.min.js')}}"></script>
+
+
+    <script src="{{asset('file/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <script src="{{asset('js/printThis.js')}}"></script>
+
+    <script src="{{asset('js/custom/print.js')}}"></script>
 </body>
 
 </html>

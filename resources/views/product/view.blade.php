@@ -13,9 +13,9 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand">পণ্যের তালিকা</a>
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand">পণ্যের লিস্ট</a>
                 <button class="btn btn-success " id="create-button">নতুন পণ্য</button>
             </nav>
         </div>
@@ -62,7 +62,7 @@
                             <td class="iteration">{{$id}}</td>
                             <td id="viewName">{{$product->name}}</td>
                             <td id="viewCategoryId">{{$product->weight}}</td>
-                            <td id="viewSell">{{$product->sell}}</td>
+                            <td id="viewSell">{{$product->price}}</td>
                             <td id="viewProductTypeId">{{$product->category->name}}</td>
                             <td id="viewProductTypeId">{{$product->stock}}</td>
                             <td id="viewCost">{{$product->cost}}</td>

@@ -9,7 +9,7 @@
 
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light"> অর্ডারের তালিকা </a>
+                <a class="navbar-brand text-light"> অর্ডারের লিস্ট </a>
                 <div>
                     <form method="get">
                         @csrf

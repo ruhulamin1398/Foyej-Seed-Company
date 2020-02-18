@@ -40,42 +40,7 @@ class RoleTableSeeder extends Seeder
                     'status'    => 1
                 ],
 
-                [
-                    'id'    => 101,
-                    'username' => 'sagor',
-                    'role_id' => 2,
-                    'email' => 'sagor.sec@gmail.com',
-                    'name' => 'Sajjad Hossain Sagor ',
-                    'address' => 'Tangail',
-                    'phone' => '01799076632',
-                    'salary' => '20000',
-                    'password' => Hash::make(1234),
-                    'status'    => 1
-                ],
-                [
-                    'id'    => 102,
-                    'username' => 'hasan',
-                    'role_id' => 2,
-                    'email' => 'rahmanhasanur715@gmail.com',
-                    'name' => 'Hasan ',
-                    'address' => 'Tangail',
-                    'phone' => '01748437672',
-                    'salary' => '20000',
-                    'password' => Hash::make(1234),
-                    'status'    => 1
-                ],  [
-                    'id'    => 103,
-                    'username' => 'joyed',
-                    'role_id' => 2,
-                    'email' => 'jabirjoyed99@gmail.com',
-                    'name' => 'joyed ',
-                    'address' => 'Tangail',
-                    'phone' => '01754549401',
-                    'salary' => '20000',
-                    'password' => Hash::make(1234),
-                    'status'    => 1
-                ],
-
+                
             ]
         );
 
@@ -103,18 +68,18 @@ class RoleTableSeeder extends Seeder
         DB::table('categories')->insert([
             [
                 'id'    => 100,
-                'name' => 'no_category',
-                'description' => 'Not add in any category'
+                'name' => 'অন্যান্য',
+                'description' => 'ক্যাটাগরি বিহীন'
             ],
             [
                 'id'    => 101,
-                'name' => 'striker',
-                'description' => 'just a sign'
+                'name' => 'স্টিকার ', 
+                'description' => 'স্টিকার বিক্রয় যোগ্যনয়'
             ],
             [
                 'id'    => 102,
-                'name' => 'complete',
-                'description' => 'now ready for sele'
+                'name' => 'কমপ্লিট',
+                'description' => 'বিক্রয়ের জন্য রেডি '
             ],
 
         ]);
@@ -143,13 +108,13 @@ class RoleTableSeeder extends Seeder
 
         DB::table('product_types')->insert([
             [
-                'name' => 'normal',
-                'description' => 'normal sale with weight ',
+                'name' => 'নরমাল ',
+                'description' => ' ওজন করে বিক্রয় ',
               
             ],
             [
-                'name' => 'packet',
-                'description' => 'sale as a packet',
+                'name' => 'প্যাকেট',
+                'description' => 'প্যাকেট হিসেবে বিক্রয় ',
                 
             ],
 

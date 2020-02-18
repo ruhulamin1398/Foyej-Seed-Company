@@ -9,7 +9,7 @@
      
         <div class="card-header py-3  bg-abasas-dark ">
         <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light"> ক্রয়ের তালিকা </a>
+                <a class="navbar-brand text-light"> ক্রয়ের লিস্ট </a>
              </nav>
         </div>
         <div class="card-body">
@@ -20,7 +20,7 @@
 
                         <tr>
                             <th>#</th>
-                            <th>ক্রয় আইডি</th>
+                            <th>ক্রয় নং </th>
                             <th> সরবরাহকারী </th>
                             <th> মোট </th>
                             <th> তথ্য </th>
@@ -30,7 +30,7 @@
                     <tfoot class="bg-abasas-dark">
                         <tr>
                             <th>#</th>
-                            <th>ক্রয় আইডি</th>
+                            <th>ক্রয় নং </th>
                             <th> সরবরাহকারী </th>
                             <th> মোট </th>
                             <th> তথ্য </th>

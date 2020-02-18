@@ -9,9 +9,15 @@
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"> বিক্রয়ের ধরন</h6>
+
+
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> বিক্রয়ের ধরন</a>
+            </nav>
         </div>
+
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
@@ -40,7 +46,7 @@
 
                         <?php $i = 1; ?>
                         @foreach ($productTypes as $productTypes )
-                        <?php $id = $productTypes ->id; ?>
+                        <?php $id = $productTypes->id; ?>
                         <tr class="data-row">
                             <td class="iteration">{{$i++}}</td>
                             <td class="  word-break name">{{$productTypes ->name}}</td>

@@ -362,22 +362,22 @@
               
                 echo '<img width="80%" src="data:image/png;base64,' . DNS1D::getBarcodePNG ( $purchase->id , "C39") . '"    />'.'<br>';
                 ?>
-                <h3 style="padding: 3px;"><strong>Invoice: #{{ $purchase->id}}</strong></h3>
+                <h3 style="padding: 3px;"><strong>  ক্রয় #  {{ $purchase->id}}</strong></h3>
             </div>
         </div>
 
         <div id="fromto">
             <div id="from">
                 <p> 
-                <h3 style="padding: 3px;"><strong>Invoice: {{$purchase->id}}</strong></h3>
-                <h4 style="padding: 3px;">Réf : {{Auth::user()->name}}</h4>
-                <p style="padding: 3px;" >Date : {{ $purchase->created_at->format('M d Y h:i:s a')}}  </p>
-                <p style="padding: 3px;" >Due :{{ $purchase->supplier->due }}</p>
+                <h3 style="padding: 3px;"><strong>ক্রয়: # {{$purchase->id}}</strong></h3>
+                <h4 style="padding: 3px;">রেফারেন্স : {{Auth::user()->name}}</h4>
+                <p style="padding: 3px;" >তারিখ : {{ $purchase->created_at->format('M d Y h:i:s a')}}  </p>
+                <p style="padding: 3px;" >বকেয়া :{{ $purchase->supplier->due }}</p>
                 </p>
             </div> 
             <div id="to">
                 <p>
-                    <div style="padding: 3px; font-weight:bold ; text-align:left">Supplier:</div>
+                    <div style="padding: 3px; font-weight:bold ; text-align:left">সাপ্লাইয়ার:</div>
                     <div style="padding: 3px; font-weight:bold ; text-align:left">{{$purchase->supplier->name}}</div>
                     <div style="padding: 3px; text-align:left " >{{$purchase->supplier->phone}}</div>
                     <div style="padding: 3px; text-align:left " >{{$purchase->supplier->address}}</div>
@@ -392,11 +392,11 @@
                 <tr>
                     <th colspan="1">#</th>
           
-                    <th colspan="4">Details</th>
+                    <th colspan="4">বিবরন</th>
                    
-                    <th colspan="2" >Quantity  </th>
-                    <th colspan="2">Price</th>
-                    <th colspan="2" >Amount</th>
+                    <th colspan="2" >পরিমান  </th>
+                    <th colspan="2"> মূল্য</th>
+                    <th colspan="2" >টোটাল </th>
                 </tr>
                 <?php $i=1 ?>
                 @foreach( $purchase->products as $product)
@@ -440,33 +440,31 @@
 
         <div id="summary">
             <div id="note">
-                <h4>Note :</h4>
-                <p>You can't return Product.</p>
             </div>
             <div id="total">
                 <table border="1">
                     <tr>
-                        <td>Sub Total </td>
+                        <td>সাব টোটাল </td>
                         <td>{{ $purchase->total}}</td>
                     </tr>
                     <tr>
-                        <td>Discount</td>
+                        <td>ডিস্কাউন্ট</td>
                         <td> {{ $purchase->discount}} </td>
                     </tr>
                     <tr>
-                        <td>Previous Due</td>
+                        <td>পুর্বের বকেয়া </td>
                         <td>  {{ $purchase->pre_due}} </td>
                     </tr>
                     <tr>
-                        <td>Total </td>
+                        <td>টোটাল  </td>
                         <td>{{ $purchase->total}}</td>
                     </tr>
                     <tr>
-                        <td>Pay </td>
+                        <td> পেমেন্ট </td>
                         <td> {{ $purchase->pay}} </td>
                     </tr>
                     <tr>
-                        <td>Due </td>
+                        <td>বকেয়া </td>
                         <td> {{ $purchase->due}} </td>
                     </tr>
                 </table>

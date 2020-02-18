@@ -13,9 +13,14 @@
 
             <div class="card mb-4 shadow">
 
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Print barcode</h6>
-                </div>
+                         
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> কোড প্রিন্ট করুন</a>
+               
+            </nav>
+        </div>
+                
                 <div class="card-body">
                     <form method="POST" action="{{ route('barcode_print') }}">
                         @csrf
@@ -24,19 +29,19 @@
         
 
                             <div class="col-auto">
-                                <span class="text-dark pl-2"> Code</span>
+                                <span class="text-dark pl-2"> কোড</span>
                                 <input type="text" name="id"  class="form-control mb-2" required >
                             </div>
 
                             <div class="col-auto">
 
-                                <span class="text-dark pl-2"> Amount</span>
+                                <span class="text-dark pl-2"> পরিমান</span>
                                 <input type="number" name="amount" class="form-control mb-2" required>
                             </div>
 
 
                             <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mt-3"  >Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3"  > সাবমিট</button>
                             </div>
 
                         </div>

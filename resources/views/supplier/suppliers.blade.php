@@ -9,35 +9,40 @@
 <div class="container-fluid">
     <div class="card mb-4 shadow">
 
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Add New Supplier</h6>
+      
+               
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> নতুন সাপ্লাইয়ার</a>
+               
+            </nav>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('suppliers.store') }}">
                 @csrf
                 <div class="form-row align-items-center">
                     <div class="col-auto">
-                        <span class="text-dark pl-2"> Supplier's Name</span>
+                        <span class="text-dark pl-2"> সাপ্লাইয়ারের নাম</span>
                         <input type="text" name="name" class="form-control mb-2">
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Phone</span>
+                        <span class="text-dark pl-2"> নাম্বার</span>
                         <input type="text" name="phone"  class="form-control mb-2" >
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Address</span>
+                        <span class="text-dark pl-2">ঠিকানা</span>
                         <input type="text" name="address"  class="form-control mb-2">
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-2"> Company</span>
+                        <span class="text-dark pl-2"> কোম্পানি</span>
                         <input type="text" name="company"  class="form-control mb-2">
                     </div>
 
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                        <button type="submit" class="btn btn-primary mt-3">সাবমিট </button>
                     </div>
 
                 </div>
@@ -50,8 +55,11 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Supplier's list</h6>
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> সাপ্লাইয়ার লিস্ট</a>
+               
+            </nav>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -61,23 +69,23 @@
 
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Company</th>
-                            <th>Due</th>
-                            <th>Action</th>
+                            <th>নাম</th>
+                            <th>নাম্বার</th></th>
+                            <th>ঠিকানা</th>
+                            <th>কোম্পানি</th>
+                            <th>বকেয়া</th>
+                            <th>একশন</th>
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                     <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Company</th>
-                            <th>Due</th>
-                            <th>Action</th>
+                            <th>নাম</th>
+                            <th>নাম্বার</th></th>
+                            <th>ঠিকানা</th>
+                            <th>কোম্পানি</th>
+                            <th>বকেয়া</th>
+                            <th>একশন</th> 
                         </tr>
 
                     </tfoot>
@@ -144,7 +152,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-dark" id="edit-modal-label ">Edit Supplier</h5>
+                <h5 class="modal-title text-dark" id="edit-modal-label ">সাপ্লাইয়ার সংশোধন</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -156,13 +164,13 @@
 
                     <!-- id -->
                     <div class="form-group">
-                        <label class="col-form-label" for="SupplierEditId">Id </label>
+                        <label class="col-form-label" for="SupplierEditId">আইডি </label>
                         <input type="text" name="id" class="form-control" id="SupplierEditId" required readonly>
                     </div>
                     <!-- /id -->
                     <!-- name -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierName">Name</label>
+                        <label class="col-form-label" for="editModalSupplierName">নাম</label>
                         <input type="text" name="name" class="form-control" id="editModalSupplierName" required >
                     </div>
                     <!-- /name -->
@@ -171,21 +179,21 @@
                 
                     <!-- phone -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierPhone">Phone</label>
+                        <label class="col-form-label" for="editModalSupplierPhone">নাম্বার</label>
                         <input type="text" name="phone" class="form-control" id="editModalSupplierPhone" required >
                     </div>
                     <!-- /phone -->
 
                     <!-- Address -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierAddress">Address</label>
+                        <label class="col-form-label" for="editModalSupplierAddress">ঠিকানা </label>
                         <input type="text" name="address" class="form-control" id="editModalSupplierAddress" required >
                     </div>
                     <!-- /Address -->
 
                     <!-- Company -->
                     <div class="form-group">
-                        <label class="col-form-label" for="editModalSupplierCompany">Company</label>
+                        <label class="col-form-label" for="editModalSupplierCompany">কোম্পানি </label>
                         <input type="text" name="company" class="form-control" id="editModalSupplierCompany" required >
                     </div>
                     <!-- /Company -->
@@ -193,7 +201,7 @@
 
                     <div class="form-group">
 
-                        <input type="submit" value="submit" class="form-control btn btn-success">
+                        <input type="submit" value="সাবমিট " class="form-control btn btn-success">
                     </div>
                     <!-- /description -->
                 

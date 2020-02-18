@@ -51,7 +51,7 @@ $(document).ready(function () {
                         $("#purchasePageSupplierName").text(data.name);
                         $("#purchasePageSupplierPhone").text(data.phone);
                         $("#purchasePageSupplieCompany").text(data.company);
-                        $("#purchasePageSupplierDue").html("Due : " + data.due);
+                        $("#purchasePageSupplierDue").html("বকেয়া : " + data.due);
 
                         $('#purchasePageAddSupplierForm').hide();
                         $("#purchasePageSupplierView").show();

@@ -9,9 +9,14 @@
 <div class="container-fluid">
     <div class="card mb-4 shadow">
 
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"> নতুন পণ্য </h6>
-        </div>     <div class="card-body">
+        
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand">নতুন পণ্য</a>
+               
+            </nav>
+        </div>
+        <div class="card-body">
 
 
 
@@ -52,7 +57,7 @@
                     <label for="price"> ওজন</label>
                     <input type="number" name="weight" class="form-control" id="weight" placeholder="">
                 </div>
-                
+
 
 
                 <div class="form-group">
@@ -66,11 +71,11 @@
                 </div>
 
                 <div class="form-group">
-                        <label for="lowLimit"> মেয়াদ </label>
-                        <input type="date" name="expire_date" class="form-control" id="lowLimit" placeholder="" >
-                    </div>
+                    <label for="lowLimit"> মেয়াদ </label>
+                    <input type="date" name="expire_date" class="form-control" id="lowLimit" placeholder="">
+                </div>
 
-                <button type="submit" class="btn btn-primary"> সাবমিট</button>
+                <button type="submit" class="btn bg-abasas-dark"> সাবমিট</button>
 
 
 

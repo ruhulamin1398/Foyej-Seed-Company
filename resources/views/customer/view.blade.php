@@ -50,7 +50,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3  bg-abasas-dark ">
         <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light"> কাস্টমার তালিকা </a>
+                <a class="navbar-brand text-light"> কাস্টমার লিস্ট </a>
              </nav>
         </div>
         <div class="card-body">

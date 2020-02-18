@@ -81,7 +81,7 @@
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <b>পণ্যের তালিকা</b>
+          <b>পণ্যের লিস্ট</b>
 
         </div>
         <div class="card-body">
@@ -209,9 +209,9 @@
           <div class="card border-none   bg-abasas-dark  h-100 p-1">
 
             <div class="card-body">
-              <div class="font-weight-blod h3 text-light">মোট: <span id="totalPrice">0</span> </div>
+              <div class="font-weight-blod h3 text-light">মোট : <span id="totalPrice">0</span> </div>
               <div class="col-auto">
-                <label class="text-light" for="orderPaymentField">পেমেন্ট</label>
+                <label class="text-light" for="orderPaymentField">পেমেন্ট :</label>
                 <input type="text" id="orderPaymentField" class="form-control mb-2" value="0" required>
               </div>
 
@@ -220,7 +220,7 @@
               <div class="font-weight-blod  text-light">ছাড়: <span id="totalPriceDiscount">0</span> </div>
 
               <div class="col-auto">
-                <label class="text-light" for="orderMoreDiscountField">অতিরিক্ত ছাড়</label>
+                <label class="text-light" for="orderMoreDiscountField">অতিরিক্ত ছাড় : </label>
                 <input type="text" id="orderMoreDiscountField" value="0" class="form-control mb-2" required>
               </div>
 
@@ -230,7 +230,7 @@
 
               <!-- Divider -->
               <hr class="sidebar-divider bg-light m-1 p-0 ">
-              <button id="orderCompleteButton" class="btn btn-success"> শেষ </button>
+              <button id="orderCompleteButton" class="btn btn-success"> সাবমিট </button>
             </div>
 
             <!-- submit form start  -->

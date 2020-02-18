@@ -125,21 +125,19 @@ class CustomerController extends Controller
     }
     public function customersupdate(Request $request)
     {
-        //  return $request;
-        $request->validate([
-            'phone' => 'required|unique:customers|max:11|min:11',
-        ]);
+     
 
 
+    //    return $request;
 
         $customer = Customer::find($request->id);
-        //  return $customer;
+        //   return $customer;
         $customer->phone = $request->phone;
         $customer->name = $request->name;
         $customer->address = $request->address;
 
         $customer->save();
-        //return $customer;
+        // return $customer;
 
         return redirect(route('customers.index'))->with('successMsg', 'Customer Successfully updated');
     }

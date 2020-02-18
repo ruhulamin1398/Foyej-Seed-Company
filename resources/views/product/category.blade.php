@@ -9,9 +9,14 @@
 <div class="container-fluid">
     <div class="card mb-4 shadow">
 
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"> নতুন ক্যাটাগরি </h6>
+    
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> নতুন ক্যাটাগরি</a>
+               
+            </nav>
         </div>
+
         <div class="card-body">
             <form method="POST" action="{{ route('categories.store') }}">
                 @csrf
@@ -40,8 +45,12 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">ক্যাটাগরি তালিকা</h6>
+        
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> ক্যাটাগরি লিস্ট</a>
+               
+            </nav>
         </div>
         <div class="card-body">
             <div class="table-responsive">

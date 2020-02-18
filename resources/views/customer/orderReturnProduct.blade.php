@@ -13,9 +13,9 @@
 
             <div class="card mb-4 shadow">
 
-                <div class="card-header py-3">
-                    <nav class="navbar navbar-light">
-                         পণ্য  ফেরত
+                <div class="card-header py-3 bg-abasas-dark">
+                    <nav class="navbar ">
+                         পণ্য ফেরত
                     </nav>
                 </div>
                 <div class="card-body">
@@ -34,25 +34,25 @@
 
                             <div class="col-auto">
                                 <span class="text-dark  pl-2"> পণ্যের আইডি</span>
-                                <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2">
+                                <input type="text" name="product_id" id="orderProductInputId" size="10" value="" class="form-control  mb-2" required>
                             </div>
 
                             <div class="col-auto">
                                 <span class="text-dark  pl-2"> পণ্যের নাম </span>
-                                <input type="text" name="name" id="orderProductInputName" size="20" value="" class="form-control  mb-2" disabled="true">
+                                <input type="text" name="name" id="orderProductInputName" size="20" value="" class="form-control  mb-2" disabled="true" required>
                             </div>
 
 
                             <div class="col-auto">
 
                                 <span class="text-dark pl-2"> পরিমান</span>
-                                <input type="text" name="quantity" class="form-control mb-2">
+                                <input type="text" name="quantity" class="form-control mb-2" required>
                             </div>
 
                             <div class="col-auto">
 
                                 <span class="text-dark pl-2"> মূল্য</span>
-                                <input type="text" name="price" class="form-control mb-2">
+                                <input type="text" name="price" class="form-control mb-2" required>
                             </div>
 
 
@@ -75,9 +75,9 @@
 
 
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <nav class="navbar navbar-light bg-light">
-                        <a class="navbar-brand">পণ্য ফেরতের তালিকা</a>
+                <div class="card-header py-3 bg-abasas-dark">
+                    <nav class="navbar navbar-light ">
+                        <a class="navbar-brand">পণ্য ফেরতের লিস্ট</a>
 
                     </nav>
                 </div>
@@ -148,8 +148,8 @@
 
             <!-- Supplier Area Start -->
 
-            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
-                <div class="card border-none   bg-dark  h-100 p-2">
+            <div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
+                <div class="card border-none   bg-abasas-dark  h-100 p-2">
                     <h3 class="text-white">ক্রেতা</h3>
 
                     <div class="card-body">

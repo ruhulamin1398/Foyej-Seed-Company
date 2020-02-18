@@ -12,7 +12,7 @@
 
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">  ক্রয়ের তালিকা  </a>
+                <a class="navbar-brand text-light">  ক্রয়ের লিস্ট  </a>
                 <div>
                     <form method="get">
                         @csrf
