@@ -99,7 +99,7 @@
     </li>
 
 
-
+    @if(Auth::user()->role_id==1)
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
@@ -117,7 +117,7 @@
         </div>
       </div>
     </li>
-
+@endif
 
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
@@ -167,16 +167,16 @@
       <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
 
-        <a class="collapse-item" href="{{ route('expenses.create') }}">Over All</a>
-          <a class="collapse-item" href="{{ route('expenses.create') }}">Sale</a>
-          <a class="collapse-item" href="{{ route('expenses.index') }}">Purchase</a>
-          <a class="collapse-item" href="{{ route('expenses.index') }}">Profit</a>
-          <a class="collapse-item" href="{{ route('expenses.index') }}">Expense</a>
+        <a class="collapse-item" href="{{ route('stats.index').'?startDate=2020-01-01&endDate='}}{{now()}}">Over All</a>
+          <a class="collapse-item" href="{{ route('sale-stats').'?startDate=2020-01-01&endDate='}}{{now()}}">Sale</a>
+          <a class="collapse-item" href="{{ route('purchase-stats').'?startDate=2020-01-01&endDate='}}{{now()}}">Purchase</a>
+          <a class="collapse-item" href="{{ route('expense-stats').'?startDate=2020-01-01&endDate='}}{{now()}}">Expense</a>
 
         </div>
       </div>
     </li>
     
+    @if(Auth::user()->role_id==1)
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
@@ -185,6 +185,7 @@
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Goal</span></a>
     </li>
+    @endif
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->

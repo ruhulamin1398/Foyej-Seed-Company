@@ -263,10 +263,11 @@ $(document).ready(function () {
             html += '<td>' + ++i + '</td>'
             html += '<td>' + orderTableData[row].id + '</td>'
             html += '<td>' + orderTableData[row].name + '</td>'
-            html += '<td>' + orderTableData[row].price_per_unit + '</td>'
+            html += '<td>' + orderTableData[row].price + '</td>'
             html += '<td>' + orderTableData[row].quantity + '</td>'
             html += '<td>' + orderTableData[row].total + '</td>'
             html += '<td>'
+
             html += '<button type="button" productId=' + orderTableData[row].id + ' id="orderProductTableEdit" class="btn btn-success"> <i class="fa fa-edit" aria-hidden="false"> </i></button>'
             html += ' <button type="button" id="orderProductTableDelete" productId=' + orderTableData[row].id + '  class="btn btn-danger" > <i class="fa fa-trash" aria-hidden="false"> </i></button>'
 

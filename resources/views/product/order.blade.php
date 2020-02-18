@@ -132,8 +132,8 @@
 
 <!-- Customer Area Start -->
 
-<div class="col-xl-12 col-md-12 mb-4  text-center  bg-dark p-2 ">
-        <div class="card border-none   bg-dark  h-100 p-2">
+<div class="col-xl-12 col-md-12 mb-4  text-center  bg-abasas-dark p-2 ">
+        <div class="card border-none bg-abasas-dark  h-100 p-2">
           <h3 class="text-white">ক্রেতা</h3>
 
           <div class="card-body">

@@ -96,6 +96,16 @@ Route::resource('yearly-expenses', 'YearlyController');
 Route::resource('goals', 'GoalController');
 Route::post('goalsupdate', 'GoalController@goalUpdate')->name("goalsupdate");
 
+
+
+/////stats
+
+
+Route::resource('stats', 'StatsController');
+Route::get('sale-stats', 'StatsController@sale')->name('sale-stats');
+Route::get('purchase-stats', 'StatsController@purchase')->name('purchase-stats');
+Route::get('expense-stats', 'StatsController@expanse')->name('expense-stats');
+
 // testing  routes
 
 Route::get('/home', 'HomeController@index')->name('home');

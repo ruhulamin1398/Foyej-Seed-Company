@@ -9,8 +9,10 @@
 <div class="container-fluid">
     <div class="card mb-4 shadow">
 
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"> নতুন কাস্টমার যোগ করুন </h6>
+        <div class="card-header py-3  bg-abasas-dark ">
+        <nav class="navbar navbar-dark">
+                <a class="navbar-brand text-light"> নতুন কাস্টমার যোগ করুন </a>
+             </nav>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('customers.store') }}">

@@ -352,19 +352,19 @@
 
               <div class="card-body">
 
-                <h4 class="small font-weight-bold">Daily Goal <span class="float-right">{{$daily}}%</span></h4>
+                <h4 class="small font-weight-bold">Daily Goal <span class="float-right">{{(int)$daily}}%</span></h4>
                 <div class="progress mb-4">
                   <div class="progress-bar bg-secondary" role="progressbar" style="width: {{$daily}}%" aria-valuenow="{{$daily}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Weekly Goal <span class="float-right">{{$weekly}}%</span></h4>
+                <h4 class="small font-weight-bold">Weekly Goal <span class="float-right">{{(int)$weekly}}%</span></h4>
                 <div class="progress mb-4">
                   <div class="progress-bar" role="progressbar" style="width: {{$weekly}}%" aria-valuenow="{{$weekly}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Monthly Goal <span class="float-right">{{$monthly}}%</span></h4>
+                <h4 class="small font-weight-bold">Monthly Goal <span class="float-right">{{(int)$monthly}}%</span></h4>
                 <div class="progress mb-4">
                   <div class="progress-bar bg-info" role="progressbar" style="width: {{$monthly}}%" aria-valuenow="{{$monthly}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Yearly Goal <span class="float-right"> {{$yearly}}%</span></h4>
+                <h4 class="small font-weight-bold">Yearly Goal <span class="float-right"> {{(int)$yearly}}%</span></h4>
                 <div class="progress">
                   <div class="progress-bar bg-success" role="progressbar" style="width: {{$yearly}}%" aria-valuenow=" {{$yearly}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
