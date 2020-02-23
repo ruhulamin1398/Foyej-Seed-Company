@@ -166,8 +166,6 @@
       </a>
       <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-
-        <a class="collapse-item" href="{{ route('stats.index').'?startDate=2020-01-01&endDate='}}{{now()}}">Over All</a>
           <a class="collapse-item" href="{{ route('sale-stats').'?startDate=2020-01-01&endDate='}}{{now()}}">বিক্রয় রিপোর্ট</a>
           <a class="collapse-item" href="{{ route('purchase-stats').'?startDate=2020-01-01&endDate='}}{{now()}}">ক্রয় রিপোর্ট</a>
           <a class="collapse-item" href="{{ route('expense-stats').'?startDate=2020-01-01&endDate='}}{{now()}}">খরচ রিপোর্ট</a>
@@ -177,6 +175,30 @@
     </li>
     
     @if(Auth::user()->role_id==1)
+
+
+
+    <hr class="sidebar-divider m-1 p-0 ">
+
+    <!-- Nav Item - Dashboard -->
+   
+    <li class="nav-item">
+      <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseAccounting" aria-expanded="true" aria-controls="collapseAccounting">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>হিসাব </span>
+      </a>
+      <div id="collapseAccounting" class="collapse" aria-labelledby="headingAccounting" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="{{ route('daily-accounting').'?startDate=2020-01-01&endDate='}}{{now()}}"> দৈনিক হিসাব</a>
+          <a class="collapse-item" href="{{ route('monthly-accounting').'?startDate=2020-01-01&endDate='}}{{now()}}"> মাসিক হিসাব</a>
+          <a class="collapse-item" href="{{ route('yearly-accounting').'?startDate=2020-01-01&endDate='}}{{now()}}">বার্ষিক হিসাব</a>
+
+        </div>
+      </div>
+    </li>
+
+
+
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->

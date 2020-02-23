@@ -90,6 +90,13 @@ Route::resource('monthly-expenses', 'MonthlyController');
 Route::resource('yearly-expenses', 'YearlyController');
 
 
+/// Accounting Area 
+
+Route::resource('accounting', 'AccountingController');
+Route::get('daily-accounting', 'AccountingController@daily')->name('daily-accounting');
+Route::get('monthly-accounting', 'AccountingController@monthly')->name('monthly-accounting');
+Route::get('yearly-accounting', 'AccountingController@yearly')->name('yearly-accounting');
+
 /////goal
 
 

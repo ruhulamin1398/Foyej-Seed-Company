@@ -2,6 +2,10 @@ $(document).ready(function () {
 
 
 
+    $(document).on('click', "#product-create-submit-button", function () {
+    
+        $('#product-create-form').submit();
+    });
     function create() {
         $("#create-button").click(function () {
 
@@ -45,90 +49,90 @@ $(document).ready(function () {
 
         $.get($("#productViewLink").val().trim() + "?id=" + id, function (product, status) {
             console.log(product);
-       
+
 
             $("#editProductId").val(id);
             $("#editProductId2").val(id);
             $("#editProductName").val(product.name);
-    
+
             var catagoryhtml = '';
 
 
 
-        $.get($("#productCategoryLink").val().trim(), function (categories, status) {
+            $.get($("#productCategoryLink").val().trim(), function (categories, status) {
 
-            console.log(categories);
-            categories.forEach(function (category, item) {
-                //   alert(viewCategoryId+'   '+i.name);
-                if (product.category_id == category.id) {
-                    catagoryhtml += '   <option  selected="selected"  value="  ' + category.id + ' ">  ' + category.name + '    </option>';
-                } else {
-                    catagoryhtml += '   <option value="  ' + category.id + ' "> ' + category.name + '</option>';
-                }
+                console.log(categories);
+                categories.forEach(function (category, item) {
+                    //   alert(viewCategoryId+'   '+i.name);
+                    if (product.category_id == category.id) {
+                        catagoryhtml += '   <option  selected="selected"  value="  ' + category.id + ' ">  ' + category.name + '    </option>';
+                    } else {
+                        catagoryhtml += '   <option value="  ' + category.id + ' "> ' + category.name + '</option>';
+                    }
 
-                // catagoryhtml += '   <option value="23"> addasfs </option>  <option value="33"> addaddddddddddsfs </option>  <option value="4"> adddddddddddasfs </option>'
+                    // catagoryhtml += '   <option value="23"> addasfs </option>  <option value="33"> addaddddddddddsfs </option>  <option value="4"> adddddddddddasfs </option>'
 
-                //catagoryhtml+='   <option value="5 "> name2</option>';
-                ///alert("Data: " + item.id + "Data: " + item.name + "\nStatus: " + status);
+                    //catagoryhtml+='   <option value="5 "> name2</option>';
+                    ///alert("Data: " + item.id + "Data: " + item.name + "\nStatus: " + status);
 
 
+                });
+
+                // alert(catagoryhtml);
+
+                $("#editProductCatagoryId").html(catagoryhtml);
             });
 
-            // alert(catagoryhtml);
-
-            $("#editProductCatagoryId").html(catagoryhtml);
-        });
 
 
 
+            var product_types_html = "";
 
-        var product_types_html = "";
+            $.get($("#productTypeLink").val().trim(), function (prodyctTypes, status) {
 
-        $.get($("#productTypeLink").val().trim(), function (prodyctTypes, status) {
+                prodyctTypes.forEach(function (type, item) {
 
-          prodyctTypes.forEach(function (type, item) {
-
-                //   alert(viewCategoryId+'   '+i.name);
-                if (product.product_type_id == type.id) {
-                    product_types_html += '   <option  selected="selected"  value="  ' + type.id + ' ">  ' + type.name + '    </option>';
-                } else {
-                    product_types_html += '   <option value="  ' + type.id + ' "> ' + type.name + '</option>';
-                }
-
+                    //   alert(viewCategoryId+'   '+i.name);
+                    if (product.product_type_id == type.id) {
+                        product_types_html += '   <option  selected="selected"  value="  ' + type.id + ' ">  ' + type.name + '    </option>';
+                    } else {
+                        product_types_html += '   <option value="  ' + type.id + ' "> ' + type.name + '</option>';
+                    }
 
 
+
+                });
+                // alert(catagoryhtml);
+
+                $("#editProductTypeId").html(product_types_html);
             });
-            // alert(catagoryhtml);
 
-            $("#editProductTypeId").html(product_types_html);
+
+
+
+
+            $("#editProductWeight").val(product.weight);
+            $("#editProductPrice").val(product.price);
+            $("#editProductCost").val(product.cost);
+            $("#editLowLimit").val(product.low_limit);
+
         });
 
+        // on modal hide
+        $('#edit-product-modal').on('hide.bs.modal', function () {
+            $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
+            $("#edit-form").trigger("reset");
+        })
 
 
 
 
-        $("#editProductWeight").val(product.weight);
-        $("#editProductPrice").val(product.price);
-        $("#editProductCost").val(product.cost);
-        $("#editLowLimit").val(product.low_limit);
+
+
+
+
 
     });
-
-    // on modal hide
-    $('#edit-product-modal').on('hide.bs.modal', function () {
-        $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
-        $("#edit-form").trigger("reset");
-    })
-
-
-
-
-
-
-
-
-
-  });
 
 
 

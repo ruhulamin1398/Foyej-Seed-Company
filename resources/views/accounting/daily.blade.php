@@ -1,23 +1,18 @@
 @extends('layout.app')
 @section('content')
 
-
-
-
-
 <!-- Begin Page Content -->
 <div class="container-fluid">
- 
-
-
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-  
+     
+   
+
 
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light">  দৈনিক খরচের লিস্ট  </a>
+                <a class="navbar-brand text-light">  DAILY LIST  </a>
                 <div>
                     <form method="get">
                         @csrf
@@ -41,43 +36,56 @@
             </nav>
         </div>
 
-
-
+        
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
-                    <thead class="bg-abasas-dark ">
+                    <thead class="bg-abasas-dark">
 
 
                         <tr>
                             <th>#</th>
-                            <th>রেফারেন্স</th>
-                            <th>পরিমান</th>
-                            <th> মন্তব্য</th>
-                            <th>সময়</th>
+                            <th>ক্রয় আইডি</th>
+                            <th> সরবরাহকারী </th>
+                            <th> মোট </th>
+                            <th> তথ্য </th>
+                            <th> একশন </th>
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                         <tr>
                             <th>#</th>
-                            <th>রেফারেন্স</th>
-                            <th>পরিমান</th>
-                            <th> মন্তব্য</th>
-                            <th>সময়</th>
+                            <th>ক্রয় আইডি</th>
+                            <th> সরবরাহকারী </th>
+                            <th> মোট </th>
+                            <th> তথ্য </th>
+                            <th> একশন </th>
                         </tr>
 
                     </tfoot>
                     <tbody>
 
                         <?php $i = 1; ?>
-                        @foreach ($dailies as $daily)
-                        <?php $id = $daily->id; ?>
+                        @foreach ($purchases as $purchase )
+                      
                         <tr class="data-row">
-                            <td>{{$i++}}</td>
-                            <td>{{$daily->user->name}}</td>
-                            <td>{{$daily->amount}}</td>
-                            <td>{{$daily->comment}}</td>
-                            <td>{{$daily->created_at->format('M d Y h:i:s a')}}</td>
+                            <td >{{$i++}}</td>
+                            <td >{{$purchase->id}}</td>
+                            <td >{{$purchase->supplier->name}}</td>
+                            <td >{{$purchase->total}}</td>
+
+                            
+                            <td >{{ $purchase->created_at->format('M d Y')}}</td>
+
+
+                            <td class="align-middle">
+                               <a href=" {{ route('purchases-receipt-show', ['id' => $purchase->id] ) }}"> <button type="button" class="btn btn-success" id="edit-item" > <i class="fa fa-eye" aria-hidden="false"> </i></button></a> 
+
+
+
+
+                            </td>
+
                         </tr>
                         @endforeach
 
@@ -87,12 +95,12 @@
         </div>
     </div>
 
+</div>
 
 
 
 </div>
-
-
+<!-- /Attachment Modal -->
 
 
 

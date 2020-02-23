@@ -9,6 +9,7 @@ $(document).ready(function () {
     var orderTableData = {};
     var productDiscount = 0;
     var totalPaurchase = 0;
+    var totalCost = 0;
     var orderId= 0;
     // customer Area Start 
 
@@ -158,6 +159,7 @@ $(document).ready(function () {
 
                 $.get(viewLink, function (data) {
                     //   console.log(data);
+                    // $("#orderProductInputCost").val(data.cost_per_unit);
                     $("#orderProductInputName").val(data.name);
                     $("#orderProductInputPrice").val(data.price_per_unit);
                 });
@@ -173,6 +175,7 @@ $(document).ready(function () {
                 $(".orderProductCreateProduct").show();
                 $("#orderProductError").show();
 
+                // $("#orderProductInputCost").val('');
                 $("#orderProductInputName").val('');
                 $("#orderProductInputPrice").val(0);
                 $("#orderProductInputQuantity").val(0);
@@ -255,6 +258,7 @@ $(document).ready(function () {
 
         var html = '';
         var i = 0;
+        totalCost=0 ;
         jQuery.each(orderTableData, function (row) {
 
             totalPaurchase += parseFloat(orderTableData[row].total.trim());
@@ -276,10 +280,9 @@ $(document).ready(function () {
             $("#totalPrice").text(totalPaurchase);
             $("#totalDue").text(totalPaurchase);
 
-
-
             $("#totalPriceDiscount").text(totalPaurchaseRow - totalPaurchase);
             productDiscount = totalPaurchaseRow - totalPaurchase;
+      
         });
     }
 
@@ -315,6 +318,7 @@ $(document).ready(function () {
     $('#orderProductInputSubmit').click(function () {
         var orderProductInputId = $("#orderProductInputId").val();
         var orderProductInputName = $("#orderProductInputName").val();
+        // var orderProductInputCost = $("#orderProductInputCost").val();
         var orderProductInputPrice = $("#orderProductInputPrice").val();
         var orderProductInputQuantity = $("#orderProductInputQuantity").val();
         var orderProductInputTotal = $("#orderProductInputTotal").val();
@@ -322,6 +326,7 @@ $(document).ready(function () {
         orderTableData[orderProductInputId] = {
             id: orderProductInputId,
             name: orderProductInputName,
+            // cost: orderProductInputCost,
             price: orderProductInputPrice,
             quantity: orderProductInputQuantity,
             total: orderProductInputTotal,
@@ -339,6 +344,7 @@ $(document).ready(function () {
 
         $("#orderProductInputId").val(orderTableData[prooductId].id);
         $("#orderProductInputName").val(orderTableData[prooductId].name);
+        // $("#orderProductInputCost").val(orderTableData[cost].name);
         $("#orderProductInputPrice").val(orderTableData[prooductId].price);
         $("#orderProductInputQuantity").val(orderTableData[prooductId].quantity);
         $("#orderProductInputTotal").val(orderTableData[prooductId].total);

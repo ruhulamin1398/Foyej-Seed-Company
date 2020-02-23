@@ -19,6 +19,7 @@
 
 
 
+
     <div class="container-fluid pt-4 mt-4" id="printdata">
         <div class="row pl-4 ml-4 mb-1">
             <div class="h5">Format CODE_39</div>

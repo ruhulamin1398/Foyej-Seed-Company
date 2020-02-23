@@ -242,7 +242,8 @@ $(document).ready(function () {
     $('#edit-modal').on('hide.bs.modal', function() {
       $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
       $("#edit-form").trigger("reset");
-    })
+    });
+    
   });
   
   

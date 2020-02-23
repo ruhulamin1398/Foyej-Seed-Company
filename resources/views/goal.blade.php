@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-auto">
 
-                        <span class="text-dark pl-4"> ্সাপ্তাহিক</span>
+                        <span class="text-dark pl-4"> সাপ্তাহিক</span>
                         <input type="text" name="weekly" class="form-control mb-2" value={{$weekly}}>
                     </div>
                     <div class="col-auto">

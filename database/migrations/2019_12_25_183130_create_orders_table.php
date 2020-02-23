@@ -20,16 +20,17 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('customer_id')->nullable();
             $table->unsignedBigInteger('pay')->nullable()->defult(0);
-            $table->bigInteger('due')->default(0);;
-            $table->bigInteger('pre_due')->default(0);
-            $table->unsignedBigInteger('discount')->nullable();;
-            $table->unsignedBigInteger('total');
+            $table->double('cost',10,2)->default(0);;
+            $table->double('due',10 ,2)->default(0);;
+            $table->double('pre_due',10,2)->default(0);
+            $table->double('discount',10,2)->nullable();;
+            $table->double('total',10,2);
 
-            $table->unsignedBigInteger('total_discount')->nullable();;
-            $table->unsignedBigInteger('total_profit')->nullable();;
+            $table->double('total_discount',8,2)->nullable();;
+            $table->double('total_profit',8,2)->nullable();;
             
 
-            $table->unsignedBigInteger('payment')->nullable();;
+            $table->double('payment',8,2)->nullable();;
             $table->timestamps();
 
             

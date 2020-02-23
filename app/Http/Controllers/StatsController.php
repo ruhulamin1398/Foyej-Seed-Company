@@ -35,6 +35,7 @@ class StatsController extends Controller
 
 
 
+
     public function purchase(Request $request)
     {
         $purchases = Purchase::whereBetween('created_at', [$request->endDate, $request->startDate])->get();

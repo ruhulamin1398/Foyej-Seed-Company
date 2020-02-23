@@ -20,7 +20,7 @@
 
 
 
-            <form method="POST" id="create-form" action="{{ route('products.store') }}">
+            <form method="POST" id="product-create-form" action="{{ route('products.store') }}">
                 @csrf
 
 
@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <label for="catagory_id">পণ্যের ক্যাটাগরি</label>
                     <select class="form-control form-control" name="category_id" id="catagory_id" required>
-                        <option value="1" selected="selected">ক্যাটাগরি নির্বাচন </option>
+                        <option value="1" >ক্যাটাগরি নির্বাচন </option>
                         @foreach ($categories as $category)
                         <option value="{{$category->id}}"> {{$category->name}}</option>
                         @endforeach
@@ -55,27 +55,27 @@
 
                 <div class="form-group">
                     <label for="price"> ওজন</label>
-                    <input type="number" name="weight" class="form-control" id="weight" placeholder="">
+                    <input type="number"  name="weight" class="form-control" id="weight" placeholder="">
                 </div>
 
 
 
                 <div class="form-group">
                     <label for="price_per_unit"> প্রতিটির মুল্য </label>
-                    <input type="number" name="price_per_unit" class="form-control" id="price_per_unit" placeholder="">
+                    <input type="number" name="price_per_unit"  value="1" class="form-control" id="price_per_unit" placeholder="">
                 </div>
 
                 <div class="form-group">
                     <label for="lowLimit">লিমিট </label>
-                    <input type="number" name="low_limit" class="form-control" id="lowLimit" placeholder="">
+                    <input type="number"  value="5" name="low_limit" class="form-control" id="lowLimit" placeholder="">
                 </div>
 
                 <div class="form-group">
                     <label for="lowLimit"> মেয়াদ </label>
-                    <input type="date" name="expire_date" class="form-control" id="lowLimit" placeholder="">
+                    <input type="date" value="now" name="expire_date" class="form-control" id="lowLimit" placeholder="">
                 </div>
 
-                <button type="submit" class="btn bg-abasas-dark"> সাবমিট</button>
+                <button type="button" id="product-create-submit-button" class="btn bg-abasas-dark"     > সাবমিট</button>
 
 
 
